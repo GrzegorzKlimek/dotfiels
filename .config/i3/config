@@ -48,6 +48,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -57,7 +62,7 @@ bindsym $mod+Shift+l move right
 
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -85,13 +90,13 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod+l exec i3lock-fancy -g
+bindsym $mod2+Ctrl+l exec i3lock-fancy -g
 
 
 #screen shot
 
 bindsym Print exec spectacle -c -r  
-bindsym $mod+g exec spectacle -b -c &  spectacle -f  -o ~/Pictures/scrennshots/screen_$(date +%F-%T).jpg -b
+# bindsym $mod+g exec spectacle -b -c &  spectacle -f  -o ~/Pictures/scrennshots/screen_$(date +%F-%T).jpg -b
 
 #plasma shell rules
   for_window [title="Desktop — Plasma"] kill; floating enable; border none
