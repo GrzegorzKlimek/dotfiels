@@ -27,7 +27,7 @@ font pango:Ubuntu Display 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
 bindsym $mod2+F4 kill
@@ -145,9 +145,9 @@ set $ws2 " "
 set $ws3 ""
 set $ws4 " |  "
 set $ws5 "5"
-set $ws6 " "
+set $ws6 "E"
 set $ws7 " "
-set $ws8 " "
+set $ws8 "S"
 set $ws9 " "
 set $ws10 " "
 set $ws11 " "
@@ -173,7 +173,7 @@ assign [class="Skype"] $ws7
 assign [class="Android Messages"] $ws7
 for_window [class="whatsdesk"] move to workspace $ws7 
 assign [class="Signal"] $ws7
-assign [class="Slack"] $ws8
+assign [class="Slack"] $ws7
 assign [class="Mailspring"] $ws9
 assign [class="Thunderbird"] $ws9
 assign [class="kmail"] $ws9
