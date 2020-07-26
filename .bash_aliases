@@ -127,5 +127,5 @@ alias fi="flatpak install"
 alias fs="flatpak search"
 alias fr="flatpak remove"
 alias fu="flatpak update"
-alias dotfiles-git='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles-git="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
