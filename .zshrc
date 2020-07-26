@@ -1,7 +1,3 @@
-# Set up the prompt
-
-
-
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
@@ -60,3 +56,15 @@ autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
+
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
