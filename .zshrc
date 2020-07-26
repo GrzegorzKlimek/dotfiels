@@ -1,8 +1,6 @@
 # Set up the prompt
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+
 
 setopt histignorealldups sharehistory
 
@@ -42,3 +40,12 @@ if [ -f ~/.bash_aliases ]; then
 else
     print "404: ~/.bash_aliases not found."
 fi
+
+
+# Luke Smith configs
+#
+# Enable colors and change prompt:
+autoload -U colors && colors	# Load colors
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+setopt autocd		# Automatically cd into typed directory.
+stty stop undef		# Disable ctrl-s to freeze terminal.
