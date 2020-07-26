@@ -41,6 +41,17 @@ else
     print "404: ~/.bash_aliases not found."
 fi
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
+export JAVA_HOME="/usr/"
+
+export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus"
+
+export XDG_CURRENT_DESKTOP=KDE
 
 # Luke Smith configs
 #
