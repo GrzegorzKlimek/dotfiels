@@ -25,9 +25,12 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
+Plug 'easymotion/vim-easymotion'
 
 
 call plug#end()
+
+let mapleader =","
 
 
 autocmd vimenter * colorscheme gruvbox
@@ -88,3 +91,6 @@ let g:tablineclosebutton=1
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
  \ }
+
+" Replace all is aliased to S.
+nnoremap S :%s///g<Left><Left><Left>
