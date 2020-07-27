@@ -8,9 +8,12 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
-autoload -Uz compinit
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
 compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -29,8 +32,11 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# print neofetch on startup
 neofetch
 
+# source aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 else
@@ -49,8 +55,6 @@ export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Appl
 
 export XDG_CURRENT_DESKTOP=KDE
 
-# Luke Smith configs
-#
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -62,9 +66,6 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 bindkey -v
 export KEYTIMEOUT=1
 
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
+# pluging
+export PLUGING_HOME="$HOME/.config/zsh/plugins/"
+source /home/frezer02/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
