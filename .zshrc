@@ -69,10 +69,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
 
+bindkey "\e[1;3C" forward-word
+bindkey "\e[1;3D" backward-word
+  
 # pluging
 export ZSH_PLUGINS_HOME="$HOME/.config/zsh/plugins"
 source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
