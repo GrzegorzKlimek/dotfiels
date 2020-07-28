@@ -35,8 +35,6 @@ let mapleader =","
 
 autocmd vimenter * colorscheme gruvbox
 set background=dark
-" colorscheme iceberg
-" colorscheme atom
 
 syntax enable
 set number
@@ -79,6 +77,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> rn <Plug>(coc-rename)
+
+" vim easy motion plugin remap
+map <Leader> <Plug>(easymotion-prefix)
 
 "custom tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
