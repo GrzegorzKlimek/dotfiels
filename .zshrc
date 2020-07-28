@@ -74,5 +74,7 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # pluging
-export PLUGING_HOME="$HOME/.config/zsh/plugins/"
-source /home/frezer02/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export ZSH_PLUGINS_HOME="$HOME/.config/zsh/plugins"
+source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
