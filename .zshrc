@@ -49,6 +49,10 @@ alias la='ls -A'
 alias l='ls -CF'
 
 
+#Auto jump
+ . /usr/share/autojump/autojump.zsh
+
+ # set enviroment variables
 export JAVA_HOME="/usr/"
 
 export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus"
