@@ -273,7 +273,7 @@ mode "launch" {
   bindsym  2 exec flatpak run org.eclipse.Java ; mode "default"; workspace $ws3
   bindsym  3 exec code ; mode "default"; workspace $ws3
   bindsym  Shift+t exec kate ; mode "default"; workspace $ws3
-  bindsym  n exec konsole --workdir /home/frezer02/Documents/repos/eclipse-workspaces/spotik-ws/lolhub -e nvim ; mode "default"; workspace $ws3
+  bindsym  n exec konsole  -e nvim -S ~/.cache/nvim/sessions/lolhub.vim ; mode "default"; workspace $ws3
   bindsym  Shift+k exec kdevelop ; mode "default"; workspace $ws3
   bindsym  5 exec kdevelop ; mode "default"; workspace $ws3
   bindsym  4 exec flatpak run com.axosoft.GitKraken ; mode "default"; workspace $ws4;
