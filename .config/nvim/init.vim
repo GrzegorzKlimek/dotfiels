@@ -90,8 +90,8 @@ let g:tablineclosebutton=1
 " status line
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'powerline',
  \ }
-
+  
 " Replace all is aliased to S.
 nnoremap S :%s///g<Left><Left><Left>
