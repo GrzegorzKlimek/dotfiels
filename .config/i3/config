@@ -145,7 +145,6 @@ set $kws17 "9"
 set $kws18 "0"
 set $kws19 "6"
 
-
 set $ws1 " "
 set $ws2 " "
 set $ws3 ""
@@ -166,9 +165,7 @@ set $ws17 "9"
 set $ws18 "0"
 set $ws19 "6" 
 
-
 #assign applications to workspaces
-
 assign [class="Code"] $ws3
 assign [class="kdevelop"] $ws3
 assign [class="eclipse"]  $ws3 
@@ -179,7 +176,7 @@ assign [class="Skype"] $ws7
 assign [class="Android Messages"] $ws7
 for_window [class="whatsdesk"] move to workspace $ws7 
 assign [class="Signal"] $ws7
-assign [class="Slack"] $ws7
+assign [class="Slack"] $ws9
 assign [class="Mailspring"] $ws9
 assign [class="Thunderbird"] $ws9
 assign [class="kmail"] $ws9
