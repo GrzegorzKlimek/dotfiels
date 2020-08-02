@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="30"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="12"/>
+        <value type="int" value="3"/>
+        <value type="int" value="15"/>
+        <value type="int" value="8"/>
+        <value type="int" value="13"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="2"/>
+        <value type="int" value="6"/>
+        <value type="int" value="9"/>
+        <value type="int" value="7"/>
+        <value type="int" value="5"/>
+      </property>
+      <property name="background-style" type="uint" value="2"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="applicationsmenu">
+      <property name="button-title" type="string" value=""/>
+      <property name="button-icon" type="string" value="kde-logo"/>
+      <property name="custom-menu" type="bool" value="false"/>
+      <property name="show-tooltips" type="bool" value="true"/>
+    </property>
+    <property name="plugin-3" type="string" value="tasklist">
+      <property name="grouping" type="uint" value="1"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
+      <property name="middle-click" type="uint" value="2"/>
+      <property name="show-wireframes" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+    </property>
+    <property name="plugin-15" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="clock"/>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="names-visible" type="array">
+        <value type="string" value="guake"/>
+        <value type="string" value="network"/>
+        <value type="string" value="discord"/>
+        <value type="string" value="mailspring"/>
+        <value type="string" value="wicd-client.py"/>
+        <value type="string" value="android-messages-desktop"/>
+        <value type="string" value="blueman-applet"/>
+        <value type="string" value="update-notifier"/>
+        <value type="string" value="dropbox"/>
+        <value type="string" value="skypeforlinux"/>
+        <value type="string" value="slack"/>
+      </property>
+    </property>
+    <property name="plugin-7" type="string" value="battery"/>
+    <property name="plugin-9" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="chromium.instance11254;chromium.instance12041;chromium.instance12319;chromium.instance12351;chromium.instance12452;chromium.instance12924;chromium.instance13781;chromium.instance13957;chromium.instance14281;chromium.instance14519;chromium.instance15091;chromium.instance15403;chromium.instance15706;chromium.instance16933;chromium.instance17475;chromium.instance18391;chromium.instance1869;chromium.instance19157;chromium.instance19242;chromium.instance20097;chromium.instance20600;chromium.instance21296;chromium.instance2374;chromium.instance25097;chromium.instance25718;chromium.instance26101;chromium.instance26776;chromium.instance28111;chromium.instance29843;chromium.instance30059;chromium.instance30683;chromium.instance31501;chromium.instance4190;chromium.instance4193;chromium.instance4212;chromium.instance4482;chromium.instance4603;chromium.instance4973;chromium.instance5323;chromium.instance5721;chromium.instance5784;chromium.instance6030;chromium.instance6354;chromium.instance6570;chromium.instance6653;chromium.instance7555;chromium.instance7566;chromium.instance8533;chromium.instance8682;chromium.instance9373;chromium.instance9917;kdeconnect.mpris_019a0d3aa5ee4c1bb6fa7d7a4460f976;kdeconnect.mpris_0e458f04b10541baadd899aa721c66fa;kdeconnect.mpris_24fe8381ea46455a9af0730cf62608bb;kdeconnect.mpris_33e0b098fb8540e8b35bc24cc27b38e3;kdeconnect.mpris_67f95a944cc344bdb9fde13e11711229;kdeconnect.mpris_a7092f099b5d42c48ee9b589b8d1a4e2;kdeconnect.mpris_baf3be4011ed4302876bdd10e6ea6e6e;kdeconnect.mpris_cbdc2d009bb94e2a837eef27526891f4;kdeconnect.mpris_cfae17ae6cf648ae9dc951ac56006fd8;kdeconnect.mpris_d18c8d2c25fa45c293dad71468754dd9;kdeconnect.mpris_f395110175d24cdcb7be88e2b6e35ff3;plasma-browser-integration;plasma-browser-integration-27611;plasma-browser-integration-28533;spotify;vlc"/>
+    </property>
+    <property name="plugin-12" type="string" value="windowmenu"/>
+    <property name="plugin-2" type="string" value="indicator">
+      <property name="known-indicators" type="array">
+        <value type="string" value="libapplication.so"/>
+      </property>
+      <property name="single-row" type="bool" value="true"/>
+      <property name="square-icons" type="bool" value="true"/>
+      <property name="align-left" type="bool" value="true"/>
+    </property>
+    <property name="plugin-8" type="string" value="xfce4-time-out-plugin"/>
+    <property name="plugin-10" type="string" value="weather"/>
+    <property name="plugin-13" type="string" value="cpugraph"/>
+    <property name="plugin-11" type="string" value="mailwatch"/>
+  </property>
+</channel>
