@@ -55,7 +55,7 @@ alias l='ls -CF'
  # set enviroment variables
 export JAVA_HOME="/usr/"
 
-export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus"
+export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus:$HOME/.cargo/bin"
 
 export XDG_CURRENT_DESKTOP=KDE
 
