@@ -26,6 +26,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
 Plug 'easymotion/vim-easymotion'
+Plug 'mattn/emmet-vim'
 
 
 call plug#end()
