@@ -47,7 +47,10 @@ set ruler
 set nowrap
 set noswapfile
 set nohlsearch
+set smarttab
 set smartindent
+set autoindent
+set autoindent
 set autoread
 let g:coc_disable_startup_warning = 1
 set t_Co=256                    " Set if term supports 256 colors.
@@ -56,6 +59,9 @@ set mouse=a
 set autoread
 set path+=/work
 set scrolloff=999
+
+" better Parenthesis handling
+inoremap { {<CR><BS>}<Esc>ko
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
