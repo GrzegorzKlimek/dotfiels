@@ -61,7 +61,7 @@ set path+=/work
 set scrolloff=999
 
 " better Parenthesis handling
-inoremap { {<CR><BS>}<Esc>ko
+inoremap {{ {<CR><BS>}<Esc>ko
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -88,6 +88,9 @@ nmap <silent> rn <Plug>(coc-rename)
 
 " vim easy motion plugin remap
 map <Leader> <Plug>(easymotion-prefix)
+
+" emmet leader key
+let g:user_emmet_leader_key=','
 
 "custom tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
