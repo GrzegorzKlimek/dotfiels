@@ -98,6 +98,9 @@ hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
 hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
 let g:tablineclosebutton=1
 
+" custom fzf seach command
+let $FZF_DEFAULT_COMMAND =  'git ls-files'
+
 " status line
 
 let g:lightline = {
