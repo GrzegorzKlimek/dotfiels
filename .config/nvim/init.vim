@@ -67,23 +67,32 @@ inoremap {{ {<CR><BS>}<Esc>ko
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" vimrc:  edit and source shortcuts sadsadsa
+" vimrc:  edit and source shortcuts 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" file explorer
 nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
+"
+" Formating and refsheshing files
 nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
+
+" split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" enter command mode
 nnoremap <Space> :
+
+" exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
- " Coc shortcuts dfsdsadsadsaf
+ " Coc shortcuts 
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
 nnoremap <silent> gm <Plug>(coc-implementation)
@@ -106,7 +115,6 @@ let g:tablineclosebutton=1
 let $FZF_DEFAULT_COMMAND =  'git ls-files'
 
 " status line
-
 let g:lightline = {
       \ 'colorscheme': 'powerline',
  \ }
