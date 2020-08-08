@@ -27,11 +27,9 @@ Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
 Plug 'mattn/emmet-vim'
 
-
 call plug#end()
 
 let mapleader =","
-
 
 autocmd vimenter * colorscheme gruvbox
 set background=dark
@@ -75,7 +73,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
-"
+
 " Formating and refsheshing files
 nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
@@ -91,6 +89,10 @@ nnoremap <Space> :
 
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+" comment visually selected region
+vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>
+vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
 
  " Coc shortcuts 
 nnoremap <silent> gd <Plug>(coc-definition)
