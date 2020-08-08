@@ -58,6 +58,7 @@ set mouse=a
 set autoread
 set path+=/work
 set scrolloff=999
+set filetype
 
 " better Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
@@ -65,6 +66,10 @@ inoremap {{ {<CR><BS>}<Esc>ko
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" vimrc:  edit and source shortcuts sadsadsa
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
@@ -78,17 +83,17 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <Space> :
 tnoremap <Esc> <C-\><C-n>
 
- " Coc shortcuts
+ " Coc shortcuts dfsdsadsadsaf
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gm <Plug>(coc-implementation)
 nnoremap <silent> gr <Plug>(coc-references)
 nnoremap <silent> rn <Plug>(coc-rename)
 
 " vim easy motion plugin remap
 map <Leader> <Plug>(easymotion-prefix)
 
-" emmet leader key
+" emmet leader key 
 let g:user_emmet_leader_key=','
 
 "custom tabline
