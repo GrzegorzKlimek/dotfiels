@@ -1,5 +1,4 @@
 call plug#begin("~/.local/share/nvim/plugged")
-
 Plug 'preservim/nerdtree'
 Plug 'gioele/vim-autoswap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -26,7 +25,7 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
 Plug 'mattn/emmet-vim'
-
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 let mapleader =","
@@ -66,7 +65,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " vimrc:  edit and source shortcuts 
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " file explorer
@@ -75,8 +74,9 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
 
 " Formating and refsheshing files
-nnoremap <C-f> :Autoformat<CR>
+" nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
+autocmd FileType typescript nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR>
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -90,10 +90,6 @@ nnoremap <Space> :
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
-" comment visually selected region
-vnoremap <leader>' <esc>`<i'<esc>`>a'<esc>
-vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
-
  " Coc shortcuts 
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
@@ -106,6 +102,10 @@ map <Leader> <Plug>(easymotion-prefix)
 
 " emmet leader key 
 let g:user_emmet_leader_key=','
+
+" sessions
+nnoremap <leader>llh :source ~/.cache/nvim/sessions/lolhub.vim<CR>
+nnoremap <leader>slh :mks! ~/.cache/nvim/sessions/lolhub.vim<CR>
 
 "custom tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
