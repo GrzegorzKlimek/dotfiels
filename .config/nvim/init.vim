@@ -25,7 +25,6 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
-Plug 'easymotion/vim-easymotion'
 Plug 'mattn/emmet-vim'
 
 
@@ -67,11 +66,11 @@ inoremap {{ {<CR><BS>}<Esc>ko
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-nmap <C-n> :NERDTreeMirror<CR>
-nmap <C-b> :NERDTreeToggle<CR>
-nmap <C-p> :Files<CR>
-nmap <C-f> :Autoformat<CR>
-nmap <F5> :e!<CR>
+nnoremap <C-n> :NERDTreeMirror<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-f> :Autoformat<CR>
+nnoremap <F5> :e!<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -80,11 +79,11 @@ nnoremap <Space> :
 tnoremap <Esc> <C-\><C-n>
 
  " Coc shortcuts
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> rn <Plug>(coc-rename)
+nnoremap <silent> gd <Plug>(coc-definition)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> rn <Plug>(coc-rename)
 
 " vim easy motion plugin remap
 map <Leader> <Plug>(easymotion-prefix)
