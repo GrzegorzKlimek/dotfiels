@@ -76,6 +76,7 @@ nnoremap <C-p> :Files<CR>
 " Formating and refsheshing files
 " nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
+nnoremap <C-f> ggVG=
 autocmd FileType typescript nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR>
 
 " split navigation
