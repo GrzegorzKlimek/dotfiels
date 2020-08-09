@@ -8,7 +8,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
 Plug 'iamcco/coc-angular'
 Plug 'burnettk/vim-angular'
-Plug 'chiel92/vim-autoformat'
 Plug 'w0ng/vim-hybrid'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'xolox/vim-misc'
@@ -78,6 +77,7 @@ nnoremap <C-p> :Files<CR>
 nnoremap <F5> :e!<CR>
 nnoremap <C-f> ggVG=
 autocmd FileType typescript nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR>
+autocmd FileType html nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR>
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -120,7 +120,7 @@ let $FZF_DEFAULT_COMMAND =  'git ls-files'
 " status line
 let g:lightline = {
       \ 'colorscheme': 'powerline',
- \ }
-  
+      \ }
+
 " Replace all is aliased to S.
 nnoremap S :%s///g<Left><Left><Left>
