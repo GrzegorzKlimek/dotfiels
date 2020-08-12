@@ -259,62 +259,62 @@ mode "resize" {
         bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+        bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+        bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r exec /home/frezer02/scripts/i3/switch-mode.sh "resize"
 
 # launch mode
 
 mode "launch" {
-  bindsym  Shift+f exec firefox --private-window ; mode "default"
-  bindsym  f exec firefox  ; mode "default"
-  bindsym  2 exec flatpak run org.eclipse.Java ; mode "default"; workspace $ws3
-  bindsym  3 exec code ; mode "default"; workspace $ws3
-  bindsym  Shift+t exec kate ; mode "default"; workspace $ws3
-  bindsym  n exec konsole  -e nvim -S ~/.cache/nvim/sessions/lolhub.vim ; mode "default"; workspace $ws3
-  bindsym  Shift+k exec kdevelop ; mode "default"; workspace $ws3
-  bindsym  5 exec kdevelop ; mode "default"; workspace $ws3
-  bindsym  4 exec flatpak run com.axosoft.GitKraken ; mode "default"; workspace $ws4;
-  bindsym  Shift+m exec mysql-workbench ; mode "default";  workspace $ws4
-  bindsym  h exec konsole -e htop ; mode "default"
-  bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; mode "default"; 
-  bindsym  m workspace $ws7; exec brave-browser --app=https://www.messenger.com/ ; mode "default"; 
-  bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; mode "default"; 
-  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; mode "default"; 
-  bindsym  Shift+y exec firefox --new-window https://www.youtube.com/; mode "default"; 
-  bindsym  y exec brave-browser --new-window https://www.youtube.com/; mode "default"; 
-  bindsym  Shift+h exec brave-browser --app=http://127.0.0.1:8080/h2-console; workspace $ws4; mode "default"; 
-  bindsym  b exec brave-browser ; mode "default"
-  bindsym  Shift+b exec brave-browser --incognito ; mode "default"
-  bindsym  Shift+c exec chromium-browser --incognito ; mode "default"
-  bindsym  c exec chromium-browser ; mode "default"
-  bindsym  e exec dolphin  ; mode "default"
-  bindsym  p exec kcmshell5 kcm_pulseaudio  ; mode "default"
-  bindsym  g exec gnome-calculator; mode "default"
-  bindsym  r exec konsole -e nvim; mode "default"
-  bindsym  q exec spotify ; mode "default"; workspace $ws10
-  bindsym  d exec discord ; mode "default"; workspace $ws7
-  bindsym  a exec android-messages-desktop ; mode "default"; workspace $ws7
-  bindsym  Shift+w exec whatsdesk ; mode "default"; workspace $ws7
-  bindsym  Shift+s exec flatpak run org.signal.Signal ; mode "default"; workspace $ws7
-  bindsym  s exec brave-browser https://stage1.proworthy.gg/; mode "default"; workspace $ws6
-  bindsym  Shift+w exec whatsdesk ; mode "default"; workspace $ws7
-  bindsym  w exec flatpak run com.bitwarden.desktop ; mode "default"; workspace $ws11
-  # bindsym  Shift+h exec  cd /home/frezer02/Applications/HOTAHD && wine64  /home/frezer02/Applications/HOTAHD/h3hota.HD.exe; mode "default"
-  bindsym  k exec libreoffice --calc ; mode "default"
-  bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; mode "default"
-  bindsym  l exec kleopatra ; mode "default"
-  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; mode "default"; 
-  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; mode "default"; 
-  bindsym  Shift+l exec /home/frezer02/Applications/ledger-live-desktop-2.0.1-linux-x86_64_00000000000000000000000000000000.AppImage ; mode "default"
+  bindsym  Shift+f exec firefox --private-window ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  2 exec flatpak run org.eclipse.Java ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  3 exec code ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  Shift+t exec kate ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  n exec konsole  -e nvim -S ~/.cache/nvim/sessions/lolhub.vim ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  Shift+k exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  5 exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
+  bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  workspace $ws4
+  bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  m workspace $ws7; exec brave-browser --app=https://www.messenger.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  y exec brave-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+h exec brave-browser --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  c exec chromium-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  r exec konsole -e nvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  q exec spotify ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
+  bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
+  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
+  bindsym  Shift+s exec flatpak run org.signal.Signal ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
+  bindsym  s exec brave-browser https://stage1.proworthy.gg/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws6
+  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
+  bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws11
+  # bindsym  Shift+h exec  cd /home/frezer02/Applications/HOTAHD && wine64  /home/frezer02/Applications/HOTAHD/h3hota.HD.exe; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  k exec libreoffice --calc ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  l exec kleopatra ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+l exec /home/frezer02/Applications/ledger-live-desktop-2.0.1-linux-x86_64_00000000000000000000000000000000.AppImage ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   # back to normal: Enter or Escape
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+  bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
 }
 
-bindsym $mod2+space mode "launch"
+bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
 # window borders colors
 
@@ -451,6 +451,10 @@ exec nm-applet
 ##set wallpaper
 
 exec_always /home/frezer02/scripts/wallpaper-i3.sh
+
+## set default mode in tmp
+
+exec echo "default" > /tmp/i3-current-mode.txt
 
 client.focused #4c7899 #285577 #ffffff #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
