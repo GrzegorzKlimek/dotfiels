@@ -25,6 +25,7 @@ Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 let mapleader =","
