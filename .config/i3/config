@@ -63,7 +63,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 
-bindsym $mod+grave focus right
+bindsym $mod+grave focus left
 bindsym $mod+Shift+grave focus left
 
 # split in horizontal orientation
@@ -273,18 +273,18 @@ mode "launch" {
   bindsym  2 exec flatpak run org.eclipse.Java ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  3 exec code ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  Shift+t exec kate ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
-  bindsym  n exec konsole  -e nvim -S ~/.cache/nvim/sessions/lolhub.vim ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  Shift+k exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  5 exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
   bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  workspace $ws4
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://meet.google.com/omk-cneh-tgv ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  m workspace $ws7; exec brave-browser --app=https://www.messenger.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  y exec brave-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  # bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+h exec brave-browser --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -293,8 +293,9 @@ mode "launch" {
   bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  r exec konsole -e nvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  n exec konsole -e nvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  q exec spotify ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  Shift+q exec konsole -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
   bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
   bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
