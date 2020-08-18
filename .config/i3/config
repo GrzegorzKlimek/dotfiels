@@ -295,7 +295,7 @@ mode "launch" {
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  n exec konsole -e nvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  q exec spotify ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  Shift+q exec konsole -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
   bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
   bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
@@ -448,8 +448,9 @@ exec xfce4-panel
 
 exec nm-applet
 
+exec /usr/bin/unclutter
 
-##set wallpaper
+#vset wallpaper
 
 exec_always /home/frezer02/scripts/wallpaper-i3.sh
 
