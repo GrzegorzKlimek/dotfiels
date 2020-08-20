@@ -57,8 +57,13 @@ set path+=/work
 set scrolloff=999
 set filetype
 
-" better Parenthesis handling
+" better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap (( ()<Left>
+inoremap [[ []<Left>
+vnoremap a  <Esc>`<i{{<Space><Left><Left><Left><Bs><Bs><Space><Esc>`>a }}<esc>v%<<Left><Left><Bs><Space>
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -92,6 +97,8 @@ nnoremap <Space> :
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+" line navigation
+nnoremap 0 0w
  " Coc shortcuts 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
