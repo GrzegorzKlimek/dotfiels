@@ -121,6 +121,7 @@ bindsym Print exec spectacle -c -r
 for_window [title="PayPal Checkout - Mozilla Firefox"] floating enable
 for_window [window_role="gnome-calculator"] floating enable
 for_window [class="kinfocenter"] floating enable
+for_window [class="Haguichi"] floating enable
 #for_window [class="kleopatra"] floating enable
 for_window [class="kwrite"] floating enable
 for_window [window_role="gnome-calculator"] move position 0 [px] 0 [px]
