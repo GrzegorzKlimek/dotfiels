@@ -123,3 +123,7 @@ alias io="iiyama-only.sh"
 alias lo="laptop-screen-only.sh"
 alias md="mirror-displays.sh"
 alias ofm="swallow dolphin"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
