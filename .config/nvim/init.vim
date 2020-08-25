@@ -26,6 +26,10 @@ Plug 'voldikss/vim-floaterm'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
 Plug 'jremmen/vim-ripgrep'
+Plug 'Dinduks/vim-java-get-set'
+Plug 'mhinz/vim-startify'
+Plug 'xolox/vim-session'
+
 call plug#end()
 
 let mapleader =","
@@ -63,7 +67,6 @@ inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap (( ()<Left>
 inoremap [[ []<Left>
-vnoremap a  <Esc>`<i{{<Space><Left><Left><Left><Bs><Bs><Space><Esc>`>a }}<esc>v%<<Left><Left><Bs><Space>
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -72,6 +75,9 @@ vnoremap K :m '<-2<CR>gv=gv
 " vimrc:  edit and source shortcuts 
 nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" edid linux configs
+nnoremap <leader>ei3 :e /home/frezer02/.config/i3/config<cr>
 
 " file explorer
 nnoremap <C-n> :NERDTreeMirror<CR>
@@ -93,6 +99,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " enter command mode
 nnoremap <Space> :
+vnoremap <Space> :
 
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
@@ -113,8 +120,13 @@ map <Leader> <Plug>(easymotion-prefix)
 let g:user_emmet_leader_key=','
 
 " sessions
-nnoremap <leader>llh :source ~/.cache/nvim/sessions/lolhub.vim<CR>
-nnoremap <leader>slh :mks! ~/.cache/nvim/sessions/lolhub.vim<CR>
+:let g:session_autoload = 'no'
+let g:startify_lists = [
+        \ { 'type': 'files',     'header': ['   MRU']            },
+        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+        \ { 'type': 'sessions',  'header': ['   Sessions']       },
+        \ ]
+let g:startify_session_dir = '/home/frezer02/.vim/sessions'
 
 "custom tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
@@ -132,3 +144,8 @@ let g:lightline = {
 
 " Replace all is aliased to S.
 nnoremap S :%s///g<Left><Left><Left>
+
+" Java specific settings
+let b:javagetset_getterTemplate = 
+          \ "\n" .
+          \ "%modifiers% %type% %funcname%() { return %varname%; }"
