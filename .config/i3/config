@@ -172,7 +172,7 @@ set $ws18 "0"
 set $ws19 "6"
 
 #assign applications to workspaces
-assign [class="Code"] $ws3
+#assign [class="Code"] $ws3
 assign [class="kdevelop"] $ws3
 assign [class="eclipse"]  $ws3 
 assign [class="GitKraken"] $ws4
@@ -272,7 +272,7 @@ mode "launch" {
   bindsym  Shift+f exec firefox --private-window ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  2 exec flatpak run org.eclipse.Java ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
-  bindsym  3 exec code ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  3 exec code ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+t exec kate ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  Shift+k exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
   bindsym  5 exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
