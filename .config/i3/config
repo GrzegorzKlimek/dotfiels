@@ -310,6 +310,7 @@ mode "launch" {
   bindsym  l exec kleopatra ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  u  exec brave-browser --app=https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+l exec /home/frezer02/Applications/ledger-live-desktop-2.0.1-linux-x86_64_00000000000000000000000000000000.AppImage ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   # back to normal: Enter or Escape
   bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"

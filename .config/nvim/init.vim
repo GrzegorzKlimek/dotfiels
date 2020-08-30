@@ -68,6 +68,9 @@ inoremap '' ''<Left>
 inoremap (( ()<Left>
 inoremap [[ []<Left>
 
+" insert mode abbreviations
+ab abbGrid div.container>div.row>div.col-*3
+
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -105,16 +108,14 @@ vnoremap <Space> :
 tnoremap <Esc> <C-\><C-n>
 
 " line navigation
-nnoremap 0 0w
+nnoremap 0 0^
+
  " Coc shortcuts 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> rn <Plug>(coc-rename)
-
-" vim easy motion plugin remap
-map <Leader> <Plug>(easymotion-prefix)
 
 " emmet leader key 
 let g:user_emmet_leader_key=','
@@ -141,6 +142,29 @@ let $FZF_DEFAULT_COMMAND =  'git ls-files'
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ }
+
+" startify logo
+let g:startify_custom_header = [
+      \ '                    .                    ',
+      \ '    ##############..... ##############   ',
+      \ '    ##############......##############   ',
+      \ '      ##########..........##########     ',
+      \ '      ##########........##########       ',
+      \ '      ##########.......##########        ',
+      \ '      ##########.....##########..        ',
+      \ '      ##########....##########.....      ',
+      \ '    ..##########..##########.........    ',
+      \ '  ....##########.#########.............  ',
+      \ '    ..################JJJ............    ',
+      \ '      ################.............      ',
+      \ '      ##############.JJJ.JJJJJJJJJJ      ',
+      \ '      ############...JJ...JJ..JJ  JJ     ',
+      \ '      ##########....JJ...JJ..JJ  JJ      ',
+      \ '      ########......JJJ..JJJ JJJ JJJ     ',
+      \ '      ######    .........                ',
+      \ '                  .....                  ',
+      \ '                    .                    ',
+        \]
 
 " Replace all is aliased to S.
 nnoremap S :%s///g<Left><Left><Left>
