@@ -30,8 +30,8 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
-bindsym $mod2+F4 kill
-bindsym $mod2+q kill
+# bindsym $mod2+F4 kill
+bindsym $mod+$mod2+q kill
 
 #swith to last workspace
 bindsym $mod2+Tab workspace back_and_forth 
@@ -122,6 +122,8 @@ for_window [title="PayPal Checkout - Mozilla Firefox"] floating enable
 for_window [window_role="gnome-calculator"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="Haguichi"] floating enable
+for_window [title="Volume Control"] floating enable
+for_window [title="Volume Control"] resize set 735 669
 #for_window [class="kleopatra"] floating enable
 for_window [class="kwrite"] floating enable
 for_window [window_role="gnome-calculator"] move position 0 [px] 0 [px]
@@ -280,7 +282,7 @@ mode "launch" {
   bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  workspace $ws4
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://meet.google.com/omk-cneh-tgv ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  m workspace $ws7; exec brave-browser --app=https://www.messenger.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   # bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
