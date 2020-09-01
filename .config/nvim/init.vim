@@ -60,6 +60,7 @@ set autoread
 set path+=/work
 set scrolloff=999
 set filetype
+set cursorline
 
 " better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
