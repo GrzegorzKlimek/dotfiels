@@ -29,7 +29,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'Dinduks/vim-java-get-set'
 Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-session'
-
+Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 let mapleader =","
@@ -64,10 +64,37 @@ set cursorline
 
 " better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
+inoremap { {}<Left>
 inoremap "" ""<Left>
 inoremap '' ''<Left>
 inoremap (( ()<Left>
 inoremap [[ []<Left>
+
+" manipulate words and parenthesis
+nnoremap cw ciw
+nnoremap cW ciW
+nnoremap vw viw
+nnoremap vW viW
+nnoremap yw yiw
+nnoremap yW yiW
+nnoremap dw diw
+nnoremap dW diW
+nnoremap dB diB
+nnoremap db dib
+nnoremap cB ciB
+nnoremap cb cib
+nnoremap v" vi"
+nnoremap d" di"
+nnoremap c" ci"
+nnoremap y" yi"
+nnoremap v' vi'
+nnoremap d' di'
+nnoremap c' ci'
+nnoremap y' yi'
+nnoremap vp vip
+nnoremap dp dip
+nnoremap cp cip
+nnoremap yp yip
 
 " insert mode abbreviations
 ab abbGrid div.container>div.row>div.col-*3
@@ -166,9 +193,6 @@ let g:startify_custom_header = [
       \ '                  .....                  ',
       \ '                    .                    ',
         \]
-
-" Replace all is aliased to S.
-nnoremap S :%s///g<Left><Left><Left>
 
 " Java specific settings
 let b:javagetset_getterTemplate = 
