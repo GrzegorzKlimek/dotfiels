@@ -172,5 +172,5 @@ nnoremap S :%s///g<Left><Left><Left>
 
 " Java specific settings
 let b:javagetset_getterTemplate = 
-          \ "\n" .
-          \ "%modifiers% %type% %funcname%() { return %varname%; }"
+    \ "\n" .
+    \ "%modifiers% %type% %funcname%() { return %varname%; }"

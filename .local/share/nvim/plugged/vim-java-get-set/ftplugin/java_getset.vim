@@ -273,12 +273,6 @@ if exists("b:javagetset_getterTemplate")
   let s:javagetset_getterTemplate = b:javagetset_getterTemplate
 else
   let s:javagetset_getterTemplate =
-    \ "\n" .
-    \ "/**\n" .
-    \ " * Get %varname%.\n" .
-    \ " *\n" .
-    \ " * @return %varname% as %type%.\n" .
-    \ " */\n" .
     \ "%modifiers% %type% %funcname%() {\n" .
     \ "    return %varname%;\n" .
     \ "}"
@@ -289,23 +283,8 @@ if exists("b:javagetset_getterArrayTemplate")
 else
   let s:javagetset_getterArrayTemplate =
     \ "\n" .
-    \ "/**\n" .
-    \ " * Get %varname%.\n" .
-    \ " *\n" .
-    \ " * @return %varname% as %type%[].\n" .
-    \ " */\n" .
     \ "%modifiers% %type%[] %funcname%() {\n" .
     \ "    return %varname%;\n" .
-    \ "}\n" .
-    \ "\n" .
-    \ "/**\n" .
-    \ " * Get %varname% element at specified index.\n" .
-    \ " *\n" .
-    \ " * @param index the index.\n" .
-    \ " * @return %varname% at index as %type%.\n" .
-    \ " */\n" .
-    \ "%modifiers% %type% %funcname%(int index) {\n" .
-    \ "    return %varname%[index];\n" .
     \ "}"
 endif
 
@@ -315,11 +294,6 @@ if exists("b:javagetset_setterTemplate")
 else
   let s:javagetset_setterTemplate =
   \ "\n" .
-  \ "/**\n" .
-  \ " * Set %varname%.\n" .
-  \ " *\n" .
-  \ " * @param %varname% the value to set.\n" .
-  \ " */\n" .
   \ "%modifiers% void %funcname%(%type% %varname%) {\n" .
   \ "    this.%varname% = %varname%;\n" .
   \ "}"
@@ -330,23 +304,8 @@ if exists("b:javagetset_setterArrayTemplate")
 else
   let s:javagetset_setterArrayTemplate =
   \ "\n" .
-  \ "/**\n" .
-  \ " * Set %varname%.\n" .
-  \ " *\n" .
-  \ " * @param %varname% the value to set.\n" .
-  \ " */\n" .
   \ "%modifiers% void %funcname%(%type%[] %varname%) {\n" .
   \ "    this.%varname% = %varname%;\n" .
-  \ "}\n" .
-  \ "\n" .
-  \ "/**\n" .
-  \ " * Set %varname% at the specified index.\n" .
-  \ " *\n" .
-  \ " * @param %varname% the value to set.\n" .
-  \ " * @param index the index.\n" .
-  \ " */\n" .
-  \ "%modifiers% void %funcname%(%type% %varname%, int index) {\n" .
-  \ "    this.%varname%[index] = %varname%;\n" .
   \ "}"
 endif
 
