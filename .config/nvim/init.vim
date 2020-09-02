@@ -34,6 +34,10 @@ call plug#end()
 
 let mapleader =","
 
+" general autocommands
+" autocmd BufNewFile *.txt :write
+
+" color scheme
 autocmd vimenter * colorscheme gruvbox
 set background=dark
 
@@ -118,9 +122,9 @@ nnoremap <C-p> :Files<CR>
 " Formating and refsheshing files
 " nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
-nnoremap <C-f> ggVG=
-autocmd FileType typescript nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR>
-autocmd FileType html nnoremap <buffer> <C-f>  :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR>
+nnoremap <C-f> mm gg=G `m
+autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR> `m
+autocmd FileType html nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR> `m
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
