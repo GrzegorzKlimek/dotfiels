@@ -31,7 +31,7 @@ bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
 # bindsym $mod2+F4 kill
-bindsym $mod+$mod2+q kill
+bindsym $mod2+q kill
 
 #swith to last workspace
 bindsym $mod2+Tab workspace back_and_forth 
@@ -40,6 +40,9 @@ bindsym $mod2+Tab workspace back_and_forth
 
 bindsym $mod2+Shift+p move scratchpad
 bindsym $mod2+p scratchpad show
+bindsym $mod2+w [class="kwrite"] scratchpad show
+bindsym $mod2+k [class="kcolorchooser"] scratchpad show
+bindsym $mod2+g [window_role="gnome-calculator"] scratchpad show
 
 
 
