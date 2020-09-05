@@ -16,6 +16,7 @@ set $mod2 Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Ubuntu Display 9
+title_align center
 
 
 #border rules
@@ -37,7 +38,6 @@ bindsym $mod2+q kill
 bindsym $mod2+Tab workspace back_and_forth 
 
 #scratchpad
-
 bindsym $mod2+Shift+p move scratchpad
 bindsym $mod2+p scratchpad show
 bindsym $mod2+w [class="kwrite"] scratchpad show
@@ -392,7 +392,7 @@ focus_on_window_activation focus
 
 #Assign workspaces to screens
 
-workspace $ws5  output eDP-1 
+workspace $ws6  output eDP-1 
 workspace $ws1 output HDMI-1
 workspace $ws8 output HDMI-1
 workspace $ws9 output HDMI-1
