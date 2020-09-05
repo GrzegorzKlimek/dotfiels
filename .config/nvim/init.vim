@@ -30,6 +30,7 @@ Plug 'Dinduks/vim-java-get-set'
 Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-session'
 Plug 'liuchengxu/vista.vim'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 let mapleader =","
@@ -74,6 +75,9 @@ inoremap '' ''<Left>
 inoremap (( ()<Left>
 inoremap [[ []<Left>
 
+"create empty lines
+nnoremap <C-Space> o<Esc>k
+
 " manipulate words and parenthesis
 nnoremap cw ciw
 nnoremap cW ciW
@@ -83,10 +87,6 @@ nnoremap yw yiw
 nnoremap yW yiW
 nnoremap dw diw
 nnoremap dW diW
-nnoremap dB diB
-nnoremap db dib
-nnoremap cB ciB
-nnoremap cb cib
 nnoremap v" vi"
 nnoremap d" di"
 nnoremap c" ci"
