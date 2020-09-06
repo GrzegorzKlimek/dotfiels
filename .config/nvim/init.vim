@@ -1,5 +1,5 @@
 call plug#begin("~/.local/share/nvim/plugged")
-Plug 'preservim/nerdtree'
+
 Plug 'gioele/vim-autoswap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -66,6 +66,10 @@ set path+=/work
 set scrolloff=999
 set filetype
 set cursorline
+
+" exit insert mode
+inoremap jk <Esc>
+
 
 " better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
