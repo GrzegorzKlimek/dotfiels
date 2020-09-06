@@ -19,10 +19,14 @@ font pango:Ubuntu Display 9
 title_align center
 
 
+
 #border rules
-  #for_window [class="^.*"] border pixel 1
+for_window [class=".*"] border pixel 3
   #for_window [class="i3-frame"] border pixel 1
 
+# Set gaps
+gaps inner 10
+gaps outer 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -286,7 +290,6 @@ mode "launch" {
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  m workspace $ws7; exec brave-browser --app=https://www.messenger.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   # bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
@@ -316,6 +319,7 @@ mode "launch" {
   bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  u  exec brave-browser --app=https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+l exec /home/frezer02/Applications/ledger-live-desktop-2.0.1-linux-x86_64_00000000000000000000000000000000.AppImage ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   # back to normal: Enter or Escape
   bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
