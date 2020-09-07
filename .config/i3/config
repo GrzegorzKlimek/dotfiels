@@ -22,7 +22,8 @@ title_align center
 
 #border rules
 for_window [class=".*"] border pixel 3
-  #for_window [class="i3-frame"] border pixel 1
+for_window [class="Synapse"] border pixel 0
+for_window [class="krunner"] border pixel 0
 
 # Set gaps
 gaps inner 10
@@ -46,7 +47,7 @@ bindsym $mod2+Shift+p move scratchpad
 bindsym $mod2+p scratchpad show
 bindsym $mod2+w [class="kwrite"] scratchpad show
 bindsym $mod2+k [class="kcolorchooser"] scratchpad show
-bindsym $mod2+g [window_role="gnome-calculator"] scratchpad show
+bindsym $mod2+c [window_role="gnome-calculator"] scratchpad show
 
 
 
