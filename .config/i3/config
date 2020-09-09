@@ -47,6 +47,7 @@ bindsym $mod2+Shift+p move scratchpad
 bindsym $mod2+p scratchpad show
 bindsym $mod2+w [class="kwrite"] scratchpad show
 bindsym $mod2+k [class="kcolorchooser"] scratchpad show
+bindsym $mod2+a [class="Pavucontrol"] scratchpad show
 bindsym $mod2+c [window_role="gnome-calculator"] scratchpad show
 
 
@@ -109,7 +110,7 @@ bindsym $mod2+Ctrl+l exec i3lock-fancy -g
 #screen shot
 
 bindsym Print exec spectacle -c -r  
-# bindsym $mod+g exec spectacle -b -c &  spectacle -f  -o ~/Pictures/scrennshots/screen_$(date +%F-%T).jpg -b
+bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/scrennshots/screen_$(date +%F-%T).jpg -b
 
 #plasma shell rules
   for_window [title="Desktop — Plasma"] kill; floating enable; border none

@@ -14,6 +14,7 @@ Plug 'xolox/vim-misc'
 Plug 'gregsexton/MatchTag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
 Plug 'itchyny/lightline.vim'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
@@ -41,6 +42,7 @@ let mapleader =","
 " color scheme
 autocmd vimenter * colorscheme gruvbox
 set background=dark
+" highlight EndOfBuffer ctermfg=bg ctermbg=bg
 
 syntax enable
 set number
@@ -70,6 +72,8 @@ set cursorline
 " exit insert mode
 inoremap jk <Esc>
 
+" easier copying to cliboard
+vnoremap == "+y
 
 " better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
