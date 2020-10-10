@@ -3,7 +3,7 @@
 	name = grzegorz
 [core]
 	autocrlf = input
-	editor = nvim
+	editor = vim
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --abbrev-commit
   discard = checkout HEAD --
