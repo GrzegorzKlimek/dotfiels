@@ -16,7 +16,8 @@ Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
 " Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'itchyny/lightline.vim'                       
+" Plug 'itchyny/lightline.vim'                       
+Plug 'vim-airline/vim-airline'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
 Plug 'ryanoasis/vim-devicons'
 Plug 'netsgnut/arctheme.vim'
@@ -187,9 +188,11 @@ let g:tablineclosebutton=1
 let $FZF_DEFAULT_COMMAND =  'git ls-files'
 
 " status line
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'powerline',
+"       \ }
+
+let g:airline_theme = 'codedark'
 
 " startify logo
 let g:startify_custom_header = [
