@@ -21,7 +21,7 @@ title_align center
 
 
 #border rules
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 1
 for_window [class="Synapse"] border pixel 0
 for_window [class="krunner"] border pixel 0
 
@@ -108,8 +108,7 @@ bindsym $mod2+Ctrl+l exec i3lock-fancy -g
 
 
 #screen shot
-
-bindsym Print exec spectacle -c -r  
+bindsym Print exec spectacle -r  
 bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/scrennshots/screen_$(date +%F-%T).jpg -b
 
 #plasma shell rules
@@ -125,6 +124,7 @@ bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/screnns
   for_window [class="(?i)*nextcloud*"] floating disable
   for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
   no_focus [class="plasmashell" window_type="notification"] 
+
 #force some windows to floating
 
 for_window [title="PayPal Checkout - Mozilla Firefox"] floating enable
@@ -137,6 +137,7 @@ for_window [title="Volume Control"] resize set 735 669
 for_window [class="kwrite"] floating enable
 for_window [window_role="gnome-calculator"] move position 0 [px] 0 [px]
 for_window [class="knotes"] floating enable
+for_window [class="kdeconnect.app"] floating enable
 for_window [class="yakuake"] floating enable
 for_window [class="yakuake"] border 0pixel
 for_window [class="yakuake"]  move position 0 [px] 0 [px]
@@ -302,10 +303,11 @@ mode "launch" {
   bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  c exec chromium-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  n exec konsole -e nvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  q exec spotify ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  n exec konsole -e vim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
   bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7

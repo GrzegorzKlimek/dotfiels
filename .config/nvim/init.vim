@@ -4,9 +4,7 @@ Plug 'gioele/vim-autoswap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'
-Plug 'iamcco/coc-angular'
 Plug 'burnettk/vim-angular'
 Plug 'w0ng/vim-hybrid'
 Plug 'uiiaoo/java-syntax.vim'
@@ -16,6 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
+" Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
 Plug 'ryanoasis/vim-devicons'
@@ -32,6 +32,7 @@ Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-session'
 Plug 'liuchengxu/vista.vim'
 Plug 'honza/vim-snippets'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
 let mapleader =","
@@ -40,7 +41,9 @@ let mapleader =","
 " autocmd BufNewFile *.txt :write
 
 " color scheme
-autocmd vimenter * colorscheme gruvbox
+" autocmd vimenter * colorscheme mountaineer
+colorscheme codedark
+
 set background=dark
 " highlight EndOfBuffer ctermfg=bg ctermbg=bg
 
@@ -68,9 +71,8 @@ set path+=/work
 set scrolloff=999
 set filetype
 set cursorline
+set clipboard=unnamedplus
 
-" exit insert mode
-inoremap jk <Esc>
 
 " easier copying to cliboard
 vnoremap == "+y
@@ -130,6 +132,7 @@ nnoremap <C-p> :Files<CR>
 " Formating and refsheshing files
 " nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
+nnoremap vv mm vip= `m
 nnoremap <C-f> mm gg=G `m
 autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR> `m
 autocmd FileType html nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR> `m
@@ -156,6 +159,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> rn <Plug>(coc-rename)
+
+" YCM shortcuts
+" nmap <silent> gd :YcmCompleter GoTo<CR>
+" nmap <silent> gr :YcmCompleter GoToReferences<CR>
+" nmap <silent> rn :YcmCompleter RefactorRename<CR>
 
 " emmet leader key 
 let g:user_emmet_leader_key=','
