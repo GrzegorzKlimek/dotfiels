@@ -445,7 +445,7 @@ exec klipper
 
 exec krunner -d
 
-exec kdeconnect-indicator 
+exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 
