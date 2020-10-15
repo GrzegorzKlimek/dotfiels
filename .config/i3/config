@@ -40,7 +40,7 @@ bindsym $mod+Return exec konsole -e zsh
 bindsym $mod2+q kill
 
 #swith to last workspace
-bindsym $mod2+Tab workspace back_and_forth 
+bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
 
 #scratchpad
 bindsym $mod2+Shift+p move scratchpad
