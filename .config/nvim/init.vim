@@ -19,9 +19,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'itchyny/lightline.vim'                       
 Plug 'vim-airline/vim-airline'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'netsgnut/arctheme.vim'
-Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
@@ -88,6 +87,8 @@ inoremap [[ []<Left>
 
 "create empty lines
 nnoremap <C-Space> o<Esc>k
+" works only in graphical vim
+nnoremap <S-Space> O<Esc>j
 
 " manipulate words and parenthesis
 nnoremap cw ciw
@@ -145,6 +146,12 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" split resize
+nnoremap <C-Down> :resize +5 <CR>
+nnoremap <C-Up> :resize -5 <CR>
+nnoremap <C-Left> :vertical resize +5 <CR>
+nnoremap <C-Right> :vertical resize -5 <CR>
 
 " enter command mode
 nnoremap <Space> :
