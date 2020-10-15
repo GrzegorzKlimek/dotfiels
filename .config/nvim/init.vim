@@ -117,6 +117,8 @@ ab abbGrid div.container>div.row>div.col-*3
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+vnoremap > >gv
+vnoremap < <gv
 
 " vimrc:  edit and source shortcuts 
 nnoremap <leader>ev :e $MYVIMRC<cr>
