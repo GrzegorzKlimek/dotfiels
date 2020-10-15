@@ -104,7 +104,7 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod2+Ctrl+l exec i3lock-fancy -g
+bindsym $mod2+Ctrl+l exec dm-tool switch-to-greeter
 
 
 #screen shot
@@ -202,25 +202,25 @@ for_window [class="Spotify"] move to workspace $ws10
 assign [class="Bitwarden"] $ws11
 
 # switch to workspace
-bindsym $mod+$kws1 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws1
-bindsym $mod+$kws2 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws2
-bindsym $mod+$kws3 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws3
-bindsym $mod+$kws4 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws4
-bindsym $mod+$kws5 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws5
-bindsym $mod+$kws6 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6
-bindsym $mod+$kws7 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
-bindsym $mod+$kws8 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws8
-bindsym $mod+$kws9 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws9
-bindsym $mod+$kws10 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
-bindsym $mod+$kws11 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws11
-bindsym $mod+$kws12 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws12
-bindsym $mod+$kws13 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws13
-bindsym $mod+$kws14 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws14
-bindsym $mod+$kws15 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws15
-bindsym $mod+$kws16 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws16
-bindsym $mod+$kws17 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws17
-bindsym $mod+$kws18 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws18
-bindsym $mod+$kws19 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws19
+bindsym $mod+$kws1 workspace $ws1
+bindsym $mod+$kws2 workspace $ws2
+bindsym $mod+$kws3 workspace $ws3
+bindsym $mod+$kws4 workspace $ws4
+bindsym $mod+$kws5 workspace $ws5
+bindsym $mod+$kws6 workspace $ws6
+bindsym $mod+$kws7 workspace $ws7
+bindsym $mod+$kws8 workspace $ws8
+bindsym $mod+$kws9 workspace $ws9
+bindsym $mod+$kws10 workspace $ws10
+bindsym $mod+$kws11 workspace $ws11
+bindsym $mod+$kws12 workspace $ws12
+bindsym $mod+$kws13 workspace $ws13
+bindsym $mod+$kws14 workspace $ws14
+bindsym $mod+$kws15 workspace $ws15
+bindsym $mod+$kws16 workspace $ws16
+bindsym $mod+$kws17 workspace $ws17
+bindsym $mod+$kws18 workspace $ws18
+bindsym $mod+$kws19 workspace $ws19
 
 # move focused container to workspace
 bindsym $mod+Shift+$kws1 move container to workspace $ws1, workspace $ws1
@@ -255,6 +255,8 @@ bindsym $mod+F1 reload
 bindsym $mod+F2 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+F3 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+space exec xfce4-popup-whiskermenu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -449,7 +451,7 @@ exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator
 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 
-exec synapse -s
+# exec synapse -s
 
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
 
