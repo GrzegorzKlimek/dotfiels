@@ -293,13 +293,13 @@ mode "launch" {
   bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
   bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  workspace $ws4
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  v workspace $ws6; exec brave-browser --app=https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  d workspace $ws7; exec brave-browser --app=https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  # bindsym  Shift+v workspace $ws6; exec brave-browser --app=https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  v workspace $ws6; exec firefox -ssb https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+v workspace $ws6; exec firefox -ssb https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  d workspace $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  # bindsym  Shift+v workspace $ws6; exec firefox -ssb https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+h exec brave-browser --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -308,7 +308,7 @@ mode "launch" {
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  n exec konsole -e vim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  n exec konsole -e nvim-qt; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
@@ -322,10 +322,10 @@ mode "launch" {
   bindsym  k exec libreoffice --calc ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  l exec kleopatra ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  u  exec brave-browser --app=https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  i  exec firefox -ssb https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  o  exec firefox -ssb https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  u  exec firefox -ssb https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  m  exec firefox -ssb https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+l exec /home/frezer02/Applications/ledger-live-desktop-2.0.1-linux-x86_64_00000000000000000000000000000000.AppImage ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   # back to normal: Enter or Escape
   bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
