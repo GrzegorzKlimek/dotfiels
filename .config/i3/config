@@ -295,7 +295,7 @@ mode "launch" {
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  v workspace $ws6; exec firefox -ssb https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+v workspace $ws6; exec firefox -ssb https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  d workspace $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  # bindsym  d workspace $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   # bindsym  Shift+v workspace $ws6; exec firefox -ssb https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
@@ -308,7 +308,7 @@ mode "launch" {
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  n exec konsole -e nvim-qt; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  n exec konsole -e vim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
@@ -416,7 +416,7 @@ bindsym $mod+Shift+p exec /home/frezer02/.screenlayout/laptop-screen-only.sh
 
   #Apps
 
-exec discord 
+exec flatpak run com.discordapp.Discord
 
 
 #exec whatsdesk

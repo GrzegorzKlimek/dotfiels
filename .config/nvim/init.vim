@@ -19,7 +19,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'itchyny/lightline.vim'                       
 Plug 'vim-airline/vim-airline'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'netsgnut/arctheme.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
