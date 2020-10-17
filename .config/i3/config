@@ -472,6 +472,7 @@ exec_always /home/frezer02/scripts/wallpaper-i3.sh
 ## set default mode in tmp
 
 exec echo "default" > /tmp/i3-current-mode.txt
+exec echo "" > /tmp/updates-genmon
 
 client.focused #4c7899 #285577 #ffffff #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
