@@ -222,6 +222,28 @@ bindsym $mod+$kws17 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws17
 bindsym $mod+$kws18 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws18
 bindsym $mod+$kws19 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws19
 
+# swap workspaces
+
+bindsym $mod+i+$kws1 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws1
+bindsym $mod+i+$kws2 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws2
+bindsym $mod+i+$kws3 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws3
+bindsym $mod+i+$kws4 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws4
+bindsym $mod+i+$kws5 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws5
+bindsym $mod+i+$kws6 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws6
+bindsym $mod+i+$kws7 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws7
+bindsym $mod+i+$kws8 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws8
+bindsym $mod+i+$kws9 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws9
+bindsym $mod+i+$kws10 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws10
+bindsym $mod+i+$kws11 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws11
+bindsym $mod+i+$kws12 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws12
+bindsym $mod+i+$kws13 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws13
+bindsym $mod+i+$kws14 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws14
+bindsym $mod+i+$kws15 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws15
+bindsym $mod+i+$kws16 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws16
+bindsym $mod+i+$kws17 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws17
+bindsym $mod+i+$kws18 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws18
+bindsym $mod+i+$kws19 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws19
+
 # move focused container to workspace
 bindsym $mod+Shift+$kws1 move container to workspace $ws1, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws1
 bindsym $mod+Shift+$kws2 move container to workspace $ws2, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws2
