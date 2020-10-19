@@ -223,25 +223,25 @@ bindsym $mod+$kws18 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws18
 bindsym $mod+$kws19 exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws19
 
 # move focused container to workspace
-bindsym $mod+Shift+$kws1 move container to workspace $ws1, workspace $ws1
-bindsym $mod+Shift+$kws2 move container to workspace $ws2, workspace $ws2
-bindsym $mod+Shift+$kws3 move container to workspace $ws3, workspace $ws3
-bindsym $mod+Shift+$kws4 move container to workspace $ws4, workspace $ws4
-bindsym $mod+Shift+$kws5 move container to workspace $ws5, workspace $ws5 
-bindsym $mod+Shift+$kws6 move container to workspace $ws6, workspace $ws6
-bindsym $mod+Shift+$kws7 move container to workspace $ws7, workspace $ws7
-bindsym $mod+Shift+$kws8 move container to workspace $ws8, workspace $ws8
-bindsym $mod+Shift+$kws9 move container to workspace $ws9, workspace $ws9
-bindsym $mod+Shift+$kws10 move container to workspace $ws10, workspace $ws10
-bindsym $mod+Shift+$kws11 move container to workspace $ws11, workspace $ws11
-bindsym $mod+Shift+$kws12 move container to workspace $ws12, workspace $ws12
-bindsym $mod+Shift+$kws13 move container to workspace $ws13, workspace $ws13
-bindsym $mod+Shift+$kws14 move container to workspace $ws14, workspace $ws14
-bindsym $mod+Shift+$kws15 move container to workspace $ws15, workspace $ws15
-bindsym $mod+Shift+$kws16 move container to workspace $ws16, workspace $ws16
-bindsym $mod+Shift+$kws17 move container to workspace $ws17, workspace $ws17
-bindsym $mod+Shift+$kws18 move container to workspace $ws18, workspace $ws18
-bindsym $mod+Shift+$kws19 move container to workspace $ws19, workspace $ws19
+bindsym $mod+Shift+$kws1 move container to workspace $ws1, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws1
+bindsym $mod+Shift+$kws2 move container to workspace $ws2, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws2
+bindsym $mod+Shift+$kws3 move container to workspace $ws3, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws3
+bindsym $mod+Shift+$kws4 move container to workspace $ws4, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws4
+bindsym $mod+Shift+$kws5 move container to workspace $ws5, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws5 
+bindsym $mod+Shift+$kws6 move container to workspace $ws6, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws6
+bindsym $mod+Shift+$kws7 move container to workspace $ws7, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws7
+bindsym $mod+Shift+$kws8 move container to workspace $ws8, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws8
+bindsym $mod+Shift+$kws9 move container to workspace $ws9, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws9
+bindsym $mod+Shift+$kws10 move container to workspace $ws10, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws10
+bindsym $mod+Shift+$kws11 move container to workspace $ws11, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws11
+bindsym $mod+Shift+$kws12 move container to workspace $ws12, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws12
+bindsym $mod+Shift+$kws13 move container to workspace $ws13, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws13
+bindsym $mod+Shift+$kws14 move container to workspace $ws14, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws14
+bindsym $mod+Shift+$kws15 move container to workspace $ws15, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws15
+bindsym $mod+Shift+$kws16 move container to workspace $ws16, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws16
+bindsym $mod+Shift+$kws17 move container to workspace $ws17, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws17
+bindsym $mod+Shift+$kws18 move container to workspace $ws18, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws18
+bindsym $mod+Shift+$kws19 move container to workspace $ws19, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws19
 
 # move focused workspace between monitors
 
@@ -285,21 +285,21 @@ bindsym $mod+r exec /home/frezer02/scripts/i3/switch-mode.sh "resize"
 mode "launch" {
   bindsym  Shift+f exec firefox --private-window ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  2 exec flatpak run org.eclipse.Java ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
+  bindsym  2 exec flatpak run org.eclipse.Java ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws3
   bindsym  3 exec code ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+t exec kate ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
-  bindsym  Shift+k exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
-  bindsym  5 exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws3
-  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
-  bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  workspace $ws4
+  bindsym  Shift+t exec kate ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws3
+  bindsym  Shift+k exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws3
+  bindsym  5 exec kdevelop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws3
+  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws4;
+  bindsym  Shift+m exec mysql-workbench ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";  exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws4
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  v workspace $ws6; exec firefox -ssb https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+v workspace $ws6; exec firefox -ssb https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  # bindsym  d workspace $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  # bindsym  Shift+v workspace $ws6; exec firefox -ssb https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  v exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6; exec firefox -ssb https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+v exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6; exec firefox -ssb https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  # bindsym  d exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  # bindsym  Shift+v exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6; exec firefox -ssb https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -308,16 +308,16 @@ mode "launch" {
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  n exec konsole -e vim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
-  bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
-  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
-  bindsym  Shift+s exec flatpak run org.signal.Signal ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
-  bindsym  s exec brave-browser https://stage1.proworthy.gg/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws6
-  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws7
-  bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws11
+  bindsym  n exec gvim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
+  bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
+  bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  Shift+s exec flatpak run org.signal.Signal ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  s exec brave-browser https://stage1.proworthy.gg/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6
+  bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws11
   # bindsym  Shift+h exec  cd /home/frezer02/Applications/HOTAHD && wine64  /home/frezer02/Applications/HOTAHD/h3hota.HD.exe; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  k exec libreoffice --calc ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -469,10 +469,10 @@ exec /usr/bin/unclutter
 
 exec_always /home/frezer02/scripts/wallpaper-i3.sh
 
-## set default mode in tmp
+## set default values in temporary files
 
-exec echo "default" > /tmp/i3-current-mode.txt
 exec echo "" > /tmp/updates-genmon
+exec echo "" > /tmp/i3-current-mode.txt
 
 client.focused #4c7899 #285577 #ffffff #2e9ef4
 client.focused_inactive #333333 #5f676a #ffffff #484e50
