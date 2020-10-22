@@ -18,8 +18,6 @@ set $mod2 Mod1
 font pango:Ubuntu Display 9
 title_align center
 
-
-
 #border rules
 for_window [class=".*"] border pixel 1
 for_window [class="Synapse"] border pixel 0
@@ -36,7 +34,7 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
-# bindsym $mod2+F4 kill
+bindsym $mod2+F4 kill
 bindsym $mod2+q kill
 
 #swith to last workspace
@@ -126,14 +124,12 @@ bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/screnns
   no_focus [class="plasmashell" window_type="notification"] 
 
 #force some windows to floating
-
 for_window [title="PayPal Checkout - Mozilla Firefox"] floating enable
 for_window [window_role="gnome-calculator"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable
 for_window [title="Volume Control"] resize set 735 669
-#for_window [class="kleopatra"] floating enable
 for_window [class="kwrite"] floating enable
 for_window [window_role="gnome-calculator"] move position 0 [px] 0 [px]
 for_window [class="knotes"] floating enable
@@ -141,8 +137,8 @@ for_window [class="kdeconnect.app"] floating enable
 for_window [class="yakuake"] floating enable
 for_window [class="yakuake"] border 0pixel
 for_window [class="yakuake"]  move position 0 [px] 0 [px]
-#declare workspaces variables
 
+#declare workspaces variables
 set $kws1 "1"
 set $kws2 "2"
 set $kws3 "3"
@@ -184,7 +180,6 @@ set $ws18 "0"
 set $ws19 "6"
 
 #assign applications to workspaces
-#assign [class="Code"] $ws3
 assign [class="kdevelop"] $ws3
 assign [class="eclipse"]  $ws3 
 assign [class="GitKraken"] $ws4
@@ -199,7 +194,6 @@ assign [class="Mailspring"] $ws9
 assign [class="Thunderbird"] $ws9
 assign [class="kmail"] $ws9
 for_window [class="Spotify"] move to workspace $ws10 
-# assign [title="Meet*"] $ws6
 assign [class="Bitwarden"] $ws11
 
 # switch to workspace
@@ -246,9 +240,7 @@ bindsym $mod+Shift+$kws18 move container to workspace $ws18, exec /home/frezer02
 bindsym $mod+Shift+$kws19 move container to workspace $ws19, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws19
 
 # move focused workspace between monitors
-
 bindsym $mod+Shift+Right move workspace to output right
-
 bindsym $mod+Shift+Left move workspace to output left
 
 # reload the configuration file
@@ -257,31 +249,25 @@ bindsym $mod+F1 reload
 bindsym $mod+F2 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+F3 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 bindsym $mod+space exec xfce4-popup-whiskermenu
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r exec /home/frezer02/scripts/i3/switch-mode.sh "resize"
 
 mode "resize" {
-
         # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 5 px or 5 ppt
         bindsym j resize grow height 5 px or 5 ppt
         bindsym k resize shrink height 5 px or 5 ppt
         bindsym l resize grow width 5 px or 5 ppt
-
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
-
         # back to normal: Enter or Escape
         bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-
-
 }
 
 # swap windows between workspaces mode
@@ -326,8 +312,6 @@ mode "launch" {
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  v  exec firefox --new-window https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+v exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6; exec firefox -ssb https://meet.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  # bindsym  d exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7; exec firefox -ssb https://discord.com/app ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  # bindsym  Shift+v exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6; exec firefox -ssb https://hangouts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
@@ -343,13 +327,12 @@ mode "launch" {
   bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
-  bindsym  a exec android-messages-desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
+  bindsym  a exec brave-browser --app=http://isl.us.to:8529 ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
   bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
   bindsym  Shift+s exec flatpak run org.signal.Signal ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
   bindsym  s exec brave-browser https://stage1.proworthy.gg/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws6
   bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
   bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws11
-  # bindsym  Shift+h exec  cd /home/frezer02/Applications/HOTAHD && wine64  /home/frezer02/Applications/HOTAHD/h3hota.HD.exe; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  k exec libreoffice --calc ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  l exec kleopatra ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -365,65 +348,18 @@ mode "launch" {
 
 bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
-# window borders colors
-
-# class                 border  bground text    indicator child_border
-
-# client.focused          #4A4E58 #4A4E58 #FFFFFF #4A4E58   #4A4E58
-# client.focused_inactive #262B33 #262B33 #FFFFFF #484E50   #5F676A
-# client.unfocused        #262B33 #262B33 #888888 #292D2E   #222222
-# client.urgent           #AA0000 #AA0000 #FFFFFF #8B360A   #8B360A
-# client.placeholder      #262B33 #262B33 #FFFFFF #000000   #0C0C0C
-# client.background       #FFFFFF
-
-
- #Start i3bar to display a workspace bar (plus the system information i3status
- #finds out, if available) and set colors
-
-
-   #bar {
-     #colors{
-   #
-     #background #262B33
-     #statusline #FFFFFF
-     #separator  #666666
-     #focused_workspace  #4A4E58 #4A4E58 #FFFFFF
-     #active_workspace   #262B33 #262B33 #FFFFFF
-     #inactive_workspace #262B33 #262B33 #888888
-     #urgent_workspace   #AA0000 #AA0000 #FFFFFF
-     #binding_mode       #AA0000 #AA0000 #FFFFFF
-   #
-     #}
-     #tray_output primary
-     #status_command i3blocks -c ~/.config/i3/i3blocks.conf
-     #status_command i3status -c ~/.config/i3/i3status.conf
-     #font pango:Ubuntu Display 11
-   #}
-  #
-
-
+# defaul layout
 workspace_layout tabbed
 
-
-
-#Audio controll
-
 # Pulse Audio controls
-
  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
- #
  bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
- 
  bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
- 
  bindsym XF86AudioPlay exec playerctl play-pause
- 
  bindcode 171 exec playerctl next
- 
  bindsym XF86AudioPrev exec playerctl previous
 
 #Screen brightness contoll
-
 bindcode 233 exec sudo brightnessctl -d intel_backlight s +10%
 bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 
@@ -432,7 +368,6 @@ bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 focus_on_window_activation focus
 
 #Assign workspaces to screens
-
 workspace $ws6  output eDP-1 
 workspace $ws1 output HDMI-1
 workspace $ws8 output HDMI-1
@@ -446,64 +381,33 @@ bindsym $mod+Shift+p exec /home/frezer02/.screenlayout/laptop-screen-only.sh
 #Autostart applications and services
 
   #Apps
-
 exec flatpak run com.discordapp.Discord
-
-
-#exec whatsdesk
-
-#exec android-messages-desktop
-
 exec flatpak run com.slack.Slack
-
-#exec flatpak run com.skype.Client 
-
-#exec mailspring
-
 exec thunderbird
-
 exec guake --hide
 
   #Services and scripts
-
 exec slimbookbattery
-
 exec korgac
-
 exec akonadi start
-
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
-
 exec /usr/bin/dunst
-
 exec klipper
-
 exec krunner -d
-
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
-
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
-
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
-
 exec /home/frezer02/scripts/disableCaps
-
 exec xcompmgr -c -f -n 
-
 exec dropbox start -i
-
 exec xfce4-panel
-
 exec nm-applet
-
 exec /usr/bin/unclutter
 
 #vset wallpaper
-
 exec_always /home/frezer02/scripts/wallpaper-i3.sh
 
 ## set default values in temporary files
-
 exec echo "" > /tmp/updates-genmon
 exec echo "" > /tmp/i3-current-mode.txt
 
