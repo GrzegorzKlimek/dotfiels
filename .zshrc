@@ -73,9 +73,13 @@ export NVM_DIR="$HOME/.nvm"
 bindkey "\e[1;3C" forward-word
 bindkey "\e[1;3D" backward-word
   
-# pluging
+# plugins
 export ZSH_PLUGINS_HOME="$HOME/.config/zsh/plugins"
 source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+
+# plugins configuration
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -85,4 +89,3 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
