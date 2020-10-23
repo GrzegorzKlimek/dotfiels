@@ -5,7 +5,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'morhetz/gruvbox'
-Plug 'burnettk/vim-angular'
 Plug 'w0ng/vim-hybrid'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'xolox/vim-misc'
@@ -16,7 +15,6 @@ Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
 " Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'itchyny/lightline.vim'                       
 Plug 'vim-airline/vim-airline'                       
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
 Plug 'ryanoasis/vim-devicons'
@@ -28,7 +26,6 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-repeat'
 Plug 'jremmen/vim-ripgrep'
 Plug 'Dinduks/vim-java-get-set'
-Plug 'mhinz/vim-startify'
 Plug 'xolox/vim-session'
 Plug 'liuchengxu/vista.vim'
 Plug 'honza/vim-snippets'
@@ -37,8 +34,6 @@ call plug#end()
 
 let mapleader =","
 
-" general autocommands
-" autocmd BufNewFile *.txt :write
 
 " color scheme
 " autocmd vimenter * colorscheme mountaineer
@@ -47,7 +42,7 @@ colorscheme codedark
 set background=dark
 " highlight EndOfBuffer ctermfg=bg ctermbg=bg
 
-syntax enable
+set syntax=on
 set number
 set expandtab
 set shiftwidth=2
@@ -69,10 +64,9 @@ set mouse=a
 set autoread
 set path+=/work
 set scrolloff=999
-set filetype
 set cursorline
 set clipboard=unnamedplus
-
+set shortmess=a
 
 " easier copying to cliboard
 vnoremap == "+y
@@ -134,7 +128,6 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
 
 " Formating and refsheshing files
-" nnoremap <C-f> :Autoformat<CR>
 nnoremap <F5> :e!<CR>
 nnoremap vv mm vip= `m
 nnoremap <C-f> mm gg=G `m
@@ -170,22 +163,11 @@ nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> rn <Plug>(coc-rename)
 
-" YCM shortcuts
-" nmap <silent> gd :YcmCompleter GoTo<CR>
-" nmap <silent> gr :YcmCompleter GoToReferences<CR>
-" nmap <silent> rn :YcmCompleter RefactorRename<CR>
-
 " emmet leader key 
 let g:user_emmet_leader_key=','
 
 " sessions
-:let g:session_autoload = 'no'
-let g:startify_lists = [
-        \ { 'type': 'files',     'header': ['   MRU']            },
-        \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
-        \ { 'type': 'sessions',  'header': ['   Sessions']       },
-        \ ]
-let g:startify_session_dir = '/home/frezer02/.vim/sessions'
+let g:session_autoload = 'no'
 
 "custom tabline
 hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
@@ -199,28 +181,6 @@ let $FZF_DEFAULT_COMMAND =  'git ls-files'
 
 let g:airline_theme = 'codedark'
 
-" startify logo
-let g:startify_custom_header = [
-      \ '                    .                    ',
-      \ '    ##############..... ##############   ',
-      \ '    ##############......##############   ',
-      \ '      ##########..........##########     ',
-      \ '      ##########........##########       ',
-      \ '      ##########.......##########        ',
-      \ '      ##########.....##########..        ',
-      \ '      ##########....##########.....      ',
-      \ '    ..##########..##########.........    ',
-      \ '  ....##########.#########.............  ',
-      \ '    ..################JJJ............    ',
-      \ '      ################.............      ',
-      \ '      ##############.JJJ.JJJJJJJJJJ      ',
-      \ '      ############...JJ...JJ..JJ  JJ     ',
-      \ '      ##########....JJ...JJ..JJ  JJ      ',
-      \ '      ########......JJJ..JJJ JJJ JJJ     ',
-      \ '      ######    .........                ',
-      \ '                  .....                  ',
-      \ '                    .                    ',
-        \]
 
 " Java specific settings
 let b:javagetset_getterTemplate = 
