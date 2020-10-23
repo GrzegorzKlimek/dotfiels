@@ -102,8 +102,7 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod2+Ctrl+l exec dm-tool switch-to-greeter
-
+bindsym $mod2+Ctrl+l exec i3lock-fancy -g
 
 #screen shot
 bindsym Print exec spectacle -r  
