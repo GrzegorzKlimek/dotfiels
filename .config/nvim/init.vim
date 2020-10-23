@@ -3,8 +3,6 @@ call plug#begin("~/.local/share/nvim/plugged")
 Plug 'gioele/vim-autoswap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'xolox/vim-misc'
@@ -13,13 +11,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
-" Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'                       
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'powerline/powerline'
+Plug 'edkolev/promptline.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
 Plug 'ryanoasis/vim-devicons'
-Plug 'netsgnut/arctheme.vim'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ap/vim-css-color'
 Plug 'voldikss/vim-floaterm'
 Plug 'mattn/emmet-vim'
@@ -32,15 +30,12 @@ Plug 'honza/vim-snippets'
 Plug 'tomasiser/vim-code-dark'
 call plug#end()
 
-let mapleader =","
-
+let mapleader ="z"
 
 " color scheme
-" autocmd vimenter * colorscheme mountaineer
 colorscheme codedark
 
 set background=dark
-" highlight EndOfBuffer ctermfg=bg ctermbg=bg
 
 set syntax=on
 set number
@@ -133,6 +128,7 @@ nnoremap vv mm vip= `m
 nnoremap <C-f> mm gg=G `m
 autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR> `m
 autocmd FileType html nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR> `m
+autocmd FileType json nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type js <CR> `m
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
@@ -156,33 +152,11 @@ tnoremap <Esc> <C-\><C-n>
 " line navigation
 nnoremap 0 0^
 
- " Coc shortcuts 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gm <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> rn <Plug>(coc-rename)
+" source plugin configurations
 
-" emmet leader key 
-let g:user_emmet_leader_key=','
-
-" sessions
-let g:session_autoload = 'no'
-
-"custom tabline
-hi TabLine      ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineFill  ctermfg=Black  ctermbg=Green     cterm=NONE
-hi TabLineSel   ctermfg=White  ctermbg=DarkBlue  cterm=NONE
-let g:tablineclosebutton=1
-
-" custom fzf seach command
-let $FZF_DEFAULT_COMMAND =  'git ls-files'
-
-
-let g:airline_theme = 'codedark'
-
-
-" Java specific settings
-let b:javagetset_getterTemplate = 
-    \ "\n" .
-    \ "%modifiers% %type% %funcname%() { return %varname%; }"
+ source ~/.config/nvim/plugins/airline.vim
+ source ~/.config/nvim/plugins/coc.vim
+ source ~/.config/nvim/plugins/emmet.vim
+ source ~/.config/nvim/plugins/fzf.vim
+ source ~/.config/nvim/plugins/tabline.vim
+ source ~/.config/nvim/plugins/vim-java-get-set.vim

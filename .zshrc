@@ -85,3 +85,4 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
