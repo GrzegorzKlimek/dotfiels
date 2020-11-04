@@ -32,7 +32,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-python/python-syntax'
 call plug#end()
 
-let mapleader ="z"
+let mapleader =" "
 
 " color scheme
 colorscheme codedark
@@ -148,8 +148,12 @@ nnoremap <C-Left> :vertical resize +5 <CR>
 nnoremap <C-Right> :vertical resize -5 <CR>
 
 " enter command mode
-nnoremap <Space> :
-vnoremap <Space> :
+nnoremap ; :
+vnoremap ; :
+
+" easier access to registers
+nnoremap ' "
+vnoremap ' "
 
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
@@ -167,3 +171,4 @@ nnoremap 0 0^
  source ~/.config/nvim/plugins/vim-java-get-set.vim
 
  let g:python_highlight_all = 1
+ let g:session_autosave = 'no'

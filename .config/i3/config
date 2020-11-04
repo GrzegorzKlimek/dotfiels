@@ -41,7 +41,7 @@ bindsym $mod2+q kill
 bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
 
 #scratchpad
-bindsym $mod2+Shift+p move scratchpad
+bindsym $mod2+Shift+m move scratchpad
 bindsym $mod2+p scratchpad show
 bindsym $mod2+w [class="kwrite"] scratchpad show
 bindsym $mod2+k [class="kcolorchooser"] scratchpad show

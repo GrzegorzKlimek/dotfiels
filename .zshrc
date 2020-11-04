@@ -74,11 +74,12 @@ bindkey "\e[1;3D" backward-word
 # plugins
 export ZSH_PLUGINS_HOME="$HOME/.config/zsh/plugins"
 source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 
 # plugins configuration
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 # POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
