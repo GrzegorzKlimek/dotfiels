@@ -28,14 +28,18 @@ Plug 'xolox/vim-session'
 Plug 'liuchengxu/vista.vim'
 Plug 'honza/vim-snippets'
 Plug 'tomasiser/vim-code-dark'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-python/python-syntax'
 call plug#end()
 
 let mapleader ="z"
 
 " color scheme
 colorscheme codedark
-
 set background=dark
+" colorscheme PaperColor
+" set background=light
+
 
 set syntax=on
 set number
@@ -50,7 +54,6 @@ set nohlsearch
 set smarttab
 set smartindent
 set autoindent
-set autoindent
 set autoread
 let g:coc_disable_startup_warning = 1
 set t_Co=256                    " Set if term supports 256 colors.
@@ -62,6 +65,8 @@ set scrolloff=999
 set cursorline
 set clipboard=unnamedplus
 set shortmess=a
+autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
+autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
 
 " easier copying to cliboard
 vnoremap == "+y
@@ -160,3 +165,5 @@ nnoremap 0 0^
  source ~/.config/nvim/plugins/fzf.vim
  source ~/.config/nvim/plugins/tabline.vim
  source ~/.config/nvim/plugins/vim-java-get-set.vim
+
+ let g:python_highlight_all = 1

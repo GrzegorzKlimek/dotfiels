@@ -33,8 +33,6 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# print neofetch on startup
-neofetch
 
 # source aliases
 if [ -f ~/.bash_aliases ]; then
@@ -80,6 +78,8 @@ source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 
 # plugins configuration
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+# POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -89,3 +89,21 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/frezer02/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/frezer02/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/frezer02/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/frezer02/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# print neofetch on startup
+# neofetch

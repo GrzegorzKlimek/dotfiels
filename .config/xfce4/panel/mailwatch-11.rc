@@ -1,8 +1,8 @@
 [mailwatch-plugin]
 click_command=thunderbird
 new_messages_command=
-normal_icon=mailspring-tray-empty
-new_mail_icon=internet-mail
+normal_icon=mail-mark-read
+new_mail_icon=mail
 log_lines=200
 show_log_status=false
 auto_open_online_doc=false

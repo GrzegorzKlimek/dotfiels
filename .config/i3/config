@@ -322,7 +322,7 @@ mode "launch" {
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  n exec konsole -e vim; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  # bindsym  n exec konsole -e bash -c "vim"; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
@@ -333,8 +333,9 @@ mode "launch" {
   bindsym  Shift+w exec whatsdesk ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
   bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws11
   bindsym  k exec libreoffice --calc ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  Shift+t exec /home/frezer02/scripts/start-torbrowser.sh --detach ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  l exec kleopatra ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  t  exec firefox -ssb https://www.typingclub.com ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  i  exec firefox -ssb https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  o  exec firefox -ssb https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  u  exec firefox -ssb https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 

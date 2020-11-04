@@ -1,8 +1,8 @@
-:set relativenumber
-:set number
+set relativenumber
+set number
 set scrolloff=999
 set clipboard=unnamedplus
-
+set incsearch
 " manipulate words and parenthesis
 nnoremap cw ciw
 nnoremap cW ciW
@@ -42,6 +42,9 @@ nnoremap <Space> :
 vnoremap <Space> :
 
 nnoremap 0 0^
+
+" find references(usages)
+nnoremap gr :action FindUsages<CR>
 
 " plugins
 set commentary

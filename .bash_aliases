@@ -101,7 +101,8 @@ alias documents="cd $HOME_DIR/Documents"
 alias scripts="cd $HOME_DIR/scripts"
 alias unmount-cifs="sudo umount -a -t cifs -l"
 alias config="sudo update-alternatives --config"
-alias install="sudo update-alternatives --install"
+alias config-install="sudo update-alternatives --install"
+alias config-remove="sudo update-alternatives --remove"
 alias sync-lolhub="rsync -a $HOME_DIR/Documents/repos/eclipse-workspaces/spotik-ws/lolhub/ $HOME_DIR/Documents/repos-windows/eclipse-workspaces/spotik-ws/lolhub --delete"
 alias diff-lolhub="diff -r --no-dereference  ~/Documents/repos/eclipse-workspaces/spotik-ws/lolhub ~/Documents/repos-windows/eclipse-workspaces/spotik-ws/lolhub"
 alias polkit-kde-start="/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 &"
@@ -127,4 +128,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias mount-lolscrapper='sshfs grzesiek@isl.us.to:/home/grzesiek/repos/lolscrapper ~/Documents/repos/remote/lolscrapper'
+alias e='editor'
+alias v='vim'
 
