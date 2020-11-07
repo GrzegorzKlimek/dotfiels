@@ -32,7 +32,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-python/python-syntax'
 call plug#end()
 
-let mapleader =" "
+let mapleader ="z"
 
 " color scheme
 colorscheme codedark
@@ -148,8 +148,8 @@ nnoremap <C-Left> :vertical resize +5 <CR>
 nnoremap <C-Right> :vertical resize -5 <CR>
 
 " enter command mode
-nnoremap ; :
-vnoremap ; :
+nnoremap <Space> :
+vnoremap <Space> :
 
 " easier access to registers
 nnoremap ' "
