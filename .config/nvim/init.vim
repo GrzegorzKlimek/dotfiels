@@ -30,6 +30,9 @@ Plug 'honza/vim-snippets'
 Plug 'tomasiser/vim-code-dark'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-python/python-syntax'
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+Plug 'wincent/terminus'
 call plug#end()
 
 let mapleader ="z"
@@ -65,8 +68,9 @@ set scrolloff=999
 set cursorline
 set clipboard=unnamedplus
 set shortmess=a
-autocmd InsertEnter * highlight CursorLine guibg=#000050 guifg=fg
-autocmd InsertLeave * highlight CursorLine guibg=#004000 guifg=fg
+set incsearch
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
 
 " easier copying to cliboard
 vnoremap == "+y
@@ -128,7 +132,7 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :Files<CR>
 
 " Formating and refsheshing files
-nnoremap <F5> :e!<CR>
+" nnoremap <F5> :e!<CR>
 nnoremap vv mm vip= `m
 nnoremap <C-f> mm gg=G `m
 autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR> `m
@@ -170,5 +174,6 @@ nnoremap 0 0^
  source ~/.config/nvim/plugins/tabline.vim
  source ~/.config/nvim/plugins/vim-java-get-set.vim
 
+ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
  let g:python_highlight_all = 1
  let g:session_autosave = 'no'
