@@ -78,14 +78,14 @@ source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source $ZSH_PLUGINS_HOME/conda-zsh-completion/conda-zsh-completion.plugin.zsh
 source $ZSH_PLUGINS_HOME/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+# source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 
-# plugins configuration
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( anaconda context  dir vcs )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-# POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
+# # plugins configuration
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( anaconda context  dir vcs )
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+# # POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
