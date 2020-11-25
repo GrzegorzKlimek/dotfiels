@@ -128,6 +128,3 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias mount-lolscrapper='sshfs grzesiek@isl.us.to:/home/grzesiek/repos/lolscrapper ~/Documents/repos/remote/lolscrapper'
-alias e='editor'
-alias v='vim'
-

@@ -41,12 +41,13 @@ bindsym $mod2+q kill
 bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
 
 #scratchpad
-bindsym $mod2+Shift+m move scratchpad
-bindsym $mod2+m scratchpad show
-bindsym $mod2+w [class="kwrite"] scratchpad show
-bindsym $mod2+k [class="kcolorchooser"] scratchpad show
-bindsym $mod2+a [class="Pavucontrol"] scratchpad show
-bindsym $mod2+c [window_role="gnome-calculator"] scratchpad show
+bindsym $mod+$mod2+m move scratchpad
+bindsym $mod+$mod2+n scratchpad show
+bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
+bindsym $mod+$mod2+k [class="kcolorchooser"] scratchpad show
+bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
+bindsym $mod+$mod2+a [class="Pavucontrol"] scratchpad show
+bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 
 
 
@@ -123,11 +124,14 @@ bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/screnns
   no_focus [class="plasmashell" window_type="notification"] 
 
 #force some windows to floating
-for_window [title="PayPal Checkout - Mozilla Firefox"] floating enable
 for_window [window_role="gnome-calculator"] floating enable
 for_window [title="Clock"] floating enable
+for_window [title="Guake Preferences"] floating enable
+for_window [title="Notification Area"] floating enable
 for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
+for_window [class="kleopatra"] floating enable
+for_window [title="Write: (no subject) - Thunderbird"] floating enable
 for_window [class="wrapper-2.0"] floating enable
 for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable

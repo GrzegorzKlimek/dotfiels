@@ -14,7 +14,6 @@ Plug 'mkitt/tabline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'                       
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'powerline/powerline'
 Plug 'edkolev/promptline.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
 Plug 'ryanoasis/vim-devicons'
@@ -33,6 +32,7 @@ Plug 'vim-python/python-syntax'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'wincent/terminus'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 let mapleader ="z"
@@ -65,7 +65,7 @@ set mouse=a
 set autoread
 set path+=/work
 set scrolloff=999
-set cursorline
+" set cursorline
 set clipboard=unnamedplus
 set shortmess=a
 set incsearch
