@@ -19,7 +19,7 @@ font pango:Ubuntu Display 9
 title_align center
 
 #border rules
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 3
 for_window [class="Synapse"] border pixel 0
 for_window [class="krunner"] border pixel 0
 
@@ -353,7 +353,7 @@ mode "launch" {
 bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
 # defaul layout
-workspace_layout tabbed
+workspace_layout default
 
 # Pulse Audio controls
  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
