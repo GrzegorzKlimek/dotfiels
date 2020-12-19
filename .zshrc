@@ -73,10 +73,6 @@ PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 
 bindkey "\e[1;3C" forward-word
 bindkey "\e[1;3D" backward-word
@@ -87,14 +83,6 @@ source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source $ZSH_PLUGINS_HOME/conda-zsh-completion/conda-zsh-completion.plugin.zsh
 source $ZSH_PLUGINS_HOME/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-# source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-
-# # plugins configuration
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( anaconda context  dir vcs )
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-# # POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -104,21 +92,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/frezer02/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/frezer02/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/frezer02/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/frezer02/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # print neofetch on startup
 # neofetch

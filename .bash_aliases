@@ -127,3 +127,5 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias mount-lolscrapper='sshfs grzesiek@isl.us.to:/home/grzesiek/repos/lolscrapper ~/Documents/repos/remote/lolscrapper'
+alias loadnvm="source ~/scripts/helpers/load-node.sh"
+alias loadconda="source ~/scripts/helpers/load-conda.sh"
