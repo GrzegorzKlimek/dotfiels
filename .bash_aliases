@@ -84,7 +84,7 @@ alias lock-screen-and-hibernate="qdbus org.freedesktop.ScreenSaver /ScreenSaver 
 alias themes="cd /usr/share/sddm/themes"
 alias restart-plasma="kquitapp5 plasmashell && kstart5 plasmashell"
 alias start-plasma="kstart plasmashell"
-alias mount-samsunghdd="sudo mount -t  cifs -o username=pi,password=12345678,gid=frezer02,uid=frezer02 //pi/samsunghdd /media/frezer02/samsunghdd"
+alias mount-media="sudo mount -t  cifs -o username=root,password=libreelec,gid=frezer02,uid=frezer02 //pi/MEDIA/ /media/frezer02/MEDIA"
 alias import-bsd-fresh-data="rsync -av -e 'ssh -p 8822' root@freebsd:~/image_scrapping/redditScrapper/new_images/file_creation.csv $HOME_DIR/Documents/repos/python/download_chart/data/partials/data.csv"
 alias cls="clear"
 alias c="clear"

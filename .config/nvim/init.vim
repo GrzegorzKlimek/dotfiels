@@ -66,7 +66,7 @@ set autoread
 set path+=/work
 set scrolloff=999
 " set cursorline
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 set shortmess=a
 set incsearch
 :autocmd InsertEnter * set cul
@@ -74,6 +74,11 @@ set incsearch
 
 " easier copying to cliboard
 vnoremap == "+y
+noremap == "+y
+vnoremap ++ "+p
+noremap ++ "+p
+noremap <leader>p "0p 
+vnoremap <leader>p "0p 
 
 " better quotes Parenthesis handling
 inoremap {{ {<CR><BS>}<Esc>ko
@@ -151,13 +156,6 @@ nnoremap <C-Up> :resize -5 <CR>
 nnoremap <C-Left> :vertical resize +5 <CR>
 nnoremap <C-Right> :vertical resize -5 <CR>
 
-" enter command mode
-nnoremap <Space> :
-vnoremap <Space> :
-
-" easier access to registers
-nnoremap ' "
-vnoremap ' "
 
 " exit terminal mode
 tnoremap <Esc> <C-\><C-n>
