@@ -125,7 +125,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " vimrc:  edit and source shortcuts 
-nnoremap <leader>ev :e $MYVIMRC<cr>
+nnoremap <leader> :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " edid linux configs
@@ -134,7 +134,7 @@ nnoremap <leader>ei3 :e /home/frezer02/.config/i3/config<cr>
 " file explorer
 nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " Formating and refsheshing files
 " nnoremap <F5> :e!<CR>
@@ -165,12 +165,12 @@ nnoremap 0 0^
 
 " source plugin configurations
 
- source ~/.config/nvim/plugins/airline.vim
- source ~/.config/nvim/plugins/coc.vim
- source ~/.config/nvim/plugins/emmet.vim
- source ~/.config/nvim/plugins/fzf.vim
- source ~/.config/nvim/plugins/tabline.vim
- source ~/.config/nvim/plugins/vim-java-get-set.vim
+ source ~/.config/nvim/plugins-config/airline.vim
+ source ~/.config/nvim/plugins-config/coc.vim
+ source ~/.config/nvim/plugins-config/emmet.vim
+ source ~/.config/nvim/plugins-config/fzf.vim
+ source ~/.config/nvim/plugins-config/tabline.vim
+ source ~/.config/nvim/plugins-config/vim-java-get-set.vim
 
  let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
  let g:python_highlight_all = 1

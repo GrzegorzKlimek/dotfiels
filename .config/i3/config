@@ -35,7 +35,7 @@ bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
 bindsym $mod2+F4 kill
-bindsym $mod2+q kill
+bindsym $mod2+Shift+q kill
 
 #swith to last workspace
 bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
@@ -47,6 +47,7 @@ bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
 bindsym $mod+$mod2+k [class="kcolorchooser"] scratchpad show
 bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
 bindsym $mod+$mod2+a [class="Pavucontrol"] scratchpad show
+bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 
 
