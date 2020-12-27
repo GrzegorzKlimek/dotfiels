@@ -33,6 +33,8 @@ Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+Plug 'othree/xml.vim'
 call plug#end()
 
 let mapleader ="z"
@@ -80,13 +82,13 @@ noremap ++ "+p
 noremap <leader>p "0p 
 vnoremap <leader>p "0p 
 
-" better quotes Parenthesis handling
-inoremap {{ {<CR><BS>}<Esc>ko
-inoremap { {}<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap (( ()<Left>
-inoremap [[ []<Left>
+" " better quotes Parenthesis handling
+" inoremap {{ {<CR><BS>}<Esc>ko
+" inoremap { {}<Left>
+" inoremap "" ""<Left>
+" inoremap '' ''<Left>
+" inoremap (( ()<Left>
+" inoremap [[ []<Left>
 
 "create empty lines
 nnoremap <C-Space> o<Esc>k
