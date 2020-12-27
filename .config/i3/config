@@ -26,6 +26,10 @@ for_window [class="krunner"] border pixel 0
 # Set gaps
 gaps inner 10
 gaps outer 5
+bindsym $mod + plus gaps inner current plus 1
+bindsym $mod + minus gaps inner current minus 1
+bindsym $mod + Shift + plus gaps outer current plus 1
+bindsym $mod + Shift + minus gaps outer current minus 1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -34,7 +38,7 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole -e zsh
 
 # kill focused window
-bindsym $mod2+F4 kill
+bindsym $mod1+F4 kill
 bindsym $mod2+Shift+q kill
 
 #swith to last workspace
@@ -135,6 +139,8 @@ for_window [title="Guake Preferences"] floating enable
 for_window [title="Notification Area"] floating enable
 for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
+for_window [class="dolphin"] floating enable 
+for_window [class="dolphin"]  resize set 735 669
 # for_window [class="kleopatra"] floating enable
 for_window [title="Write: (no subject) - Thunderbird"] floating enable
 for_window [class="wrapper-2.0"] floating enable
@@ -337,8 +343,9 @@ mode "launch" {
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  s exec konsole --profile "bare-sh"; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
+  bindsym  s exec konsole --profile "Dark Arc"; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  # bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
+  bindsym  q exec  spotify; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  Shift+q exec konsole --profile "Profile ciemne tło" -e spt ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws10
   bindsym  d exec discord ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/goToWorkspaceWrapper $ws7
   bindsym  a exec brave-browser --app=http://isl.us.to:8529 ; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
@@ -388,15 +395,8 @@ workspace $ws9 output HDMI-1
 bindsym $mod+Shift+p exec /home/frezer02/.screenlayout/laptop-screen-only.sh
 
 
-#Autostart applications and services
-
-  #Apps
-exec flatpak run com.discordapp.Discord
-exec flatpak run com.slack.Slack
-exec thunderbird
-exec guake --hide
-
   #Services and scripts
+exec xfce4-panel
 exec slimbookbattery
 exec korgac
 exec akonadi start
@@ -410,9 +410,16 @@ exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.b
 exec /home/frezer02/scripts/disableCaps
 exec xcompmgr -c -f -n 
 exec dropbox start -i
-exec xfce4-panel
 exec nm-applet
 exec /usr/bin/unclutter
+
+#Autostart applications and services
+
+  #Apps
+# exec flatpak run com.discordapp.Discord --ignore-certificate-error
+# exec flatpak run com.slack.Slack
+# exec thunderbird
+exec guake --hide
 
 #vset wallpaper
 exec_always /home/frezer02/scripts/wallpaper-i3.sh
