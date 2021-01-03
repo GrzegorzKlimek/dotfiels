@@ -67,8 +67,6 @@ set mouse=a
 set autoread
 set path+=/work
 set scrolloff=999
-" set cursorline
-" set clipboard=unnamedplus
 set shortmess=a
 set incsearch
 :autocmd InsertEnter * set cul
@@ -81,14 +79,6 @@ vnoremap ++ "+p
 noremap ++ "+p
 noremap <leader>p "0p 
 vnoremap <leader>p "0p 
-
-" " better quotes Parenthesis handling
-" inoremap {{ {<CR><BS>}<Esc>ko
-" inoremap { {}<Left>
-" inoremap "" ""<Left>
-" inoremap '' ''<Left>
-" inoremap (( ()<Left>
-" inoremap [[ []<Left>
 
 "create empty lines
 nnoremap <C-Space> o<Esc>k

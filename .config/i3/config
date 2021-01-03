@@ -22,6 +22,8 @@ title_align center
 for_window [class=".*"] border pixel 3
 for_window [class="Synapse"] border pixel 0
 for_window [class="krunner"] border pixel 0
+for_window [class="Guake"] border pixel 0
+for_window [class="Wrapper-2.0"] border pixel 0
 
 # Set gaps
 gaps inner 10
@@ -46,6 +48,7 @@ bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh
 
 #scratchpad
 bindsym $mod+$mod2+m move scratchpad
+bindsym $mod+button3 --whole-window  move scratchpad
 bindsym $mod+$mod2+n scratchpad show
 bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
 bindsym $mod+$mod2+k [class="kcolorchooser"] scratchpad show
@@ -148,6 +151,8 @@ for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable
 for_window [title="Volume Control"] resize set 735 669
 for_window [title="About Mozilla Firefox"] floating enable
+for_window [class="systemsettings"] floating enable
+for_window [class="kwrite"] resize set 650 500
 for_window [class="kwrite"] floating enable
 for_window [class="kwrite"] resize set 650 500
 for_window [class="kwrite"] move absolute position center
@@ -409,6 +414,7 @@ exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
 exec /home/frezer02/scripts/disableCaps
 exec xcompmgr -c -f -n 
+# exec picom --vsync
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
