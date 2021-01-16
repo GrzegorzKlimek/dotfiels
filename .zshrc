@@ -1,4 +1,6 @@
-setopt histignorealldups sharehistory
+# setopt histignorealldups sharehistory
+unsetopt share_history
+
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
