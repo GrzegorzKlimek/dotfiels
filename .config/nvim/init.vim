@@ -35,9 +35,12 @@ Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
+Plug 'chrisbra/improvedft'
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
-let mapleader ="z"
+let mapleader =" "
 
 " color scheme
 colorscheme codedark
@@ -64,7 +67,6 @@ let g:coc_disable_startup_warning = 1
 set t_Co=256                    " Set if term supports 256 colors.
 set guitablabel=%N\ %f
 set mouse=a
-set autoread
 set path+=/work
 set scrolloff=999
 set shortmess=a
@@ -106,9 +108,6 @@ nnoremap vp vip
 nnoremap dp dip
 nnoremap cp cip
 nnoremap yp yip
-
-" insert mode abbreviations
-ab abbGrid div.container>div.row>div.col-*3
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv

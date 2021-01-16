@@ -28,6 +28,7 @@ for_window [class="Wrapper-2.0"] border pixel 0
 # Set gaps
 gaps inner 10
 gaps outer 5
+# smart_gaps on
 bindsym $mod + plus gaps inner current plus 1
 bindsym $mod + minus gaps inner current minus 1
 bindsym $mod + Shift + plus gaps outer current plus 1
@@ -42,6 +43,7 @@ bindsym $mod+Return exec konsole -e zsh
 # kill focused window
 bindsym $mod1+F4 kill
 bindsym $mod2+Shift+q kill
+bindsym $mod+button2 --whole-window kill
 
 #swith to last workspace
 bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
@@ -56,6 +58,7 @@ bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
 bindsym $mod+$mod2+a [class="Pavucontrol"] scratchpad show
 bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
+bindsym $mod+$mod2+t [title="translate.google.pl"] scratchpad show
 
 
 
@@ -100,6 +103,7 @@ bindsym $mod+t split v; layout tabbed
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+button1 --whole-window  floating toggle
 
 #toggle between split and tabbed
 
@@ -144,9 +148,9 @@ for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="dolphin"] floating enable 
 for_window [class="dolphin"]  resize set 735 669
-# for_window [class="kleopatra"] floating enable
-for_window [title="Write: (no subject) - Thunderbird"] floating enable
+# for_window [class="kleopatra"] floating enable for_window [title="Write: (no subject) - Thunderbird"] floating enable
 for_window [class="wrapper-2.0"] floating enable
+for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable
 for_window [title="Volume Control"] resize set 735 669

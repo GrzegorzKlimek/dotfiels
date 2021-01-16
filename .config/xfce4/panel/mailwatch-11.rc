@@ -2,7 +2,7 @@
 click_command=thunderbird
 new_messages_command=
 normal_icon=mail-mark-read
-new_mail_icon=mail
+new_mail_icon=mail-mark-unread
 log_lines=200
 show_log_status=false
 auto_open_online_doc=false
@@ -15,5 +15,5 @@ mailbox_name0=gmail
 [mailbox0]
 username=grzegorzklimek77@gmail.com
 password=X^*j2P6&6hurqjh8CK!A*rD%uC
-timeout=120
+timeout=60
 
