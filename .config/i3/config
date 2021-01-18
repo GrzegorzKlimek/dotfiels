@@ -268,6 +268,28 @@ bindsym $mod+Shift+$kws17 move container to workspace $ws17, exec /home/frezer02
 bindsym $mod+Shift+$kws18 move container to workspace $ws18, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws18
 bindsym $mod+Shift+$kws19 move container to workspace $ws19, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws19
 
+# move focused container to workspace
+bindsym $mod+Ctrl+$kws0 move container to workspace $ws1
+bindsym $mod+Ctrl+$kws2 move container to workspace $ws2
+bindsym $mod+Ctrl+$kws3 move container to workspace $ws3
+bindsym $mod+Ctrl+$kws4 move container to workspace $ws4
+bindsym $mod+Ctrl+$kws5 move container to workspace $ws5
+bindsym $mod+Ctrl+$kws6 move container to workspace $ws6
+bindsym $mod+Ctrl+$kws7 move container to workspace $ws7
+bindsym $mod+Ctrl+$kws8 move container to workspace $ws8
+bindsym $mod+Ctrl+$kws9 move container to workspace $ws9
+bindsym $mod+Ctrl+$kws10 move container to workspace $ws10
+bindsym $mod+Ctrl+$kws11 move container to workspace $ws11
+bindsym $mod+Ctrl+$kws12 move container to workspace $ws12
+bindsym $mod+Ctrl+$kws13 move container to workspace $ws13
+bindsym $mod+Ctrl+$kws14 move container to workspace $ws14
+bindsym $mod+Ctrl+$kws15 move container to workspace $ws15
+bindsym $mod+Ctrl+$kws16 move container to workspace $ws16
+bindsym $mod+Ctrl+$kws17 move container to workspace $ws17
+bindsym $mod+Ctrl+$kws18 move container to workspace $ws18
+bindsym $mod+Ctrl+$kws19 move container to workspace $ws19
+
+
 # move focused workspace between monitors
 bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Left move workspace to output left
