@@ -116,14 +116,15 @@ vnoremap > >gv
 vnoremap < <gv
 
 " vimrc:  edit and source shortcuts 
-nnoremap <leader> :e $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ev <Esc> :e $MYVIMRC<cr>
+nnoremap <leader>sv  :source $MYVIMRC<cr>
 
 " edid linux configs
 nnoremap <leader>ei3 :e /home/frezer02/.config/i3/config<cr>
 
 " file explorer
 nnoremap <C-n> :NERDTreeMirror<CR>
+nnoremap <C-c> :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 
