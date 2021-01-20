@@ -212,7 +212,7 @@ set $ws19 "6"
 assign [class="kdevelop"] $ws3
 assign [class="eclipse"]  $ws3 
 assign [class="GitKraken"] $ws4
-assign [class="Mysql-workbench-bin"] $ws4
+# assign [class="Mysql-workbench-bin"] $ws4
 assign [class="discord"] $ws7
 assign [class="Skype"] $ws7
 assign [class="Android Messages"] $ws7
