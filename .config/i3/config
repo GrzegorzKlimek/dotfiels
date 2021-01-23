@@ -269,7 +269,7 @@ bindsym $mod+Shift+$kws18 move container to workspace $ws18, exec /home/frezer02
 bindsym $mod+Shift+$kws19 move container to workspace $ws19, exec /home/frezer02/scripts/i3/moveToWorkspaceWrapper.sh $ws19
 
 # move focused container to workspace
-bindsym $mod+Ctrl+$kws0 move container to workspace $ws1
+bindsym $mod+Ctrl+$kws1 move container to workspace $ws1
 bindsym $mod+Ctrl+$kws2 move container to workspace $ws2
 bindsym $mod+Ctrl+$kws3 move container to workspace $ws3
 bindsym $mod+Ctrl+$kws4 move container to workspace $ws4
@@ -444,6 +444,7 @@ exec xcompmgr -c -f -n
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
+exec autorandr --change
 
 #Autostart applications and services
 
