@@ -127,4 +127,5 @@ alias mount-lolscrapper='sshfs grzesiek@isl.us.to:/home/grzesiek/repos/lolscrapp
 alias loadnvm="source ~/scripts/helpers/load-node.sh"
 alias loadconda="source ~/scripts/helpers/load-conda.sh"
 alias new="tmux new -s"
+alias t-session="tmux new -A -s"
 alias attach="tmux attach -t"
