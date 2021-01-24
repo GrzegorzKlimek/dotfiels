@@ -411,6 +411,9 @@ workspace_layout default
 bindcode 233 exec sudo brightnessctl -d intel_backlight s +10%
 bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 
+#clipmenu
+bindsym $mod+b exec CM_HISTLENGTH=20 clipmenu
+
 #Focus to activated window
 
 focus_on_window_activation focus
@@ -425,6 +428,7 @@ workspace $ws9 output HDMI-1
 
 bindsym $mod+Shift+p exec /home/frezer02/.screenlayout/laptop-screen-only.sh
 
+#Autostart applications and services
 
   #Services and scripts
 exec xfce4-panel
@@ -445,8 +449,7 @@ exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
 exec autorandr --change
-
-#Autostart applications and services
+exec  clipmenud
 
   #Apps
 # exec flatpak run com.discordapp.Discord --ignore-certificate-error
