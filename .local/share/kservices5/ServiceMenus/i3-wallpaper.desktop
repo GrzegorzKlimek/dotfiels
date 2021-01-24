@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+Icon=smiley-shape
+MimeType=image/*;
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=image/*;
+Actions=Seti3Wallpaper;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+Encoding=UTF-8
+
+[Desktop Action Seti3Wallpaper]
+Name=Set i3 wallpaper
+Icon=image-tiff
+Exec=rm /home/frezer02/Pictures/tapety/feh-wallpaper && ln -s %f /home/frezer02/Pictures/tapety/feh-wallpaper && /home/frezer02/scripts/wallpaper-i3.sh
