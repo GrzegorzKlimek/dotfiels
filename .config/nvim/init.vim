@@ -75,10 +75,8 @@ set incsearch
 :autocmd InsertLeave * set nocul
 
 " easier copying to cliboard
-vnoremap == "+y
-noremap == "+y
-vnoremap ++ "+p
-noremap ++ "+p
+vnoremap <C-c> "+y
+vnoremap <C-v> "+p
 noremap <leader>p "0p 
 vnoremap <leader>p "0p 
 
