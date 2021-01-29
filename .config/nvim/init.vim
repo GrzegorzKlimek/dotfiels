@@ -152,6 +152,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " line navigation
 nnoremap 0 0^
+nnoremap <leader>0 0
 
 " source plugin configurations
 
@@ -161,7 +162,6 @@ nnoremap 0 0^
  source ~/.config/nvim/plugins-config/fzf.vim
  source ~/.config/nvim/plugins-config/tabline.vim
  source ~/.config/nvim/plugins-config/vim-java-get-set.vim
-
- let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
- let g:python_highlight_all = 1
- let g:session_autosave = 'no'
+ source ~/.config/nvim/plugins-config/vim-session
+ source ~/.config/nvim/plugins-config/vimspector.vim
+ source ~/.config/nvim/plugins-config/vim-python.vim
