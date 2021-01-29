@@ -81,11 +81,12 @@ bindkey "\e[1;3C" forward-word
 bindkey "\e[1;3D" backward-word
   
 # plugins
-export ZSH_PLUGINS_HOME="$HOME/.config/zsh/plugins"
+export ZSH_PLUGINS_HOME="$HOME/.local/share/zsh/plugins" 
 source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source $ZSH_PLUGINS_HOME/conda-zsh-completion/conda-zsh-completion.plugin.zsh
 source $ZSH_PLUGINS_HOME/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# source $ZSH_PLUGINS_HOME/zsh-vi-mode/zsh-vi-mode.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
