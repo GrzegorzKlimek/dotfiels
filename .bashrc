@@ -92,7 +92,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ls='exa'
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -105,6 +105,12 @@ export JAVA_HOME="/usr/"
 export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus"
 export XDG_CURRENT_DESKTOP=KDE
 export EDITOR="vim"
+
+export CM_SELECTIONS="clipboard"
+export CM_MAX_CLIPS=100
+export CM_HISTLENGTH=10
+# export CM_OUTPUT_CLIP=0
+# export CM_DEBUG=1
 
 # run and set ssh-agent
 
