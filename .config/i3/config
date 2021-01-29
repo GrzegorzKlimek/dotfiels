@@ -49,9 +49,9 @@ bindsym $mod+button2 --whole-window kill
 bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
 
 #scratchpad
-bindsym $mod+$mod2+m move scratchpad
+bindsym $mod+$mod2+Down move scratchpad
 bindsym $mod+button3 --whole-window  move scratchpad
-bindsym $mod+$mod2+n scratchpad show
+bindsym $mod+$mod2+Up scratchpad show
 bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
 bindsym $mod+$mod2+k [class="kcolorchooser"] scratchpad show
 bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
@@ -449,7 +449,7 @@ exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
 exec autorandr --change
-exec  clipmenud
+exec  CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
 
   #Apps
 # exec flatpak run com.discordapp.Discord --ignore-certificate-error
