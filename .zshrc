@@ -73,6 +73,7 @@ setopt PROMPT_SUBST
 # PROMPT='%n in ${PWD/#$HOME/~} ${vcs_info_msg_0_} > '
 NEWLINE=$'\n'
 PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%c%{$fg[red]%}]%{$fg[green]%}${vcs_info_msg_0_} %{$reset_color%} ${NEWLINE} ~ > '
+PS2=' ~ > '
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
