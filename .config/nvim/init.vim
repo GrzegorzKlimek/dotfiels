@@ -37,6 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
@@ -114,8 +115,8 @@ vnoremap > >gv
 vnoremap < <gv
 
 " vimrc:  edit and source shortcuts 
-nnoremap <leader>ev <Esc> :e $MYVIMRC<cr>
-nnoremap <leader>sv  :source $MYVIMRC<cr>
+nnoremap <leader>en  :e $MYVIMRC<cr>
+nnoremap <leader>sn  :source $MYVIMRC<cr>
 
 " edid linux configs
 nnoremap <leader>ei3 :e /home/frezer02/.config/i3/config<cr>
