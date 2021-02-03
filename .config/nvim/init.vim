@@ -113,6 +113,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap > >gv
 vnoremap < <gv
+nnoremap <leader>o o<Esc>k
+nnoremap <leader>O O<Esc>j
 
 " vimrc:  edit and source shortcuts 
 nnoremap <leader>en  :e $MYVIMRC<cr>
