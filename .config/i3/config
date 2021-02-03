@@ -34,6 +34,10 @@ bindsym $mod + minus gaps inner current minus 1
 bindsym $mod + Shift + plus gaps outer current plus 1
 bindsym $mod + Shift + minus gaps outer current minus 1
 
+#marks
+bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+bindsym $mod+n exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
