@@ -35,6 +35,7 @@ alias efstab="sudoedit /etc/fstab"
 alias ealiases="vim ~/.bash_aliases"
 alias edns="sudoedit /etc/resolvconf/resolv.conf.d/head"
 alias ei3="vim ~/.config/i3/config"
+alias etmux="vim .tmux.conf"
 
 alias lock-screen="i3lock-fancy"
 
@@ -77,3 +78,4 @@ alias ttsession="tmux new -A -s"
 alias attach="tmux attach -t"
 
 alias poweroff="sudo poweroff"
+alias hibernate="sudo hibernate"
