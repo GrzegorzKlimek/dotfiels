@@ -50,7 +50,7 @@ bindsym $mod2+Shift+q kill
 bindsym $mod+button2 --whole-window kill
 
 #swith to last workspace
-bindsym $mod2+Tab  exec /home/frezer02/scripts/i3/back_and_forth.sh 
+bindsym $mod2+Tab workspace back_and_forth
 
 #scratchpad
 bindsym $mod+$mod2+Down move scratchpad
@@ -359,7 +359,7 @@ mode "launch" {
   bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  v  exec firefox --new-window https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  v  exec brave-browser --new-window https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
