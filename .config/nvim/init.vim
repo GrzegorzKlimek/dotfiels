@@ -118,7 +118,7 @@ nnoremap <leader>O O<Esc>j
 
 " vimrc:  edit and source shortcuts 
 nnoremap <leader>en  :e $MYVIMRC<cr>
-nnoremap <leader>sn  :source $MYVIMRC<cr>
+nnoremap <leader>sn  :source $MYVIMRC<cr> :e! <cr>
 
 " edid linux configs
 nnoremap <leader>ei3 :e /home/frezer02/.config/i3/config<cr>
@@ -160,6 +160,9 @@ nnoremap <leader>0 0
 "  some custom remaps with leader key
 nnoremap <leader>i :echo @% <CR>
 nnoremap <leader>r :e! <CR>
+nnoremap <leader>c cc<Esc>
+nnoremap <leader>t :tabnew<Esc>
+nnoremap <leader>w :tabclose<Esc>
 
 " source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim
