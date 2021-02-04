@@ -157,8 +157,11 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap 0 0^
 nnoremap <leader>0 0
 
-" source plugin configurations
+"  some custom remaps with leader key
+nnoremap <leader>i :echo @% <CR>
+nnoremap <leader>r :e! <CR>
 
+" source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/coc.vim
  source ~/.config/nvim/plugins-config/emmet.vim
