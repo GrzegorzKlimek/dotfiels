@@ -72,6 +72,7 @@ set path+=/work
 set scrolloff=999
 set shortmess=a
 set incsearch
+set lazyredraw
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
 
@@ -161,6 +162,7 @@ nnoremap <leader>0 0
 nnoremap <leader>i :echo @% <CR>
 nnoremap <leader>r :e! <CR>
 nnoremap <leader>c cc<Esc>
+nnoremap <leader>z :MaximizerToggle<Esc>
 nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
 
