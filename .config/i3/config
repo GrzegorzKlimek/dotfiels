@@ -54,12 +54,11 @@ bindsym $mod2+Tab workspace back_and_forth
 
 #scratchpad
 bindsym $mod+$mod2+Down move scratchpad
-bindsym $mod+button3 --whole-window  move scratchpad
 bindsym $mod+$mod2+Up scratchpad show
+bindsym $mod+$mod2+j move scratchpad
+bindsym $mod+$mod2+k scratchpad show
+bindsym $mod+button3 --whole-window  move scratchpad
 bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
-bindsym $mod+$mod2+k [class="kcolorchooser"] scratchpad show
-bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
-bindsym $mod+$mod2+a [class="Pavucontrol"] scratchpad show
 bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 bindsym $mod+$mod2+t [title="translate.google.pl"] scratchpad show
@@ -326,31 +325,31 @@ mode "resize" {
 }
 
 # swap windows between workspaces mode
-bindsym $mod+i exec /home/frezer02/scripts/i3/switch-mode.sh "swap"
-mode "swap" {
-    bindsym $kws1 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws1; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws2 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws2; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws3 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws3; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws4 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws5 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws5; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws6 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws6; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws7 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws7; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws8 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws8; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws9 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws9; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws10 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws10; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws11 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws11; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws12 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws12; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws13 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws13; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws14 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws14; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws15 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws15; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws16 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws16; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws17 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws17; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws18 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws18; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym $kws19 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws19; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    # back to normal: Enter or Escape
-    bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-    bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-}
+# bindsym $mod+i exec /home/frezer02/scripts/i3/switch-mode.sh "swap"
+# mode "swap" {
+#     bindsym $kws1 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws1; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws2 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws2; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws3 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws3; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws4 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws5 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws5; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws6 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws6; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws7 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws7; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws8 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws8; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws9 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws9; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws10 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws10; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws11 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws11; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws12 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws12; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws13 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws13; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws14 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws14; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws15 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws15; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws16 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws16; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws17 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws17; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws18 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws18; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym $kws19 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws19; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     # back to normal: Enter or Escape
+#     bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+#     bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+# }
 
 # launch mode
 
@@ -388,7 +387,7 @@ mode "launch" {
 bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
 # defaul layout
-workspace_layout default
+workspace_layout tabbed
 
 # Pulse Audio controls
  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
