@@ -99,4 +99,4 @@ if type brew &>/dev/null; then
 fi
 
 # print neofetch on startup
-# neofetch
+neofetch
