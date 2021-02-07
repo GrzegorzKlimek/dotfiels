@@ -1,0 +1,66 @@
+{
+    "editor.suggestSelection": "first",
+    "editor.lineNumbers": "relative",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "vim.handleKeys": {
+       "<C-b>": false,
+    },
+    "vim.normalModeKeyBindings": [
+        {
+        "before": ["<C-h>"],
+        "after": ["<C-w>", "h"]
+        },
+        {
+        "before": ["<C-l>"],
+        "after": ["<C-w>", "l"]
+        },
+        {
+        "before": ["<C-k>"],
+        "after": ["<C-w>", "k"]
+        },
+        {
+        "before": ["<C-j>"],
+        "after": ["<C-w>", "j"]
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+    ],
+    
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "J"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction"
+            ]
+        }
+    ],
+    "vim.statusBarColors.visualline": "",
+    "window.menuBarVisibility": "toggle",
+    "window.restoreWindows": "none",
+    "workbench.startupEditor": "welcomePage",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "glassit-linux.opacity": 90,
+    "stories.username": "Leia Organa_turkey",
+    "vim.vimrc.path": "/home/frezer02/.config/Code/User/.vimrc",
+    "vim.vimrc.enable": true,
+}
