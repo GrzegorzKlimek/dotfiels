@@ -36,6 +36,7 @@ alias ealiases="vim ~/.bash_aliases"
 alias edns="sudoedit /etc/resolvconf/resolv.conf.d/head"
 alias ei3="vim ~/.config/i3/config"
 alias etmux="vim .tmux.conf"
+alias sudovim="sudoedit"
 
 alias lock-screen="i3lock-fancy"
 
@@ -79,3 +80,5 @@ alias attach="tmux attach -t"
 
 alias poweroff="sudo poweroff"
 alias hibernate="sudo hibernate"
+
+alias dck-lolhub="docker run -p:3306:3306 --name lolhub-local -e MYSQL_ROOT_PASSWORD=7PeqzoDepPE6VP -d mysql:latest"
