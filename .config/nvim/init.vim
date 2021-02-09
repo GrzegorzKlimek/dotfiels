@@ -37,6 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
@@ -46,8 +47,7 @@ let mapleader =" "
 " color scheme
 colorscheme codedark
 set background=dark
-" colorscheme PaperColor
-" set background=light
+" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 
 
 set syntax=on
