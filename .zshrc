@@ -47,12 +47,6 @@ fi
 #Auto jump
  . /usr/share/autojump/autojump.zsh
 
- # set enviroment variables
-export JAVA_HOME="/usr/"
-export PATH="$HOME/scripts:$HOME/scripts/i3:$HOME/.screenlayout:$PATH:$HOME/Applications:$HOME/.local/share/kservices5/ServiceMenus:$HOME/.cargo/bin"
-export XDG_CURRENT_DESKTOP=KDE
-export EDITOR="vim"
-
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 
@@ -69,7 +63,6 @@ PS1='%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 PS2=' ~ > '
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
-
 
 bindkey "\e[1;3C" forward-word
 bindkey "\e[1;3D" backward-word
