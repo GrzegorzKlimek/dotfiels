@@ -1,3 +1,26 @@
+###############################From original bashrc##############################
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='exa --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# some more ls aliases
+alias ll='ls -lF'
+alias la='ls -alF'
+
+##############################My aliases########################################
+
+#build,compile and debug projects
 spring_profile="devonline-greg"
 HOME_DIR="/home/frezer02"
 REPOS_DIR="repos"
@@ -12,9 +35,7 @@ alias run-lolhub-full="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
 alias run-b61="mvn clean package -Pfrontend -Dmaven.test.skip=true"
 
 #other aliases
-
 alias zolta="cat $HOME_DIR/Pictures/ascii/zolta.txt"
-
 
 alias logout-plasma="qdbus org.kde.ksmserver /KSMServer logout 0 3 3"
 alias restart-plasma="kquitapp5 plasmashell && kstart5 plasmashell"
@@ -24,7 +45,6 @@ alias lock-screen-and-hibernate="qdbus org.freedesktop.ScreenSaver /ScreenSaver 
 
 alias pause-notifications="notify-send \"DUNST_COMMAND_PAUSE\""
 alias resume-notifications="notify-send \"DUNST_COMMAND_RESUME\""
-
 
 alias ebashrc="vim ~/.bashrc"
 alias ezshrc="vim ~/.zshrc"
@@ -50,7 +70,7 @@ alias prettyjson="python -m json.tool"
 alias cls="clear"
 alias c="clear"
 alias date-now="date '+%F-%T'"
-alias dotfiles-git="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias dgit="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 alias config="sudo update-alternatives --config"
 alias config-install="sudo update-alternatives --install"
@@ -64,7 +84,6 @@ alias unmount-cifs="sudo umount -a -t cifs -l"
 alias p="ping wp.pl"
 alias nr="sudo service network-manager restart"
 alias restart-dns="sudo service resolvconf restart"
-alias network-manager-restart="sudo service network-manager restart"
 
 alias io="iiyama-only.sh"
 alias lo="laptop-screen-only.sh"
