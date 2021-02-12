@@ -29,6 +29,8 @@ for_window [class="Wrapper-2.0"] border pixel 0
 gaps inner 10
 gaps outer 5
 # smart_gaps on
+# bindsym $mod + Shift + g gaps inner current toggle 0; gaps outer current toggle 0
+bindsym $mod + Shift + g gaps inner current toggle 10; gaps outer current toggle 5
 bindsym $mod + plus gaps inner current plus 1
 bindsym $mod + minus gaps inner current minus 1
 bindsym $mod + Shift + plus gaps outer current plus 1
@@ -375,6 +377,7 @@ mode "launch" {
   bindsym  q exec  spotify; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws11
   bindsym  t  exec brave-browser --app=https://www.typingclub.com ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  k  exec kwrite; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
   bindsym  i  exec firefox -ssb https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  o  exec firefox -ssb https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  u  exec firefox -ssb https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
@@ -387,7 +390,7 @@ mode "launch" {
 bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
 # defaul layout
-workspace_layout tabbed
+workspace_layout default
 
 # Pulse Audio controls
  bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
