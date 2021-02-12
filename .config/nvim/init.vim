@@ -161,10 +161,10 @@ nnoremap <leader>0 0
 "  some custom remaps with leader key
 nnoremap <leader>i :echo @% <CR>
 nnoremap <leader>r :e! <CR>
-nnoremap <leader>c cc<Esc>
 nnoremap <leader>z :MaximizerToggle<Esc>
 nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
+nnoremap <leader>cd :CocDiagnostics<Esc>
 
 " source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim
