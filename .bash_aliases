@@ -58,6 +58,8 @@ alias edns="sudoedit /etc/resolvconf/resolv.conf.d/head"
 alias ei3="vim ~/.config/i3/config"
 alias etmux="vim .tmux.conf"
 alias sudovim="sudoedit"
+alias vi="vim"
+alias e="editor"
 
 alias lock-screen="i3lock-fancy"
 

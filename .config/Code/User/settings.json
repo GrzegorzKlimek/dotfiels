@@ -2,7 +2,6 @@
     "editor.suggestSelection": "first",
     "editor.lineNumbers": "relative",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.zoomLevel": 0,
     "editor.minimap.enabled": false,
     "vim.handleKeys": {
        "<C-b>": false,
@@ -55,7 +54,6 @@
     "vim.statusBarColors.visualline": "",
     "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
-    "workbench.startupEditor": "welcomePage",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
