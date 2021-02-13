@@ -28,8 +28,6 @@ for_window [class="Wrapper-2.0"] border pixel 0
 # Set gaps
 gaps inner 10
 gaps outer 5
-# smart_gaps on
-# bindsym $mod + Shift + g gaps inner current toggle 0; gaps outer current toggle 0
 bindsym $mod + Shift + g gaps inner current toggle 10; gaps outer current toggle 5
 bindsym $mod + plus gaps inner current plus 1
 bindsym $mod + minus gaps inner current minus 1
@@ -65,8 +63,6 @@ bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 bindsym $mod+$mod2+t [title="translate.google.pl"] scratchpad show
 
-
-
 # change focus
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -79,7 +75,6 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
@@ -90,9 +85,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
 bindsym $mod+grave focus left
-bindsym $mod+Shift+grave focus left
+bindsym $mod+Shift+grave focus right
 
 # split in horizontal orientation
 bindsym $mod+g split h
@@ -153,7 +147,6 @@ for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="dolphin"] floating enable 
 for_window [class="dolphin"]  resize set 735 669
-# for_window [class="kleopatra"] floating enable for_window [title="Write: (no subject) - Thunderbird"] floating enable
 for_window [class="wrapper-2.0"] floating enable
 for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
@@ -217,7 +210,6 @@ set $ws19 "6"
 assign [class="kdevelop"] $ws3
 assign [class="eclipse"]  $ws3 
 assign [class="GitKraken"] $ws4
-# assign [class="Mysql-workbench-bin"] $ws4
 assign [class="discord"] $ws7
 assign [class="Skype"] $ws7
 assign [class="Android Messages"] $ws7
@@ -250,7 +242,6 @@ bindsym $mod+$kws16 workspace $ws16
 bindsym $mod+$kws17 workspace $ws17
 bindsym $mod+$kws18 workspace $ws18
 bindsym $mod+$kws19 workspace $ws19
-
 
 # move focused container to workspace
 bindsym $mod+Shift+$kws1 move container to workspace $ws1, workspace $ws1
@@ -325,33 +316,6 @@ mode "resize" {
         bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
 }
-
-# swap windows between workspaces mode
-# bindsym $mod+i exec /home/frezer02/scripts/i3/switch-mode.sh "swap"
-# mode "swap" {
-#     bindsym $kws1 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws1; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws2 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws2; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws3 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws3; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws4 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws5 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws5; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws6 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws6; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws7 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws7; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws8 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws8; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws9 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws9; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws10 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws10; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws11 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws11; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws12 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws12; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws13 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws13; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws14 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws14; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws15 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws15; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws16 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws16; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws17 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws17; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws18 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws18; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym $kws19 exec /home/frezer02/scripts/i3/i3-swap-workspaces $ws19; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     # back to normal: Enter or Escape
-#     bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-#     bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-# }
 
 # launch mode
 
@@ -437,7 +401,6 @@ exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
 exec /home/frezer02/scripts/disableCaps
 exec xcompmgr -c -f -n 
-# exec picom --vsync
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
@@ -445,9 +408,6 @@ exec autorandr --change
 exec  CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
 
   #Apps
-# exec flatpak run com.discordapp.Discord --ignore-certificate-error
-# exec flatpak run com.slack.Slack
-# exec thunderbird
 exec guake --hide
 
 #vset wallpaper
