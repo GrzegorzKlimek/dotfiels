@@ -37,7 +37,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'maxbrunsfeld/vim-yankstack'
+" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
@@ -166,8 +166,8 @@ nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
 
-" disable S in visual mode to not conflict with surround plugin
-" vnoremap S <Nop>
+" clear register command
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 
 " source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim
