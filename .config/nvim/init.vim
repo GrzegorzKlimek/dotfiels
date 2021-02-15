@@ -166,6 +166,9 @@ nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
 
+" disable S in visual mode to not conflict with surround plugin
+" vnoremap S <Nop>
+
 " source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/coc.vim

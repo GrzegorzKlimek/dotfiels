@@ -78,7 +78,6 @@ alias config="sudo update-alternatives --config"
 alias config-install="sudo update-alternatives --install"
 alias config-remove="sudo update-alternatives --remove"
 alias show-manually-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
-alias apt="sudo apt"
 
 alias mount-media="sudo mount -t  cifs -o username=root,password=libreelec,gid=frezer02,uid=frezer02 //pi/MEDIA/ /media/frezer02/MEDIA"
 alias unmount-cifs="sudo umount -a -t cifs -l"
@@ -106,3 +105,7 @@ alias poweroff="sudo poweroff"
 alias hibernate="sudo hibernate"
 
 alias dck-lolhub="docker run -p:3306:3306 --name lolhub-local -e MYSQL_ROOT_PASSWORD=7PeqzoDepPE6VP -d mysql:latest"
+
+alias btc="curl pln.rate.sx/btc"
+alias xmr="curl pln.rate.sx/xmr"
+alias crypto="curl pln.rate.sx"

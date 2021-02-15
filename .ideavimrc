@@ -48,7 +48,6 @@ nnoremap gr :action FindUsages<CR>
 nnoremap <C-P> :action GotoFile<CR>
 nnoremap <C-a>j :action ActivateTerminalToolWindow<CR>
 nnoremap <C-a>h :action ActivateProjectToolWindow<CR>
-nnoremap rn :action RemoteHostView.Rename
 
 " plugins
 set commentary

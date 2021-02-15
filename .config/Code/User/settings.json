@@ -31,6 +31,14 @@
                 "editor.action.indentLines"
             ]
         },
+        {
+            "before": ["<Space>", "%"],
+            "commands": [
+              {
+                "command": "editor.emmet.action.matchTag"
+              }
+            ]
+          }
     ],
     
     "vim.visualModeKeyBindings": [
