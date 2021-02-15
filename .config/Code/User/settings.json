@@ -3,6 +3,7 @@
     "editor.lineNumbers": "relative",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.minimap.enabled": false,
+    "vim.leader": " ",
     "vim.handleKeys": {
        "<C-b>": false,
     },

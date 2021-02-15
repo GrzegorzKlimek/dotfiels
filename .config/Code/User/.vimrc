@@ -1,9 +1,8 @@
-let mapleader =" "
 " easier copying to cliboard
 vnoremap <C-c> "+y
 vnoremap <C-v> "+p
-noremap <Space>p "0p 
-vnoremap <Space>p "0p 
+noremap <leader>p "0p 
+vnoremap <leader>p "0p 
 
 " manipulate words and parenthesis
 nnoremap cw ciw
@@ -27,19 +26,19 @@ nnoremap dp dip
 nnoremap cp cip
 nnoremap yp yip
 
-nnoremap <Space>o o<Esc>k
-nnoremap <Space>O O<Esc>j
+nnoremap <leader>o o<Esc>k
+nnoremap <leader>O O<Esc>j
 vnoremap > >gv
 vnoremap < <gv
 
 
 " line navigation
 nnoremap 0 0^
-nnoremap <Space>0 0
+nnoremap <leader>0 0
 
 "  some custom remaps with leader key
-nnoremap <Space>i :echo @% <CR>
-nnoremap <Space>r :e! <CR>
-nnoremap <Space>c cc<Esc>
-noremap <Space>p "0p 
-vnoremap <Space>p "0p 
+nnoremap <leader>i :echo @% <CR>
+nnoremap <leader>r :e! <CR>
+nnoremap <leader>c cc<Esc>
+noremap <leader>p "0p 
+vnoremap <leader>p "0p 
