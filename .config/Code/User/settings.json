@@ -61,7 +61,6 @@
         }
     ],
     "vim.statusBarColors.visualline": "",
-    "window.menuBarVisibility": "toggle",
     "window.restoreWindows": "none",
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
