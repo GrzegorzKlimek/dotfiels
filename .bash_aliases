@@ -107,6 +107,7 @@ alias hibernate="sudo hibernate"
 alias dck-lolhub="docker run -p:3306:3306 --name lolhub-local -e MYSQL_ROOT_PASSWORD=7PeqzoDepPE6VP -d mysql:latest"
 
 alias btc="curl pln.rate.sx/btc"
+alias 1btc="curl pln.rate.sx/1BTC"
 alias xmr="curl pln.rate.sx/xmr"
 alias crypto="curl pln.rate.sx"
 
@@ -116,3 +117,6 @@ alias ffi="flatpak install"
 alias sar="sudo apt remove"
 alias ssr="sudo snap remove"
 alias ffr="flatpak remove"
+
+alias git-amend="git add -u && git commit --amend --no-edit"
+alias git-commit="git add -u && git commit"
