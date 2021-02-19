@@ -3,6 +3,7 @@ call plug#begin("~/.local/share/nvim/plugged")
 Plug 'gioele/vim-autoswap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 Plug 'w0ng/vim-hybrid'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'xolox/vim-misc'
@@ -37,7 +38,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
@@ -62,6 +62,8 @@ set noswapfile
 set nohlsearch
 set smarttab
 set smartindent
+set cursorline
+" set cursorcolumn
 set autoindent
 set autoread
 let g:coc_disable_startup_warning = 1
@@ -108,6 +110,16 @@ nnoremap vp vip
 nnoremap dp dip
 nnoremap cp cip
 nnoremap yp yip
+
+" add surrouning to current word
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
+nnoremap <leader>) viw<esc>a)<esc>bi(<esc>lel
+nnoremap <leader>] viw<esc>a]<esc>bi[<esc>lel
+nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
+nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
+nnoremap <leader>} viw<esc>a}<esc>bi{<esc>lel
 
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
@@ -173,7 +185,7 @@ command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | 
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/coc.vim
  source ~/.config/nvim/plugins-config/emmet.vim
- source ~/.config/nvim/plugins-config/fzf.vim
+ " source ~/.config/nvim/plugins-config/fzf.vim
  source ~/.config/nvim/plugins-config/tabline.vim
  source ~/.config/nvim/plugins-config/vim-java-get-set.vim
  source ~/.config/nvim/plugins-config/vim-session
