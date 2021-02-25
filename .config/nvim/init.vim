@@ -141,6 +141,18 @@ nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-c> :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :BLines<CR>
+nnoremap <leader>l :Lines<CR>
+nnoremap <leader>g :Rg<CR>
+
+"  some custom remaps with leader key
+nnoremap <leader>i :echo @% <CR>
+nnoremap <leader>r :e! <CR>
+nnoremap <leader>z :MaximizerToggle<Esc>
+nnoremap <leader>t :tabnew<Esc>
+nnoremap <leader>w :tabclose<Esc>
+nnoremap <leader>cd :CocDiagnostics<Esc>
 
 " Formating and refsheshing files
 " nnoremap <F5> :e!<CR>
@@ -170,14 +182,6 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap 0 0^
 nnoremap <leader>0 0
 
-"  some custom remaps with leader key
-nnoremap <leader>i :echo @% <CR>
-nnoremap <leader>r :e! <CR>
-nnoremap <leader>z :MaximizerToggle<Esc>
-nnoremap <leader>t :tabnew<Esc>
-nnoremap <leader>w :tabclose<Esc>
-nnoremap <leader>cd :CocDiagnostics<Esc>
-
 " clear register command
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 
@@ -185,7 +189,7 @@ command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | 
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/coc.vim
  source ~/.config/nvim/plugins-config/emmet.vim
- " source ~/.config/nvim/plugins-config/fzf.vim
+ source ~/.config/nvim/plugins-config/fzf.vim
  source ~/.config/nvim/plugins-config/tabline.vim
  source ~/.config/nvim/plugins-config/vim-java-get-set.vim
  source ~/.config/nvim/plugins-config/vim-session
