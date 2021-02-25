@@ -146,6 +146,7 @@ for_window [title="Notification Area"] floating enable
 for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="dolphin"] floating enable 
+for_window [class="plasma.emojier"] floating enable 
 for_window [class="dolphin"]  resize set 735 669
 for_window [class="wrapper-2.0"] floating enable
 for_window [class="xfce4-panel"] floating enable
@@ -285,7 +286,6 @@ bindsym $mod+Ctrl+$kws17 move container to workspace $ws17
 bindsym $mod+Ctrl+$kws18 move container to workspace $ws18
 bindsym $mod+Ctrl+$kws19 move container to workspace $ws19
 
-
 # move focused workspace between monitors
 bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+Ctrl+Left move workspace to output left
@@ -312,6 +312,7 @@ mode "resize" {
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
+        bindsym m  resize set 1025 679 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         # back to normal: Enter or Escape
         bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -369,7 +370,7 @@ bindcode 233 exec sudo brightnessctl -d intel_backlight s +10%
 bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 
 #clipmenu
-bindsym $mod+comma exec CM_HISTLENGTH=20 clipmenu
+bindsym $mod+comma exec CM_HISTLENGTH=20 CM_LAUNCHER=dmenu clipmenu
 
 #Focus to activated window
 
