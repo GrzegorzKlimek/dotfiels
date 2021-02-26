@@ -152,6 +152,7 @@ nnoremap <leader>r :e! <CR>
 nnoremap <leader>z :MaximizerToggle<Esc>
 nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
+nnoremap <leader>q :q<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
 
 " Formating and refsheshing files

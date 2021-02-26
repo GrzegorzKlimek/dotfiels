@@ -108,6 +108,7 @@ alias dck-lolhub="docker run -p:3306:3306 --name lolhub-local -e MYSQL_ROOT_PASS
 alias btc="curl pln.rate.sx/btc"
 alias 1btc="curl pln.rate.sx/1BTC"
 alias xmr="curl pln.rate.sx/xmr"
+alias 1xmr="curl pln.rate.sx/1XMR"
 alias crypto="curl pln.rate.sx"
 
 alias sai="sudo apt install"

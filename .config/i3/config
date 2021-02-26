@@ -36,7 +36,7 @@ bindsym $mod + Shift + minus gaps outer current minus 1
 
 #marks
 bindsym $mod+m exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
-bindsym $mod+n exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+bindsym $mod+Escape exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -106,7 +106,9 @@ bindsym $mod+Shift+button1 --whole-window  floating toggle
 
 #toggle between split and tabbed
 
-bindsym $mod+Escape layout toggle  tabbed splith splitv
+bindsym $mod+u layout splith
+bindsym $mod+y layout splitv
+bindsym $mod+i layout tabbed
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+f focus mode_toggle
@@ -313,6 +315,8 @@ mode "resize" {
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
         bindsym m  resize set 1025 679 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+        bindsym s  resize set 644 493 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+        bindsym b  resize set 1403 793 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         # back to normal: Enter or Escape
         bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
         bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -401,13 +405,13 @@ exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
 exec /home/frezer02/scripts/disableCaps
-exec /home/frezer02/scripts/remaps.sh
+exec /home/frezer02/scripts/fastkeys.sh
 exec xcompmgr -c -f -n 
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
 exec autorandr --change
-exec  CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
+exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
 
   #Apps
 exec guake --hide
