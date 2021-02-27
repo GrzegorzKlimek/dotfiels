@@ -38,7 +38,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 

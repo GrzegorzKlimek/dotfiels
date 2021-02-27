@@ -416,8 +416,8 @@ exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
   #Apps
 exec guake --hide
 
-#vset wallpaper
-exec_always /home/frezer02/scripts/wallpaper-i3.sh
+#set wallpaper
+exec_always sleep 3 && /home/frezer02/scripts/wallpaper-i3.sh
 
 ## set default values in temporary files
 exec echo "" > /tmp/updates-genmon
