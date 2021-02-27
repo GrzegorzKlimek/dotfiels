@@ -61,7 +61,7 @@ bindsym $mod+button3 --whole-window  move scratchpad
 bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
 bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
-bindsym $mod+$mod2+t [title="translate.google.pl"] scratchpad show
+bindsym $mod+$mod2+t [title="Tłumacz Google"] scratchpad show
 
 # change focus
 bindsym $mod+Left focus left
@@ -154,6 +154,7 @@ for_window [class="wrapper-2.0"] floating enable
 for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable
+for_window [title="Tłumacz Google"] floating enable
 for_window [title="Volume Control"] resize set 735 669
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [class="systemsettings"] floating enable
@@ -345,12 +346,11 @@ mode "launch" {
   # bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  q exec  spotify; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws11
-  bindsym  t  exec brave-browser --app=https://www.typingclub.com ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  k  exec kwrite; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym  i  exec firefox -ssb https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  o  exec firefox -ssb https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  u  exec firefox -ssb https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  m  exec firefox -ssb https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   # back to normal: Enter or Escape
   bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
@@ -404,7 +404,7 @@ exec krunner -d
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
-exec /home/frezer02/scripts/disableCaps
+exec /home/frezer02/scripts/disableCaps.sh
 exec /home/frezer02/scripts/fastkeys.sh
 exec xcompmgr -c -f -n 
 exec dropbox start -i
@@ -417,7 +417,7 @@ exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
 exec guake --hide
 
 #set wallpaper
-exec_always sleep 3 && /home/frezer02/scripts/wallpaper-i3.sh
+exec_always /home/frezer02/scripts/wallpaper-i3.sh
 
 ## set default values in temporary files
 exec echo "" > /tmp/updates-genmon
