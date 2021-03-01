@@ -59,6 +59,7 @@ bindsym $mod+$mod2+j move scratchpad
 bindsym $mod+$mod2+k scratchpad show
 bindsym $mod+button3 --whole-window  move scratchpad
 bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
+bindsym $mod+$mod2+p [class="Bitwarden"] scratchpad show
 bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 bindsym $mod+$mod2+t [title="Tłumacz Google"] scratchpad show
@@ -158,6 +159,7 @@ for_window [title="Tłumacz Google"] floating enable
 for_window [title="Volume Control"] resize set 735 669
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [class="systemsettings"] floating enable
+for_window [class="Bitwarden"] floating enable
 for_window [class="kwrite"] resize set 650 500
 for_window [class="kwrite"] floating enable
 for_window [class="kwrite"] resize set 650 500
@@ -224,7 +226,6 @@ assign [class="Mailspring"] $ws9
 assign [class="Thunderbird"] $ws9
 assign [class="kmail"] $ws9
 for_window [class="Spotify"] move to workspace $ws10 
-assign [class="Bitwarden"] $ws11
 
 # switch to workspace
 bindsym $mod+$kws1 workspace $ws1
