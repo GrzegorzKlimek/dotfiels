@@ -25,21 +25,25 @@ nnoremap dp dip
 nnoremap cp cip
 nnoremap yp yip
 
+" easier copying to cliboard
+vnoremap <C-c> "+y
+vnoremap <C-v> "+p
+noremap <leader>p "0p 
+vnoremap <leader>p "0p 
+
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap > >gv
 vnoremap < <gv
+nnoremap <leader>o o<Esc>k
+nnoremap <leader>O O<Esc>j
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" enter command mode
-nnoremap <Space> :
-vnoremap <Space> :
 
 nnoremap 0 0^
 
