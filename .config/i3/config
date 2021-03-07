@@ -94,12 +94,14 @@ bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+v focus left; split v;focus right; move left
 
 # next window will be tabbed to current
 bindsym $mod+t split v; layout tabbed
+bindsym $mod+Shift+t focus left; split v; layout tabbed; focus right; move left
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
