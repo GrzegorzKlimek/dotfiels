@@ -78,6 +78,7 @@ alias config-install="sudo update-alternatives --install"
 alias config-remove="sudo update-alternatives --remove"
 alias show-manually-installed="comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)"
 
+alias mount-mng="sudo mount -t  cifs -o username=root,password=libreelec,gid=frezer02,uid=frezer02 //pi/WD500N/ /media/frezer02/MnG"
 alias mount-media="sudo mount -t  cifs -o username=root,password=libreelec,gid=frezer02,uid=frezer02 //pi/MEDIA/ /media/frezer02/MEDIA"
 alias mount-vianova="curlftpfs daxrcokbom:Stachu_klimek_16@s127.cyber-folks.pl /media/frezer02/vianova"
 alias unmount-cifs="sudo umount -a -t cifs -l"
