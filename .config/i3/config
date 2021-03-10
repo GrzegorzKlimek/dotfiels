@@ -383,7 +383,7 @@ exec slimbookbattery
 exec korgac
 exec akonadi start
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
-exec /usr/bin/dunst
+exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec klipper
 exec krunner -d
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
