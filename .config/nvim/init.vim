@@ -142,7 +142,9 @@ nnoremap <C-c> :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>f :Files<CR>
-nnoremap <leader>b :BLines<CR>
+" nnoremap <leader>bl :BLines<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>m :Marks<CR>
 nnoremap <leader>l :Lines<CR>
 nnoremap <leader>g :Rg<CR>
 
