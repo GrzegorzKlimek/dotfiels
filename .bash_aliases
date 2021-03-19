@@ -21,15 +21,15 @@ alias la='ls -alF'
 ##############################My aliases########################################
 
 #build,compile and debug projects
-spring_profile="devonline-greg"
+spring_profile="devonline-grzesiek"
 HOME_DIR="/home/frezer02"
 REPOS_DIR="repos"
 alias tunnel-spotik="ssh -L 3700:10.0.0.20:3306 -L 9200:10.0.0.21:9200 -L 9300:10.0.0.21:9300 grzegorz@bot.spotik.bot1984.net"
 alias run-bookbot="mvn clean spring-boot:run -Dspring-boot.run.profiles=$spring_profile"
-alias run-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=devonline-grzesiek,frontend -Dfrontend"
+alias run-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend"
 alias run-lolhub-local="mvn spring-boot:run -Dspring-boot.run.profiles=dev-grzesiek,frontend -Dfrontend"
-alias debug-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=dev,frontend -Dfrontend -P debug"
-alias debug-lolhub-devonline="mvn spring-boot:run -Dspring-boot.run.profiles=devonline-grzesiek,frontend -Dfrontend -P debug"
+alias debug-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
+alias debug-lolhub-devonline="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
 alias debug-bookbot="mvnDebug clean spring-boot:run -Dspring-boot.run.profiles=$spring_profile"
 alias deploy-bookbot="cp target/bookbot-0.1.war root@readow:/opt/tomcat/apache-tomcat-8.5.8/webapps/bookbot.war"
 alias run-lolhub-full="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
