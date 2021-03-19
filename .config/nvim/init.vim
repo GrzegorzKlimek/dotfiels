@@ -154,6 +154,7 @@ nnoremap <leader>t :tabnew<Esc>
 nnoremap <leader>w :tabclose<Esc>
 nnoremap <leader>q :q<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
+nnoremap <leader>ca :CocAction<Esc>
 nnoremap <leader><space> a<space><Esc>h
 
 " Formating and refsheshing files
