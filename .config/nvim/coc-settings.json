@@ -1,5 +1,7 @@
 {
   "java.trace.server": "verbose",
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-  "java.format.settings.url": "/home/frezer02/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
+  "java.format.settings.url": "/home/frezer02/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml",
+  "suggest.noselect": false,
+  "suggest.fixInsertedWord": false
 }
