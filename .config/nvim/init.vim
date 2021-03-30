@@ -36,7 +36,10 @@ Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
-Plug 'chrisbra/improvedft'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'rainglow/vim'
+Plug 'mhinz/vim-startify'
+" Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
 " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
@@ -49,6 +52,8 @@ colorscheme codedark
 set background=dark
 " autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 
+" gui options 
+set guifont=DejaVu\ Sans\ Mono:h10
 
 set syntax=on
 set number
@@ -126,6 +131,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap > >gv
 vnoremap < <gv
+vnoremap <leader>l <gv
 nnoremap <leader>o o<Esc>k
 nnoremap <leader>O O<Esc>j
 
@@ -187,6 +193,16 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap 0 0^
 nnoremap <leader>0 0
 
+" restore cursor position after yank
+augroup yank_restore_cursor
+    autocmd!
+    autocmd VimEnter,CursorMoved *
+        \ let s:cursor = getpos('.')
+    autocmd TextYankPost *
+        \ if v:event.operator ==? 'y' |
+            \ call setpos('.', s:cursor) |
+        \ endif
+
 " clear register command
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 
@@ -200,3 +216,4 @@ command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | 
  source ~/.config/nvim/plugins-config/vim-session
  source ~/.config/nvim/plugins-config/vimspector.vim
  source ~/.config/nvim/plugins-config/vim-python.vim
+ source ~/.config/nvim/plugins-config/startify.vim
