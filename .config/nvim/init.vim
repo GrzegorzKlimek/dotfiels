@@ -89,6 +89,8 @@ vnoremap <C-v> "+p
 noremap <leader>p "0p 
 vnoremap <leader>p "0p 
 
+" select all
+noremap <C-a> ggVG
 "create empty lines
 nnoremap <C-Space> o<Esc>k
 " works only in graphical vim
@@ -111,10 +113,6 @@ nnoremap v' vi'
 nnoremap d' di'
 nnoremap c' ci'
 nnoremap y' yi'
-nnoremap vp vip
-nnoremap dp dip
-nnoremap cp cip
-nnoremap yp yip
 
 " add surrouning to current word
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
