@@ -147,6 +147,7 @@ bindsym $mod+$mod2+s exec spectacle -b -c &  spectacle -f  -o ~/Pictures/screnns
 for_window [window_role="gnome-calculator"] floating enable
 for_window [title="Clock"] floating enable
 for_window [title="Guake Preferences"] floating enable
+for_window [title="Separator"]  floating enable
 for_window [title="Notification Area"] floating enable
 for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
