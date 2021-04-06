@@ -13,6 +13,7 @@ Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'puremourning/vimspector'
 Plug 'vim-airline/vim-airline'                       
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/promptline.vim'
@@ -30,7 +31,6 @@ Plug 'honza/vim-snippets'
 Plug 'tomasiser/vim-code-dark'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-python/python-syntax'
-Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
@@ -39,9 +39,7 @@ Plug 'othree/xml.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rainglow/vim'
 Plug 'mhinz/vim-startify'
-" Plug 'chrisbra/improvedft'
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
@@ -236,6 +234,7 @@ tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
 " Terminal go back to normal mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
+
 
 " source plugin configurations
  source ~/.config/nvim/plugins-config/airline.vim

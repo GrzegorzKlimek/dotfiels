@@ -153,6 +153,7 @@ for_window [title="Add New Items"] floating enable
 for_window [class="kinfocenter"] floating enable
 for_window [class="plasma.emojier"] floating enable 
 for_window [class="wrapper-2.0"] floating enable
+for_window [class="gwenview"] floating enable
 for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
 for_window [title="Volume Control"] floating enable
