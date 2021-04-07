@@ -69,4 +69,13 @@
     "stories.username": "Leia Organa_turkey",
     "vim.vimrc.path": "/home/frezer02/.config/Code/User/.vimrc",
     "vim.vimrc.enable": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.startupEditor": "newUntitledFile",
+    // "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
 }
