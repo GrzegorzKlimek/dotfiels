@@ -42,6 +42,14 @@
         },
         {
             "before": [
+                "r", "n"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
                 "<C-w>", "L"
             ],
             "commands": [
