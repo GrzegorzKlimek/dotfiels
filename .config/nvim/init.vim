@@ -48,10 +48,10 @@ let mapleader =" "
 " color scheme
 colorscheme codedark
 set background=dark
-" autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
 
 " gui options 
-set guifont=DejaVu\ Sans\ Mono:h11
+set guifont=DejaVu\ Sans\ Mono:h10
+" set guifont=JetBrainsMono\ Nerd\ Font:h11
 
 set syntax=on
 set number
