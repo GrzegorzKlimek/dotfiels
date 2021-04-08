@@ -33,6 +33,22 @@
             ]
         },
         {
+            "before": [
+                "<C-w>", "K"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToPreviousGroup"
+            ]
+        },
+        {
+            "before": [
+                "<C-w>", "L"
+            ],
+            "commands": [
+                "workbench.action.moveEditorToNextGroup"
+            ]
+        },
+        {
             "before": ["<Space>", "%"],
             "commands": [
               {
@@ -78,4 +94,6 @@
     "workbench.startupEditor": "newUntitledFile",
     // "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+
 }
