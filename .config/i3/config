@@ -360,6 +360,18 @@ mode "launch" {
 
 bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
 
+# display mode
+mode "display" {
+
+  bindsym i exec /home/frezer02/.screenlayout/iiyama-only.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym s exec /home/frezer02/.screenlayout/sc-resolution.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym l exec /home/frezer02/.screenlayout/laptop-screen-only.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym d exec /home/frezer02/.screenlayout/dual-monitors.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+}
+bindsym $mod+semicolon exec /home/frezer02/scripts/i3/switch-mode.sh "display"
+
 # swap workspaces
 bindsym $mod+b exec i3-input -F 'exec /home/frezer02/scripts/i3/i3-swap-workspaces %s' -l 1 -P 'Swap windows with workspace: '
 
