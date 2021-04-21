@@ -30,7 +30,7 @@ alias run-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile
 alias run-lolhub-local="mvn spring-boot:run -Dspring-boot.run.profiles=dev-grzesiek,frontend -Dfrontend"
 alias debug-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
 alias debug-lolhub-devonline="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
-alias debug-bookbot="mvnDebug clean spring-boot:run -Dspring-boot.run.profiles=$spring_profile"
+alias debug-bookbot="mvnDebug clean spring-boot:run -Dspring-boot.run.profiles=devonline-greg"
 alias deploy-bookbot="cp target/bookbot-0.1.war root@readow:/opt/tomcat/apache-tomcat-8.5.8/webapps/bookbot.war"
 alias run-lolhub-full="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
 alias run-b61="mvn clean package -Pfrontend -Dmaven.test.skip=true"

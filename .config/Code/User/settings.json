@@ -103,6 +103,5 @@
     // "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "editor.scrollbar.verticalScrollbarSize": 0,
-    "window.zoomLevel": -1,
 
 }
