@@ -103,5 +103,14 @@
     // "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "editor.scrollbar.verticalScrollbarSize": 0,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
 
 }
