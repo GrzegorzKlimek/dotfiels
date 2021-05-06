@@ -31,9 +31,10 @@ alias run-lolhub-local="mvn spring-boot:run -Dspring-boot.run.profiles=dev-grzes
 alias debug-lolhub="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
 alias debug-lolhub-devonline="mvn spring-boot:run -Dspring-boot.run.profiles=$spring_profile,frontend -Dfrontend -P debug"
 alias debug-bookbot="mvnDebug clean spring-boot:run -Dspring-boot.run.profiles=devonline-greg"
-alias deploy-bookbot="cp target/bookbot-0.1.war root@readow:/opt/tomcat/apache-tomcat-8.5.8/webapps/bookbot.war"
+alias deploy-bookbot="mvn clean package -Dmaven.test.skip=true && scp -r target/bookbot-0.1.war readow:/opt/tomcat/apache-tomcat-8.5.8/webapps/bookbot.war"
 alias run-lolhub-full="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
 alias run-b61="mvn clean package -Pfrontend -Dmaven.test.skip=true"
+alias link-lolscout-data="ln -s /media/frezer02/7D3CDB1B28552965/Data/lolscout/data data"
 
 #other aliases
 alias zolta="cat $HOME_DIR/Pictures/ascii/zolta.txt"
@@ -135,3 +136,4 @@ alias vim-be-good="docker run -it --rm brandoncc/vim-be-good:stable"
 alias sync-redditScrapper="rsync -rav src/ readow:/opt/java/redditScrapper/src"
 
 alias bat="batcat"
+alias cat='bat --paging=never'

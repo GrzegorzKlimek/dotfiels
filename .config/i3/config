@@ -193,7 +193,10 @@ for_window [class="knotes"] floating enable
 for_window [class="kdeconnect.app"] floating enable
 for_window [class="yakuake"] floating enable
 for_window [class="yakuake"] border 0pixel
-for_window [class="yakuake"]  move position 0 [px] 0 [px]
+for_window [title="About Mozilla Firefox"] floating enable
+# for_window [title="Welcome to PyCharm"]  floating enable
+# for_window [title="Welcome to PyCharm"]  resize set 650 500
+for_window [title="win0"]  floating enable
 
 #declare workspaces variables
 
