@@ -64,8 +64,8 @@ PS2=' ~ > '
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
-bindkey "\e[1;3C" forward-word
-bindkey "\e[1;3D" backward-word
+bindkey "\e[1;5D" backward-word
+bindkey "\e[1;5C" forward-word
   
 # plugins
 export ZSH_PLUGINS_HOME="$HOME/.local/share/zsh/plugins" 
