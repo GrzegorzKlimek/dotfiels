@@ -62,7 +62,7 @@ alias ei3="vim ~/.config/i3/config"
 alias etmux="vim .tmux.conf"
 alias sudovim="sudoedit"
 alias svim="sudoedit"
-# alias vi="vim"
+alias vim="nvim"
 alias e="editor"
 
 alias lock-screen="i3lock-fancy"
