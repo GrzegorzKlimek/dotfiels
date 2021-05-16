@@ -137,3 +137,5 @@ alias sync-redditScrapper="rsync -rav src/ readow:/opt/java/redditScrapper/src"
 
 alias bat="batcat"
 alias cat='bat --paging=never'
+
+alias moonlander-firmare-update="wally-cli ~/Downloads/firm.bin"
