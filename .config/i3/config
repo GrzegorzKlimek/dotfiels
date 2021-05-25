@@ -351,7 +351,7 @@ mode "launch" {
   bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  c exec chromium-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  c exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
