@@ -42,6 +42,17 @@ bindsym $mod+$mod2+Down move scratchpad
 bindsym $mod+$mod2+Up scratchpad show
 bindsym $mod+button3 --whole-window  move scratchpad
 
+bindsym $mod+$mod2+0 [con_mark="0"] focus
+bindsym $mod+$mod2+1 [con_mark="1"] focus
+bindsym $mod+$mod2+2 [con_mark="2"] focus
+bindsym $mod+$mod2+3 [con_mark="3"] focus
+bindsym $mod+$mod2+4 [con_mark="4"] focus
+bindsym $mod+$mod2+5 [con_mark="5"] focus
+bindsym $mod+$mod2+6 [con_mark="6"] focus
+bindsym $mod+$mod2+7 [con_mark="7"] focus
+bindsym $mod+$mod2+8 [con_mark="8"] focus
+bindsym $mod+$mod2+9 [con_mark="9"] focus
+
 bindsym $mod+$mod2+a [con_mark="a"] focus
 bindsym $mod+$mod2+b [con_mark="b"] focus
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
