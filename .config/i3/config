@@ -179,6 +179,7 @@ for_window [class="Msgcompose"] floating enable
 for_window [class="Msgcompose"] resize enable 1025 679 
 for_window [title="Tworzenie:*"] resize enable 1025 679 
 for_window [title="Tworzenie:*"] floating enable
+for_window [title="Edycja wydarzenia:*"] floating enable
 for_window [title="Photos"] floating enable
 for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
