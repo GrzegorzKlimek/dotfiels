@@ -25,6 +25,11 @@ nnoremap dp dip
 nnoremap cp cip
 nnoremap yp yip
 
+"disable big S
+nnoremap S <Nop>
+
+let mapleader =" "
+
 " easier copying to cliboard
 vnoremap <C-c> "+y
 vnoremap <C-v> "+p
