@@ -420,6 +420,8 @@ bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 #clipmenu
 bindsym $mod+comma exec CM_HISTLENGTH=20 CM_LAUNCHER=dmenu clipmenu
 
+bindsym $mod+n exec man -k . | dmenu -l 30 | awk '{ print $1}' | xargs man -Tpdf  | zathura - 
+
 #Focus to activated window
 
 focus_on_window_activation focus
