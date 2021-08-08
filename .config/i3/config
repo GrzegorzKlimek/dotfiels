@@ -84,7 +84,7 @@ bindsym $mod+$mod2+z [con_mark="z"] focus
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole -e zsh
+bindsym $mod+Return exec alacritty -e zsh
 
 # kill focused window
 bindsym $mod1+F4 kill
@@ -154,7 +154,7 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod2+Ctrl+l exec i3lock-fancy -g
+bindsym $mod2+Ctrl+l exec  /home/frezer02/.local/bin/betterlockscreen -l dim -r $(xdpyinfo | grep dimen | awk '{print $2}')
 
 #screen shot
 bindsym Print exec spectacle -r  
@@ -191,6 +191,7 @@ for_window [class="Msgcompose"] resize enable 1025 679
 for_window [title="Tworzenie:*"] resize enable 1025 679 
 for_window [title="Tworzenie:*"] floating enable
 for_window [title="Edycja wydarzenia:*"] floating enable
+for_window [title="Nowe wydarzenie:*"] floating enable
 for_window [title="Photos"] floating enable
 for_window [class="xfce4-panel"] floating enable
 for_window [class="Haguichi"] floating enable
@@ -201,7 +202,6 @@ for_window [title="About Mozilla Firefox"] floating enable
 for_window [class="systemsettings"] floating enable
 for_window [class="Bitwarden"] floating enable
 for_window [class="kleopatra"] floating enable
-for_window [class="kleopatra"] resize set 744 594
 for_window [class="dolphin"] floating enable
 for_window [class="kwrite"] resize set 650 500
 for_window [class="kwrite"] floating enable
@@ -212,6 +212,7 @@ for_window [class="knotes"] floating enable
 for_window [class="kdeconnect.app"] floating enable
 for_window [class="yakuake"] floating enable
 for_window [class="yakuake"] border 0pixel
+for_window [class="Seahorse"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Welcome to PyCharm"] floating enable
@@ -359,7 +360,7 @@ mode "launch" {
   bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
   bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  v  workspace $ws11; exec brave-browser --new-window https://meet.google.com/sgp-yzgm-tgh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  v exec /home/frezer02/scripts/i3/meety.sh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
   bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
@@ -420,7 +421,8 @@ bindcode 232 exec sudo brightnessctl -d intel_backlight s 10%-
 #clipmenu
 bindsym $mod+comma exec CM_HISTLENGTH=20 CM_LAUNCHER=dmenu clipmenu
 
-bindsym $mod+n exec man -k . | dmenu -l 30 | awk '{ print $1}' | xargs man -Tpdf  | zathura - 
+# bindsym $mod+n exec man -k . | dmenu -l 30 | awk '{ print $1}' | xargs man -Tpdf  | zathura - 
+bindsym $mod+n exec xclip -o | tr -d '\n' |  xclip -selection c &&  notify-send "removed new lines from cliboard content"
 
 #Focus to activated window
 
@@ -458,7 +460,7 @@ exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
 exec autorandr --change
-exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=100 clipmenud
+exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=50 clipmenud
 
   #Apps
 exec guake --hide
