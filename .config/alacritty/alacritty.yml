@@ -16,7 +16,7 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 11
+  size: 8
 
 #opacity
 background_opacity: 0.9
@@ -44,6 +44,13 @@ colors:
     magenta: '#dcbdfb'
     cyan:    '#96d0ff'
     white:   '#adbac7'
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
@@ -197,7 +204,7 @@ colors:
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  #size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
