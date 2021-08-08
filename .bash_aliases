@@ -58,7 +58,7 @@ alias envim="vim ~/.config/nvim/init.vim"
 alias ehosts="sudoedit /etc/hosts"
 alias cbashrc="source ~/.bashrc"
 alias efstab="sudoedit /etc/fstab"
-alias ealacritty="vim \"+call cursor(18, 9)\" ~/.config/alacritty/alacritty.yml"
+alias ealacritty="vim ~/.config/alacritty/alacritty.yml"
 alias ealiases="vim ~/.bash_aliases"
 alias saliases="source ~/.bash_aliases"
 alias edns="sudoedit /etc/resolvconf/resolv.conf.d/head"
@@ -143,6 +143,7 @@ alias sync-redditScrapper="rsync -rav src/ readow:/opt/java/redditScrapper/src"
 
 alias bat="batcat"
 alias cat='bat --paging=never'
+alias ssh='TERM=xterm-256color ssh'
 
 alias moonlander-firmare-update="wally-cli ~/Downloads/firm.bin"
 
@@ -152,3 +153,4 @@ alias pulse-output-analog="pacmd set-default-sink alsa_output.pci-0000_00_1b.0.a
 alias finanse-time-filter="awk -F \";\" '(\$NF ~ /^.*\.07\.2021/) {s += \$3} END  {print s}'"
 alias finanse-category-filter="awk -F \";\" '(\$4 ~ /.*/ ) {s += \$3} END  {print s}'"
 alias finanse-category-and-time-filter="awk -F \";\" '(\$4 ~ /.*/ && \$NF ~ /^.*\.07\.2021/ ) {s += \$3} END  {print s}'"
+
