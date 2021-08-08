@@ -3,7 +3,7 @@
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='exa --color=auto'
+    alias ls='exa --color=auto --icons --group-directories-first'
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
 
@@ -17,6 +17,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # some more ls aliases
 alias ll='ls -lF'
 alias la='ls -alF'
+alias tree='exa --color=auto --icons --group-directories-first --tree'
 
 ##############################My aliases########################################
 
@@ -57,6 +58,7 @@ alias envim="vim ~/.config/nvim/init.vim"
 alias ehosts="sudoedit /etc/hosts"
 alias cbashrc="source ~/.bashrc"
 alias efstab="sudoedit /etc/fstab"
+alias ealacritty="vim \"+call cursor(18, 9)\" ~/.config/alacritty/alacritty.yml"
 alias ealiases="vim ~/.bash_aliases"
 alias saliases="source ~/.bash_aliases"
 alias edns="sudoedit /etc/resolvconf/resolv.conf.d/head"
@@ -74,6 +76,7 @@ alias cpwd="pwd | tr -d '\n' | copy-to-clipboard"
 alias scanrootfs="sudo ncdu  --exclude=/media --exclude=/run --exclude=/home --exclude=/tmp --exclude=/proc --exclude=/mnt /"
 alias df='df -x"squashfs"'
 alias copy-to-clipboard="xclip -selection c"
+alias paste-from-clipboard=" xclip -o -sel clip"
 alias prettyjson="python -m json.tool"
 alias cls="clear"
 alias c="clear"
@@ -92,7 +95,8 @@ alias unmount-cifs="sudo umount -a -t cifs -l"
 alias p="ping wp.pl"
 alias nr="sudo service network-manager restart"
 alias restart-dns="sudo service resolvconf restart"
-
+alias getip="ifconfig | grep -A 1 wlp | grep -o 'inet 192.168.8.[0-9]\+' | grep -o '192.168.8.[0-9]\+' | tr -d '\n' |xclip -selection c
+"
 alias io="iiyama-only.sh"
 alias lo="laptop-screen-only.sh"
 alias md="mirror-displays.sh"
@@ -141,3 +145,10 @@ alias bat="batcat"
 alias cat='bat --paging=never'
 
 alias moonlander-firmare-update="wally-cli ~/Downloads/firm.bin"
+
+alias pulse-output-hdmi="pacmd set-default-sink alsa_output.pci-0000_00_03.0.hdmi-stereo"
+alias pulse-output-analog="pacmd set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo"
+
+alias finanse-time-filter="awk -F \";\" '(\$NF ~ /^.*\.07\.2021/) {s += \$3} END  {print s}'"
+alias finanse-category-filter="awk -F \";\" '(\$4 ~ /.*/ ) {s += \$3} END  {print s}'"
+alias finanse-category-and-time-filter="awk -F \";\" '(\$4 ~ /.*/ && \$NF ~ /^.*\.07\.2021/ ) {s += \$3} END  {print s}'"
