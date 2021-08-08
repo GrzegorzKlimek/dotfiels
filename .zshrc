@@ -10,6 +10,34 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+#enable vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char 2>/dev/null
+bindkey -M menuselect 'j' vi-down-line-or-history 2>/dev/null
+bindkey -M menuselect 'k' vi-up-line-or-history 2>/dev/null
+bindkey -M menuselect 'l' vi-forward-char 2>/dev/null
+bindkey -M menuselect 'left' vi-backward-char 2>/dev/null
+bindkey -M menuselect 'down' vi-down-line-or-history 2>/dev/null
+bindkey -M menuselect 'up' vi-up-line-or-history 2>/dev/null
+bindkey -M menuselect 'right' vi-forward-char 2>/dev/null
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
@@ -83,6 +111,12 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+#functions
+
+changeFontAlacritty() {
+  sed -i "s/size: [0-9]\+/size: $1/g" .config/alacritty/alacritty.yml
+}
 
 # print neofetch on startup
 neofetch
