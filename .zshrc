@@ -112,11 +112,12 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-#functions
-
-changeFontAlacritty() {
-  sed -i "s/size: [0-9]\+/size: $1/g" .config/alacritty/alacritty.yml
-}
+# source functions
+if [ -f ~/.shell_functions ]; then
+    source ~/.shell_functions
+else
+    print "404: ~/.shell_functions not found."
+fi
 
 # print neofetch on startup
 neofetch

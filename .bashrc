@@ -122,6 +122,12 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# source functions
+if [ -f ~/.shell_functions ]; then
+    source ~/.shell_functions
+else
+    print "404: ~/.shell_functions not found."
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
