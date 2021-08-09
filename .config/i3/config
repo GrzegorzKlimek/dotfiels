@@ -57,7 +57,7 @@ bindsym $mod+$mod2+a [con_mark="a"] focus
 bindsym $mod+$mod2+b [con_mark="b"] focus
 bindsym $mod+$mod2+c [window_role="gnome-calculator"] scratchpad show
 bindsym $mod+$mod2+d [con_mark="d"] focus
-bindsym $mod+$mod2+e [instance="ranger"] scratchpad show
+bindsym $mod+$mod2+e [class="dolphin"] scratchpad show
 bindsym $mod+$mod2+f [con_mark="f"] focus
 bindsym $mod+$mod2+g [con_mark="g"] focus
 bindsym $mod+$mod2+h [con_mark="h"] focus
@@ -202,7 +202,7 @@ for_window [title="About Mozilla Firefox"] floating enable
 for_window [class="systemsettings"] floating enable
 for_window [class="Bitwarden"] floating enable
 for_window [class="kleopatra"] floating enable
-for_window [instance="ranger"] floating enable
+for_window [class="dolphin"] floating enable
 for_window [class="kwrite"] resize set 650 500
 for_window [class="kwrite"] floating enable
 for_window [class="kwrite"] resize set 650 500
@@ -213,7 +213,6 @@ for_window [class="kdeconnect.app"] floating enable
 for_window [class="yakuake"] floating enable
 for_window [class="yakuake"] border 0pixel
 for_window [class="Seahorse"] floating enable
-for_window [instance="ranger"] floating enable
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Welcome to PyCharm"] floating enable
@@ -369,7 +368,7 @@ mode "launch" {
   bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  c exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  e exec EDITOR=vim alacritty --class=ranger -e ranger   ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
