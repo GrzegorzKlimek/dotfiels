@@ -1,0 +1,50 @@
+set preview_images
+set preview_images=true
+trash
+search fon
+search loc
+delete
+search vim
+search ran
+search Pict
+search zsh
+search te
+search Doc
+search re
+search elec
+search config
+search range
+q
+search rang
+search_inc 
+find spo
+search 
+find np
+find fz
+search comp
+find tmu
+search conf
+search rofi
+search Pic
+search media
+search home
+search Docum
+h
+set show_hidden
+search Documents
+
+set hidden_filter
+h set
+set show_hidden true
+set show_hidden false
+m
+man
+help
+set show_hidden!
+search Pictur
+help m
+set preview_images true
+delete 
+!ls
+j
+ls

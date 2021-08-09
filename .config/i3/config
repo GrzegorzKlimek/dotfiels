@@ -329,7 +329,7 @@ bindsym $mod+F1 reload
 bindsym $mod+F2 restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+F3 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+space exec xfce4-popup-whiskermenu
+# bindsym $mod+space exec xfce4-popup-whiskermenu
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+r exec /home/frezer02/scripts/i3/switch-mode.sh "resize"
@@ -461,6 +461,7 @@ exec nm-applet
 exec /usr/bin/unclutter
 exec autorandr --change
 exec CM_SELECTIONS="clipboard" CM_MAX_CLIPS=50 clipmenud
+exec synapse
 
   #Apps
 exec guake --hide

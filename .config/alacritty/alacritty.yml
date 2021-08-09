@@ -16,7 +16,7 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 8
+  size: 11
 
 #opacity
 background_opacity: 0.9
@@ -52,6 +52,7 @@ key_bindings:
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
 
+history: 100000
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
