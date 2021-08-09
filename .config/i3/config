@@ -455,7 +455,8 @@ exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
 exec /home/frezer02/scripts/disableCaps.sh
 exec /home/frezer02/scripts/fastkeys.sh
-exec xcompmgr -c -f -n 
+# exec xcompmgr -c -f -n 
+exec picom --experimental-backends --config /home/frezer02/.config/picom/picom.conf --backend glx
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
