@@ -16,7 +16,7 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
 
-  size: 11
+  size: 8
 
 #opacity
 background_opacity: 1
