@@ -19,38 +19,56 @@ font:
   size: 9
 
 #opacity
-background_opacity: 0.9
+background_opacity: 0.95
 
-# The 'Dark dimmed' colorscheme from Github.
+draw_bold_text_with_bright_colors: true
+
+# Colors
 colors:
+  # Default colors
   primary:
-    background: '#2d333b'
-    foreground: '#adbac7'
-  normal:
-    black:   '#2d333b'
-    red:     '#f47067'
-    green:   '#8ddb8c'
-    yellow:  '#f69d50'
-    blue:    '#6cb6ff'
-    magenta: '#dcbdfb'
-    cyan:    '#96d0ff'
-    white:   '#adbac7'
-  bright:
-    black:   '#768390'
-    red:     '#f47067'
-    green:   '#8ddb8c'
-    yellow:  '#f69d50'
-    blue:    '#6cb6ff'
-    magenta: '#dcbdfb'
-    cyan:    '#96d0ff'
-    white:   '#adbac7'
+    background:        '#011627'
+    foreground:        '#acb4c2'
+    bright_foreground: '#eeeeee'
 
+  # Cursor colors
+  cursor:
+    text:   '#080808'
+    cursor: '#9ca1aa'
+
+  # Selection colors
+  selection:
+    text:       '#080808'
+    background: '#b2ceee'
+
+  # Normal colors
+  normal:
+    black:   '#1d3b53'
+    red:     '#fc514e'
+    green:   '#a1cd5e'
+    yellow:  '#e3d18a'
+    blue:    '#82aaff'
+    magenta: '#c792ea'
+    cyan:    '#7fdbca'
+    white:   '#a1aab8'
+
+  # Bright colors
+  bright:
+    black:   '#7c8f8f'
+    red:     '#ff5874'
+    green:   '#21c7a8'
+    yellow:  '#ecc48d'
+    blue:    '#82aaff'
+    magenta: '#ae81ff'
+    cyan:    '#7fdbca'
+    white:   '#d6deeb'
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
   - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
+
 
 history: 100000
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
