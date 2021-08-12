@@ -257,25 +257,25 @@ assign [class="kmail"] $ws9
 for_window [class="Spotify"] move to workspace $ws10 
 
 # switch to workspace
-bindsym $mod+$ws1 workspace $ws1
-bindsym $mod+$ws2 workspace $ws2
-bindsym $mod+$ws3 workspace $ws3
-bindsym $mod+$ws4 workspace $ws4
-bindsym $mod+$ws5 workspace $ws5
-bindsym $mod+$ws6 workspace $ws6
-bindsym $mod+$ws7 workspace $ws7
-bindsym $mod+$ws8 workspace $ws8
-bindsym $mod+$ws9 workspace $ws9
-bindsym $mod+$ws10 workspace $ws10
-bindsym $mod+$ws11 workspace $ws11
-bindsym $mod+$ws12 workspace $ws12
-bindsym $mod+$ws13 workspace $ws13
-bindsym $mod+$ws14 workspace $ws14
-bindsym $mod+$ws15 workspace $ws15
-bindsym $mod+$ws16 workspace $ws16
-bindsym $mod+$ws17 workspace $ws17
-bindsym $mod+$ws18 workspace $ws18
-bindsym $mod+$ws19 workspace $ws19
+bindsym $mod+$ws1 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws1
+bindsym $mod+$ws2 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws2
+bindsym $mod+$ws3 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws3
+bindsym $mod+$ws4 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws4
+bindsym $mod+$ws5 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws5
+bindsym $mod+$ws6 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws6
+bindsym $mod+$ws7 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws7
+bindsym $mod+$ws8 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws8
+bindsym $mod+$ws9 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws9
+bindsym $mod+$ws10 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws10
+bindsym $mod+$ws11 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws11
+bindsym $mod+$ws12 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws12
+bindsym $mod+$ws13 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws13
+bindsym $mod+$ws14 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws14
+bindsym $mod+$ws15 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws15
+bindsym $mod+$ws16 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws16
+bindsym $mod+$ws17 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws17
+bindsym $mod+$ws18 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws18
+bindsym $mod+$ws19 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws19
 
 # move focused container to workspace
 bindsym $mod+Shift+$ws1 move container to workspace $ws1, workspace $ws1
