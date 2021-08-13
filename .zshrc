@@ -24,6 +24,12 @@ bindkey -M menuselect 'down' vi-down-line-or-history 2>/dev/null
 bindkey -M menuselect 'up' vi-up-line-or-history 2>/dev/null
 bindkey -M menuselect 'right' vi-forward-char 2>/dev/null
 
+# edit command in vim 
+autoload -U edit-command-line
+
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
@@ -113,10 +119,10 @@ if type brew &>/dev/null; then
 fi
 
 # source functions
-if [ -f ~/.shell_functions ]; then
-    source ~/.shell_functions
+if [ -f ~/.shell_functions.sh ]; then
+    source ~/.shell_functions.sh
 else
-    print "404: ~/.shell_functions not found."
+    print "404: ~/.shell_functions.sh not found."
 fi
 
 # print neofetch on startup

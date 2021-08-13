@@ -123,10 +123,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # source functions
-if [ -f ~/.shell_functions ]; then
-    source ~/.shell_functions
+if [ -f ~/.shell_functions.sh ]; then
+    source ~/.shell_functions.sh
 else
-    print "404: ~/.shell_functions not found."
+    print "404: ~/.shell_functions.sh not found."
 fi
 
 # >>> conda initialize >>>
