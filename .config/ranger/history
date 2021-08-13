@@ -44,7 +44,7 @@ set show_hidden!
 search Pictur
 help m
 set preview_images true
-delete 
 !ls
 j
 ls
+delete 
