@@ -13,6 +13,9 @@
 set $mod Mod4
 set $mod2 Mod1
 
+set $SCRIPTS /home/frezer02/scripts
+set $HOME /home/frezer02
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Ubuntu Display 9
@@ -154,7 +157,7 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod2+Ctrl+l exec  /home/frezer02/.local/bin/betterlockscreen -l dim -r $(xdpyinfo | grep dimen | awk '{print $2}')
+bindsym $mod2+Ctrl+l exec  $HOME/.local/bin/betterlockscreen -l dim -r $(xdpyinfo | grep dimen | awk '{print $2}')
 
 #screen shot
 bindsym Print exec spectacle -r  
@@ -257,25 +260,25 @@ assign [class="kmail"] $ws9
 for_window [class="Spotify"] move to workspace $ws10 
 
 # switch to workspace
-bindsym $mod+$ws1 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws1
-bindsym $mod+$ws2 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws2
-bindsym $mod+$ws3 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws3
-bindsym $mod+$ws4 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws4
-bindsym $mod+$ws5 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws5
-bindsym $mod+$ws6 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws6
-bindsym $mod+$ws7 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws7
-bindsym $mod+$ws8 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws8
-bindsym $mod+$ws9 exec   /home/frezer02/scripts/i3/go-to-workspace.sh $ws9
-bindsym $mod+$ws10 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws10
-bindsym $mod+$ws11 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws11
-bindsym $mod+$ws12 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws12
-bindsym $mod+$ws13 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws13
-bindsym $mod+$ws14 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws14
-bindsym $mod+$ws15 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws15
-bindsym $mod+$ws16 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws16
-bindsym $mod+$ws17 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws17
-bindsym $mod+$ws18 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws18
-bindsym $mod+$ws19 exec  /home/frezer02/scripts/i3/go-to-workspace.sh $ws19
+bindsym $mod+$ws1 exec   $SCRIPTS/i3/go-to-workspace.sh $ws1
+bindsym $mod+$ws2 exec   $SCRIPTS/i3/go-to-workspace.sh $ws2
+bindsym $mod+$ws3 exec   $SCRIPTS/i3/go-to-workspace.sh $ws3
+bindsym $mod+$ws4 exec   $SCRIPTS/i3/go-to-workspace.sh $ws4
+bindsym $mod+$ws5 exec   $SCRIPTS/i3/go-to-workspace.sh $ws5
+bindsym $mod+$ws6 exec   $SCRIPTS/i3/go-to-workspace.sh $ws6
+bindsym $mod+$ws7 exec   $SCRIPTS/i3/go-to-workspace.sh $ws7
+bindsym $mod+$ws8 exec   $SCRIPTS/i3/go-to-workspace.sh $ws8
+bindsym $mod+$ws9 exec   $SCRIPTS/i3/go-to-workspace.sh $ws9
+bindsym $mod+$ws10 exec  $SCRIPTS/i3/go-to-workspace.sh $ws10
+bindsym $mod+$ws11 exec  $SCRIPTS/i3/go-to-workspace.sh $ws11
+bindsym $mod+$ws12 exec  $SCRIPTS/i3/go-to-workspace.sh $ws12
+bindsym $mod+$ws13 exec  $SCRIPTS/i3/go-to-workspace.sh $ws13
+bindsym $mod+$ws14 exec  $SCRIPTS/i3/go-to-workspace.sh $ws14
+bindsym $mod+$ws15 exec  $SCRIPTS/i3/go-to-workspace.sh $ws15
+bindsym $mod+$ws16 exec  $SCRIPTS/i3/go-to-workspace.sh $ws16
+bindsym $mod+$ws17 exec  $SCRIPTS/i3/go-to-workspace.sh $ws17
+bindsym $mod+$ws18 exec  $SCRIPTS/i3/go-to-workspace.sh $ws18
+bindsym $mod+$ws19 exec  $SCRIPTS/i3/go-to-workspace.sh $ws19
 
 # move focused container to workspace
 bindsym $mod+Shift+$ws1 move container to workspace $ws1, workspace $ws1
@@ -332,7 +335,7 @@ bindsym $mod+F3 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do
 # bindsym $mod+space exec xfce4-popup-whiskermenu
 
 # resize window (you can also use the mouse for that)
-bindsym $mod+r exec /home/frezer02/scripts/i3/switch-mode.sh "resize"
+bindsym $mod+r exec $SCRIPTS/i3/switch-mode.sh "resize"
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -345,63 +348,63 @@ mode "resize" {
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
-        bindsym m  resize set 1025 679 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-        bindsym s  resize set 644 493 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-        bindsym b  resize set 1403 793 ;exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+        bindsym m  resize set 1025 679 ;exec $SCRIPTS/i3/switch-mode.sh "default"
+        bindsym s  resize set 644 493 ;exec $SCRIPTS/i3/switch-mode.sh "default"
+        bindsym b  resize set 1403 793 ;exec $SCRIPTS/i3/switch-mode.sh "default"
         # back to normal: Enter or Escape
-        bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-        bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+        bindsym Return exec $SCRIPTS/i3/switch-mode.sh "default"
+        bindsym Escape exec $SCRIPTS/i3/switch-mode.sh "default"
 }
 
 # launch mode
 
 mode "launch" {
-  bindsym  Shift+f exec firefox --private-window ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  f exec firefox  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws4;
-  bindsym  h exec konsole -e bpytop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  v exec /home/frezer02/scripts/i3/meety.sh ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  y exec firefox --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  b exec brave-browser ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  Shift+b exec brave-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  Shift+c exec chromium-browser --incognito ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  c exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  e exec dolphin  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  g exec gnome-calculator; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym  s exec konsole --profile "Dark Arc"; exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  # bindsym  q exec flatpak run com.spotify.Client ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  q exec  spotify; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  w exec flatpak run com.bitwarden.desktop ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; workspace $ws11
-  bindsym  k  exec kwrite; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
-  bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec /home/frezer02/scripts/i3/switch-mode.sh "default"; 
+  bindsym  Shift+f exec firefox --private-window ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  f exec firefox  ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws4;
+  bindsym  h exec konsole -e bpytop ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  v exec $SCRIPTS/i3/meety.sh ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  y exec firefox --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  b exec brave-browser ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  Shift+b exec brave-browser --incognito ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  Shift+c exec chromium-browser --incognito ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  c exec gnome-calculator; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  e exec dolphin  ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  g exec gnome-calculator; exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym  s exec konsole --profile "Dark Arc"; exec $SCRIPTS/i3/switch-mode.sh "default"
+  # bindsym  q exec flatpak run com.spotify.Client ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  q exec  spotify; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
+  bindsym  w exec flatpak run com.bitwarden.desktop ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws11
+  bindsym  k  exec kwrite; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   # back to normal: Enter or Escape
-  bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"
-  bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"
+  bindsym Return exec $SCRIPTS/i3/switch-mode.sh "default"
+  bindsym Escape exec $SCRIPTS/i3/switch-mode.sh "default"
 }
 
-bindsym $mod2+space exec /home/frezer02/scripts/i3/switch-mode.sh "launch"
+bindsym $mod2+space exec $SCRIPTS/i3/switch-mode.sh "launch"
 
 # display mode
 mode "display" {
 
-  bindsym i exec /home/frezer02/.screenlayout/iiyama-only.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym s exec /home/frezer02/.screenlayout/sc-resolution.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym l exec /home/frezer02/.screenlayout/laptop-screen-only.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym d exec /home/frezer02/.screenlayout/dual-monitors.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym Return exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
-  bindsym Escape exec /home/frezer02/scripts/i3/switch-mode.sh "default"; exec /home/frezer02/scripts/i3/switch-mode.sh "default";
+  bindsym i exec $HOME/.screenlayout/iiyama-only.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym s exec $HOME/.screenlayout/sc-resolution.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym l exec $HOME/.screenlayout/laptop-screen-only.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym d exec $HOME/.screenlayout/dual-monitors.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym Return exec $SCRIPTS/i3/switch-mode.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym Escape exec $SCRIPTS/i3/switch-mode.sh "default"; exec $SCRIPTS/i3/switch-mode.sh "default";
 }
-bindsym $mod+semicolon exec /home/frezer02/scripts/i3/switch-mode.sh "display"
+bindsym $mod+semicolon exec $SCRIPTS/i3/switch-mode.sh "display"
 
 # swap workspaces
-bindsym $mod+b exec i3-input -F 'exec /home/frezer02/scripts/i3/i3-swap-workspaces %s' -l 1 -P 'Swap windows with workspace: '
+bindsym $mod+b exec i3-input -F 'exec $SCRIPTS/i3/i3-swap-workspaces %s' -l 1 -P 'Swap windows with workspace: '
 
 # defaul layout
 workspace_layout default
@@ -436,7 +439,7 @@ workspace $ws9 output HDMI-1
 
 #Enable laptop screen
 
-bindsym $mod+Shift+p exec /home/frezer02/.screenlayout/laptop-screen-only.sh
+bindsym $mod+Shift+p exec $HOME/.screenlayout/laptop-screen-only.sh
 
 #Autostart applications and services
 
@@ -452,10 +455,10 @@ exec krunner -d
 bindsym F7 exec krunner
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
-exec_always xautolock -time 45 -locker "exec /home/frezer02/scripts/lockScript.bash"
-exec /home/frezer02/scripts/disableCaps.sh
+exec_always xautolock -time 45 -locker "exec $SCRIPTS/lockScript.bash"
+exec $SCRIPTS/disableCaps.sh
 # exec xcompmgr -c -f -n 
-exec picom --experimental-backends --config /home/frezer02/.config/picom/picom.conf --backend glx
+exec picom --experimental-backends --config $HOME/.config/picom/picom.conf --backend glx
 exec dropbox start -i
 exec nm-applet
 exec /usr/bin/unclutter
@@ -467,7 +470,7 @@ exec synapse
 exec guake --hide
 
 #set wallpaper
-exec_always /home/frezer02/scripts/wallpaper-i3.sh
+exec_always $SCRIPTS/wallpaper-i3.sh
 
 ## set default values in temporary files
 exec echo "" > /tmp/updates-genmon
