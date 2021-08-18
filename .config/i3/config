@@ -78,7 +78,7 @@ bindsym $mod+$mod2+s [con_mark="s"] focus
 bindsym $mod+$mod2+t [title="Tłumacz Google"] scratchpad show
 bindsym $mod+$mod2+u [con_mark="u"] focus
 bindsym $mod+$mod2+v [con_mark="v"] focus
-bindsym $mod+$mod2+w [class="kwrite"] scratchpad show
+bindsym $mod+$mod2+w [class="Gvim"] scratchpad show
 bindsym $mod+$mod2+x [con_mark="x"] focus
 bindsym $mod+$mod2+y [con_mark="y"] focus
 bindsym $mod+$mod2+z [con_mark="z"] focus
@@ -221,6 +221,10 @@ for_window [title="Welcome to Android Studio"] floating enable
 for_window [title="Welcome to PyCharm"] floating enable
 for_window [title="win0"]  floating enable
 for_window [title="Książka adresowa"]  floating enable
+for_window [class="Nitrogen"]  floating enable
+for_window [class="Gvim"]  floating enable
+for_window [class="Gvim"] resize set 1025 679
+for_window [class="Gvim"] move absolute position center
 
 #declare workspaces variables
 
@@ -379,7 +383,7 @@ mode "launch" {
   # bindsym  q exec flatpak run com.spotify.Client ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  q exec  spotify; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  w exec flatpak run com.bitwarden.desktop ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws11
-  bindsym  k  exec kwrite; exec $SCRIPTS/i3/switch-mode.sh "default";
+  bindsym  k  exec gvim; exec $SCRIPTS/i3/switch-mode.sh "default";
   bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
@@ -404,7 +408,7 @@ mode "display" {
 bindsym $mod+semicolon exec $SCRIPTS/i3/switch-mode.sh "display"
 
 # swap workspaces
-bindsym $mod+b exec i3-input -F 'exec $SCRIPTS/i3/i3-swap-workspaces %s' -l 1 -P 'Swap windows with workspace: '
+bindsym $mod+b exec i3-input -F 'exec $SCRIPTS/i3/i3-swap-workspaces.sh %s' -l 1 -P 'Swap windows with workspace: '
 
 # defaul layout
 workspace_layout default
