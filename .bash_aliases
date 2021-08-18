@@ -159,3 +159,5 @@ alias finanse-category-filter="awk -F \";\" '(\$4 ~ /.*/ ) {s += \$3} END  {prin
 alias finanse-category-and-time-filter="awk -F \";\" '(\$4 ~ /.*/ && \$NF ~ /^.*\.07\.2021/ ) {s += \$3} END  {print s}'"
 
 alias nano-to-vim="paste-from-clipboard | sed 's/nano/vim/' | tr -d "\n" | copy-to-clipboard"
+
+alias get-myvpm-address="ifconfig | grep -A 1 'tun0:' | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+.[0-9]\+' | head -n 1 | tr -d \"\n\" | copy-to-clipboard"
