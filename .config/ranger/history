@@ -32,7 +32,6 @@ search Docum
 h
 set show_hidden
 search Documents
-
 set hidden_filter
 h set
 set show_hidden true
@@ -48,3 +47,4 @@ set preview_images true
 j
 ls
 delete 
+
