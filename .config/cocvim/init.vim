@@ -58,8 +58,8 @@ let mapleader =" "
 
 
 " gui options 
-set guifont=DejaVu\ Sans\ Mono:h10
-" set guifont=JetBrainsMono\ Nerd\ Font:h11
+" set guifont=DejaVu\ Sans\ Mono:h10
+set guifont=JetBrainsMono\ Nerd\ Font:h10
 
 set syntax=on
 set number
