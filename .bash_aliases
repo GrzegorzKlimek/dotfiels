@@ -25,7 +25,7 @@ alias tree='exa --color=auto --icons --group-directories-first --tree'
 spring_profile="devonline-grzesiek"
 HOME_DIR="/home/frezer02"
 REPOS_DIR="repos"
-alias connectCluster="mysql -u admin -h morai-mysql-riot-3 -P 6447 -p"
+alias connectCluster="mysql -u admin -h morai-mysql-riot-1 -P 6447 -pmorai123"
 alias tunnel-spotik="ssh -L 3700:10.0.0.20:3306 -L 9200:10.0.0.21:9200 -L 9300:10.0.0.21:9300 grzegorz@bot.spotik.bot1984.net"
 alias run-replay="mvn spring-boot:run"
 alias test-replay="mvn -Dtest=ParserTests#reg test"
