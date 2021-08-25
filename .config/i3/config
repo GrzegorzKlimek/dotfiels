@@ -123,11 +123,11 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+grave focus left
 bindsym $mod+Shift+grave focus right
 
-# split in horizontal orientation
-bindsym $mod+g split h
-
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
+
+# split in horizontal orientation
+bindsym $mod+s split v
 bindsym $mod+Shift+v focus left; split v;focus right; move left
 
 # next window will be tabbed to current
@@ -138,7 +138,7 @@ bindsym $mod+Shift+t focus left; split v; layout tabbed; focus right; move left
 bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space focus floating toggle
 bindsym $mod+Shift+button1 --whole-window  floating toggle
 
 #toggle between split and tabbed
@@ -235,7 +235,7 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "E"
 set $ws7 "D"
-set $ws8 "S"
+set $ws8 "G"
 set $ws9 "A"
 set $ws10 "Q"
 set $ws11 "W"
@@ -271,7 +271,7 @@ bindsym $mod+$ws4 exec   $SCRIPTS/i3/go-to-workspace.sh $ws4
 bindsym $mod+$ws5 exec   $SCRIPTS/i3/go-to-workspace.sh $ws5
 bindsym $mod+$ws6 exec   $SCRIPTS/i3/go-to-workspace.sh $ws6
 bindsym $mod+$ws7 exec   $SCRIPTS/i3/go-to-workspace.sh $ws7
-bindsym $mod+$ws8 exec   $SCRIPTS/i3/go-to-workspace.sh $ws8
+# bindsym $mod+$ws8 exec   $SCRIPTS/i3/go-to-workspace.sh $ws8
 bindsym $mod+$ws9 exec   $SCRIPTS/i3/go-to-workspace.sh $ws9
 bindsym $mod+$ws10 exec  $SCRIPTS/i3/go-to-workspace.sh $ws10
 bindsym $mod+$ws11 exec  $SCRIPTS/i3/go-to-workspace.sh $ws11
@@ -292,7 +292,7 @@ bindsym $mod+Shift+$ws4 move container to workspace $ws4, workspace $ws4
 bindsym $mod+Shift+$ws5 move container to workspace $ws5, workspace $ws5 
 bindsym $mod+Shift+$ws6 move container to workspace $ws6, workspace $ws6
 bindsym $mod+Shift+$ws7 move container to workspace $ws7, workspace $ws7
-bindsym $mod+Shift+$ws8 move container to workspace $ws8, workspace $ws8
+# bindsym $mod+Shift+$ws8 move container to workspace $ws8, workspace $ws8
 bindsym $mod+Shift+$ws9 move container to workspace $ws9, workspace $ws9
 bindsym $mod+Shift+$ws10 move container to workspace $ws10, workspace $ws10
 bindsym $mod+Shift+$ws11 move container to workspace $ws11, workspace $ws11
@@ -313,7 +313,7 @@ bindsym $mod+Ctrl+$ws4 move container to workspace $ws4
 bindsym $mod+Ctrl+$ws5 move container to workspace $ws5
 bindsym $mod+Ctrl+$ws6 move container to workspace $ws6
 bindsym $mod+Ctrl+$ws7 move container to workspace $ws7
-bindsym $mod+Ctrl+$ws8 move container to workspace $ws8
+# bindsym $mod+Ctrl+$ws8 move container to workspace $ws8
 bindsym $mod+Ctrl+$ws9 move container to workspace $ws9
 bindsym $mod+Ctrl+$ws10 move container to workspace $ws10
 bindsym $mod+Ctrl+$ws11 move container to workspace $ws11
