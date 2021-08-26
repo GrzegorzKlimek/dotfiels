@@ -138,7 +138,7 @@ bindsym $mod+Shift+t focus left; split v; layout tabbed; focus right; move left
 bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
-bindsym $mod+Shift+space focus floating toggle
+bindsym $mod+Shift+space --whole-window floating toggle
 bindsym $mod+Shift+button1 --whole-window  floating toggle
 
 #toggle between split and tabbed
