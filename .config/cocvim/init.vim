@@ -51,7 +51,8 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
-
+" Plug 'unblevable/quick-scope'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 let mapleader =" "
@@ -181,7 +182,7 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>f :Files<CR>
 " nnoremap <leader>bl :BLines<CR>
-nnoremap <leader>b :Buffers<CR>
+nnoremap <leader><leader>b :Buffers<CR>
 nnoremap <leader>m :Marks<CR>
 nnoremap <leader>dm :delm! \| delm A-Z0-9 <CR>
 nnoremap <leader>l :Lines<CR>
@@ -192,7 +193,6 @@ nnoremap <leader>i :echo @% <CR>
 nnoremap <leader>r :e! <CR>
 nnoremap <leader>z :MaximizerToggle<Esc>
 nnoremap <leader>t :tabnew<Esc>
-nnoremap <leader>w :tabclose<Esc>
 nnoremap <leader>q :q<Esc>
 nnoremap <leader>s :SessionLoad<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
@@ -275,6 +275,7 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 
 
 " source plugin configurations
+ source ~/.config/nvim/plugins-config/easymotion.vim
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/lightline.vim
  source ~/.config/nvim/plugins-config/coc.vim
