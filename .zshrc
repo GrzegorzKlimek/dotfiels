@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # setopt histignorealldups sharehistory
 unsetopt share_history
 
@@ -103,7 +110,6 @@ source $ZSH_PLUGINS_HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source $ZSH_PLUGINS_HOME/conda-zsh-completion/conda-zsh-completion.plugin.zsh
 source $ZSH_PLUGINS_HOME/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-# source $ZSH_PLUGINS_HOME/zsh-vi-mode/zsh-vi-mode.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -126,7 +132,3 @@ autoload -U edit-command-line
 
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
-
-
-# print neofetch on startup
-neofetch
