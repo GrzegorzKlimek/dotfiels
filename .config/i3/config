@@ -228,6 +228,21 @@ for_window [class="Gvim"] move absolute position center
 
 #declare workspaces variables
 
+#assign applications to workspaces
+assign [class="kdevelop"] $ws3
+assign [class="eclipse"]  $ws3 
+assign [class="GitKraken"] $ws4
+assign [class="discord"] $ws7
+assign [class="Skype"] $ws7
+assign [class="Android Messages"] $ws7
+for_window [class="whatsdesk"] move to workspace $ws7 
+assign [class="Signal"] $ws7
+assign [class="Slack"] $ws9
+assign [class="Mailspring"] $ws9
+assign [class="Thunderbird"] $ws9
+assign [class="kmail"] $ws9
+for_window [class="Spotify"] move to workspace $ws10 
+
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -247,21 +262,6 @@ set $ws16 "8"
 set $ws17 "9"
 set $ws18 "0"
 set $ws19 "6"
-
-#assign applications to workspaces
-assign [class="kdevelop"] $ws3
-assign [class="eclipse"]  $ws3 
-assign [class="GitKraken"] $ws4
-assign [class="discord"] $ws7
-assign [class="Skype"] $ws7
-assign [class="Android Messages"] $ws7
-for_window [class="whatsdesk"] move to workspace $ws7 
-assign [class="Signal"] $ws7
-assign [class="Slack"] $ws9
-assign [class="Mailspring"] $ws9
-assign [class="Thunderbird"] $ws9
-assign [class="kmail"] $ws9
-for_window [class="Spotify"] move to workspace $ws10 
 
 # switch to workspace
 bindsym $mod+$ws1 exec   $SCRIPTS/i3/go-to-workspace.sh $ws1
