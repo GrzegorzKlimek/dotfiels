@@ -365,27 +365,19 @@ mode "resize" {
 mode "launch" {
   bindsym  Shift+f exec firefox --private-window ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  f exec firefox  ; exec $SCRIPTS/i3/switch-mode.sh "default"
-  bindsym  4 exec flatpak run com.axosoft.GitKraken ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws4;
-  bindsym  h exec konsole -e bpytop ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  v exec $SCRIPTS/i3/meety.sh ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
-  bindsym  Shift+h exec brave-browser  --app=http://127.0.0.1:8080/h2-console; workspace $ws4; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  b exec brave-browser ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  Shift+c exec chromium-browser --incognito ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  c exec gnome-calculator; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  e exec dolphin  ; exec $SCRIPTS/i3/switch-mode.sh "default"
-  bindsym  Shift+e exec EDITOR=vim gnome-terminal --  ranger  ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  p exec kcmshell5 kcm_pulseaudio  ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  g exec gnome-calculator; exec $SCRIPTS/i3/switch-mode.sh "default"
-  bindsym  s exec konsole --profile "Dark Arc"; exec $SCRIPTS/i3/switch-mode.sh "default"
   # bindsym  q exec flatpak run com.spotify.Client ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  q exec  spotify; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  w exec flatpak run com.bitwarden.desktop ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws11
-  bindsym  k  exec gvim; exec $SCRIPTS/i3/switch-mode.sh "default";
-  bindsym  i  exec brave-browser --app=https://contacts.google.com/ ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
-  bindsym  o  exec brave-browser --app=https://calendar.google.com/calendar/r ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  w  exec gvim; exec $SCRIPTS/i4/switch-mode.sh "default";
   bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   # back to normal: Enter or Escape
@@ -443,7 +435,7 @@ workspace $ws9 output HDMI-1
 
 #Enable laptop screen
 
-bindsym $mod+Shift+p exec $HOME/.screenlayout/laptop-screen-only.sh
+# bindsym $mod+Shift+p exec $HOME/.screenlayout/laptop-screen-only.sh
 
 #Autostart applications and services
 
