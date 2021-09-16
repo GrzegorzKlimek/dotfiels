@@ -53,6 +53,10 @@ Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
 " Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
+
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'nvim-lua/popup.nvim'
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 let mapleader =" "
@@ -60,7 +64,7 @@ let mapleader =" "
 
 " gui options 
 " set guifont=DejaVu\ Sans\ Mono:h10
-set guifont=JetBrainsMono\ Nerd\ Font:h10
+set guifont=JetBrainsMono\ Nerd\ Font:h12
 
 set syntax=on
 set number
@@ -146,16 +150,6 @@ nnoremap d' di'
 nnoremap c' ci'
 nnoremap y' yi'
 
-" add surrouning to current word
-nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
-nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
-nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lel
-nnoremap <leader>) viw<esc>a)<esc>bi(<esc>lel
-nnoremap <leader>] viw<esc>a]<esc>bi[<esc>lel
-nnoremap <leader>[ viw<esc>a]<esc>bi[<esc>lel
-nnoremap <leader>{ viw<esc>a}<esc>bi{<esc>lel
-nnoremap <leader>} viw<esc>a}<esc>bi{<esc>lel
-
 " move lines in visual mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -183,8 +177,6 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>f :Files<CR>
 " nnoremap <leader>bl :BLines<CR>
 nnoremap <leader><leader>b :Buffers<CR>
-nnoremap <leader>m :Marks<CR>
-nnoremap <leader>dm :delm! \| delm A-Z0-9 <CR>
 nnoremap <leader>l :Lines<CR>
 nnoremap <leader>g :Rg<CR>
 
@@ -275,6 +267,7 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 
 
 " source plugin configurations
+ source ~/.config/nvim/plugins-config/harpoon.vim
  source ~/.config/nvim/plugins-config/easymotion.vim
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/lightline.vim
