@@ -28,12 +28,19 @@ nnoremap yp yip
 "disable big S
 nnoremap S <Nop>
 
+"disable annoying lose of focus when trying to tab complete in command move
+:cnoremap <Tab> <Nop>
+
 let mapleader =" "
+
+nnoremap vv viw
 
 " easier copying to cliboard
 vnoremap <C-c> "+y
 vnoremap <C-v> "+p
-noremap <leader>p "0p 
+inoremap <C-v> <C-R>+
+vnoremap <C-v> "+p
+noremap <leader>p "0p
 vnoremap <leader>p "0p 
 
 " move lines in visual mode

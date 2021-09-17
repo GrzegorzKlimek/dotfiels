@@ -132,3 +132,5 @@ autoload -U edit-command-line
 
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
+
+pfetch

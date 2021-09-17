@@ -374,7 +374,7 @@ mode "launch" {
   bindsym  g exec gnome-calculator; exec $SCRIPTS/i3/switch-mode.sh "default"
   # bindsym  q exec flatpak run com.spotify.Client ; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
   bindsym  q exec  spotify; exec $SCRIPTS/i3/switch-mode.sh "default"; workspace $ws10
-  bindsym  w  exec gvim; exec $SCRIPTS/i4/switch-mode.sh "default";
+  bindsym  w  exec gvim; exec $SCRIPTS/i3/switch-mode.sh "default";
   bindsym  t  exec brave-browser --app=https://translate.google.pl ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  m  exec brave-browser --app=https://www.google.com/maps ; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   # back to normal: Enter or Escape

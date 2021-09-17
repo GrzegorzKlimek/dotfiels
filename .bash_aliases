@@ -69,7 +69,6 @@ alias tmux="TERM=\"xterm-256color\" tmux"
 alias etmux="vim ~/.tmux.conf"
 alias sudovim="sudoedit"
 alias svim="sudoedit"
-alias vim="nvim"
 alias e="editor"
 
 alias lock-screen="i3lock-fancy"
