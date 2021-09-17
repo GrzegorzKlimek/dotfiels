@@ -14,8 +14,6 @@ Plug 'preservim/nerdtree'
 Plug 'mkitt/tabline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'puremourning/vimspector'
-" Plug 'vim-airline/vim-airline'                       
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/promptline.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
@@ -29,9 +27,6 @@ Plug 'Dinduks/vim-java-get-set'
 Plug 'xolox/vim-session'
 Plug 'liuchengxu/vista.vim'
 Plug 'honza/vim-snippets'
-" Plug 'tomasiser/vim-code-dark'
-" Plug 'NLKNguyen/papercolor-theme'
-" Plug 'vim-python/python-syntax'
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'szw/vim-maximizer'
 Plug 'wincent/terminus'
@@ -39,7 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'othree/xml.vim'
 Plug 'rainglow/vim'
-" Plug 'mhinz/vim-startify'
 Plug  'glepnir/dashboard-nvim'
 Plug 'Tarmean/fzf-session.vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -51,8 +45,8 @@ Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
-" Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
 Plug 'nvim-lua/popup.nvim'
@@ -62,9 +56,6 @@ call plug#end()
 let mapleader =" "
 
 
-" gui options 
-" set guifont=DejaVu\ Sans\ Mono:h10
-set guifont=JetBrainsMono\ Nerd\ Font:h12
 
 set syntax=on
 set number
@@ -130,7 +121,7 @@ nnoremap <C-Space> o<Esc>k
 " works only in graphical vim
 nnoremap <S-Space> O<Esc>j
 
-inoremap <C-v> <Esc>"+pa 
+inoremap <C-v> <C-R>+
 
 " manipulate words and parenthesis
 nnoremap cw ciw
@@ -282,3 +273,9 @@ tnoremap :q! <C-\><C-n>:q!<CR>
  source ~/.config/nvim/plugins-config/startify.vim
  source ~/.config/nvim/plugins-config/vista.vim
  source ~/.config/nvim/plugins-config/dashboard.vim
+
+
+
+" gui options 
+" set guifont=DejaVu\ Sans\ Mono:h10
+set guifont=JetBrainsMono\ Nerd\ Font:h13
