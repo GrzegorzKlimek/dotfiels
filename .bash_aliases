@@ -80,7 +80,7 @@ alias df='df -x"squashfs"'
 alias copy-to-clipboard="xclip -selection c"
 alias paste-from-clipboard=" xclip -o -sel clip"
 alias prettyjson="python -m json.tool"
-alias viewjson="vim -c 'set syntax=json' -"
+alias viewjson="python -m json.tool | vim -c 'set syntax=json' -"
 alias cls="clear"
 alias c="clear"
 alias date-now="date '+%F-%T'"
