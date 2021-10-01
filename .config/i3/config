@@ -157,7 +157,7 @@ bindsym $mod+p focus parent
 bindsym $mod+o focus child
 
 #lock screen 
-bindsym $mod2+Ctrl+l exec  $HOME/.local/bin/betterlockscreen -l dim -r $(xdpyinfo | grep dimen | awk '{print $2}')
+# bindsym $mod2+Ctrl+l exec  $HOME/.local/bin/betterlockscreen -l dim -r $(xdpyinfo | grep dimen | awk '{print $2}')
 
 #screen shot
 bindsym Print exec spectacle -r  
@@ -364,6 +364,7 @@ mode "launch" {
   bindsym  f exec firefox  ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  v exec $SCRIPTS/i3/meety.sh ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  y exec firefox --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
+  bindsym  k exec firefox --new-window https://www.keyhero.com/free-typing-test/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  Shift+y exec chromium-browser --new-window https://www.youtube.com/; exec $SCRIPTS/i3/switch-mode.sh "default"; 
   bindsym  b exec brave-browser ; exec $SCRIPTS/i3/switch-mode.sh "default"
   bindsym  Shift+b exec brave-browser --incognito ; exec $SCRIPTS/i3/switch-mode.sh "default"
@@ -444,7 +445,7 @@ exec akonadi start
 exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec klipper
-exec krunner -d
+exec /usr/bin/krunner -d
 bindsym F7 exec krunner
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
