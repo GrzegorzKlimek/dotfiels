@@ -79,8 +79,8 @@ alias scanrootfs="sudo ncdu  --exclude=/media --exclude=/run --exclude=/home --e
 alias df='df -x"squashfs"'
 alias copy-to-clipboard="xclip -selection c"
 alias paste-from-clipboard=" xclip -o -sel clip"
-alias prettyjson="python -m json.tool"
-alias viewjson="python -m json.tool | vim -c 'set syntax=json' -"
+alias pjson="python -m json.tool"
+alias vjson="python -m json.tool | vim -c 'set syntax=json' -"
 alias cls="clear"
 alias c="clear"
 alias date-now="date '+%F-%T'"
