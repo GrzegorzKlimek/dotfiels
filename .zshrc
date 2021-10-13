@@ -133,4 +133,12 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 
+
+# function expand-alias() {
+#   zle _expand_alias
+#     zle self-insert
+#   }
+# zle -N expand-alias
+# bindkey -M main ' ' expand-alias
+
 pfetch
