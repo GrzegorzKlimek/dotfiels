@@ -120,12 +120,6 @@ alias hibernate="sudo hibernate"
 
 alias dck-lolhub="docker run -p:3306:3306 --name lolhub-local -e MYSQL_ROOT_PASSWORD=7PeqzoDepPE6VP -d mysql:latest"
 
-alias btc="curl pln.rate.sx/btc"
-alias 1btc="curl pln.rate.sx/1BTC"
-alias xmr="curl pln.rate.sx/xmr"
-alias 1xmr="curl pln.rate.sx/1XMR"
-alias crypto="curl pln.rate.sx"
-
 alias sai="sudo apt install"
 alias ssi="sudo snap install"
 alias ffi="flatpak install"
@@ -158,5 +152,6 @@ alias finanse-category-filter="awk -F \";\" '(\$4 ~ /.*/ ) {s += \$3} END  {prin
 alias finanse-category-and-time-filter="awk -F \";\" '(\$4 ~ /.*/ && \$NF ~ /^.*\.07\.2021/ ) {s += \$3} END  {print s}'"
 
 alias nano-to-vim="paste-from-clipboard | sed 's/nano/vim/' | tr -d "\n" | copy-to-clipboard"
-
 alias get-myvpm-address="ifconfig | grep -A 1 'tun0:' | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+.[0-9]\+' | head -n 1 | tr -d \"\n\" | copy-to-clipboard"
+
+alias freg="-regextype sed -regex"
