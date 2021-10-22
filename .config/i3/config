@@ -67,7 +67,7 @@ bindsym $mod+$mod2+h [class="GitKraken"] focus
 bindsym $mod+$mod2+i [class="Signal"] focus
 bindsym $mod+$mod2+j move scratchpad
 bindsym $mod+$mod2+k scratchpad show
-bindsym $mod+$mod2+l [con_mark="l"] focus
+bindsym $mod+$mod2+l [class="kleopatra"] scratchpad show
 bindsym $mod+$mod2+m [class="Thunderbird"] focus
 bindsym $mod+$mod2+n [con_mark="n"] focus
 bindsym $mod+$mod2+o [class="Mysql-workbench-bin"] focus
