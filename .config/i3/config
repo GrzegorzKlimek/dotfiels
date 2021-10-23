@@ -447,7 +447,7 @@ exec --no-startup-id /usr/share/libpam-kwallet-common/pam_kwallet_init
 exec /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
 exec klipper
 exec /usr/bin/krunner -d
-bindsym F7 exec krunner
+bindsym F7 exec /usr/bin/krunner
 exec KDE_FULL_SESSION= XDG_CURRENT_DESKTOP=i3 kdeconnect-indicator 
 exec /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always xautolock -time 45 -locker "exec $SCRIPTS/lockScript.bash"
