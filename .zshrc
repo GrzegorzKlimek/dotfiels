@@ -142,3 +142,5 @@ bindkey '^xe' edit-command-line
 # bindkey -M main ' ' expand-alias
 
 pfetch
+
+export PATH="$HOME/.poetry/bin:$PATH"
