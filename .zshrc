@@ -111,7 +111,7 @@ source $ZSH_PLUGINS_HOME/zsh-completions/zsh-completions.plugin.zsh
 source $ZSH_PLUGINS_HOME/conda-zsh-completion/conda-zsh-completion.plugin.zsh
 source $ZSH_PLUGINS_HOME/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -141,6 +141,3 @@ bindkey '^xe' edit-command-line
 # zle -N expand-alias
 # bindkey -M main ' ' expand-alias
 
-pfetch
-
-export PATH="$HOME/.poetry/bin:$PATH"
