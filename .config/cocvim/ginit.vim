@@ -1,1 +1,1 @@
-set guifont=DejaVu\ Sans\ Mono:h10
+set guifont=JetBrainsMono\ Nerd\ Font:h16

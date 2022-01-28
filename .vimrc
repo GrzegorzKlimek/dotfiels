@@ -1,3 +1,6 @@
+call plug#begin()
+Plug 'https://github.com/cormacrelf/vim-colors-github'
+call plug#end()
 set syntax=on
 set number
 set shiftwidth=2
