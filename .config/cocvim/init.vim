@@ -1,56 +1,71 @@
 call plug#begin("~/.local/share/nvim/plugged")
 
-Plug 'gioele/vim-autoswap'
+" code completion and other IDE like fetchers
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'puremourning/vimspector' " debugger
+Plug 'Dinduks/vim-java-get-set' " java gettter setters code generation
+Plug 'liuchengxu/vista.vim' " navigate symbols
+
+"snippets
+Plug 'honza/vim-snippets'
+
+"file navigation
+Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter'
-Plug 'w0ng/vim-hybrid'
-Plug 'uiiaoo/java-syntax.vim'
-Plug 'xolox/vim-misc'
-Plug 'gregsexton/MatchTag'
+Plug 'jremmen/vim-ripgrep' " search utility
+
+"sessions
+Plug 'xolox/vim-session'
+Plug 'Tarmean/fzf-session.vim'
+
+"tpope stuff
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdtree'
-Plug 'mkitt/tabline.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'puremourning/vimspector'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+
+"terminal stuff
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'wincent/terminus'
+Plug 'szw/vim-maximizer'
+Plug 'voldikss/vim-floaterm'
+
+" frontend
+Plug 'ap/vim-css-color'
+Plug 'mattn/emmet-vim'
+Plug 'gregsexton/MatchTag' " Match html tags
+
+" syntax
+Plug 'pangloss/vim-javascript'
+Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
+Plug 'uiiaoo/java-syntax.vim'
+Plug 'sheerun/vim-polyglot'
+
+"prompt lines
 Plug 'itchyny/lightline.vim'
 Plug 'edkolev/promptline.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'                " i3 config highlighting
-Plug 'ryanoasis/vim-devicons'
-Plug 'ap/vim-css-color'
-Plug 'voldikss/vim-floaterm'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-repeat'
-Plug 'jremmen/vim-ripgrep'
-Plug 'Dinduks/vim-java-get-set'
-Plug 'xolox/vim-session'
-Plug 'liuchengxu/vista.vim'
-Plug 'honza/vim-snippets'
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
-Plug 'szw/vim-maximizer'
-Plug 'wincent/terminus'
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
-Plug 'othree/xml.vim'
-Plug 'rainglow/vim'
-Plug  'glepnir/dashboard-nvim'
-Plug 'Tarmean/fzf-session.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'liuchengxu/vista.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
-Plug 'nvim-lua/popup.nvim'
+
+"color shemes
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'gosukiwi/vim-atom-dark'
 Plug 'mhartington/oceanic-next'
 Plug 'joshdick/onedark.vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'rainglow/vim'
+Plug 'w0ng/vim-hybrid'
 
-Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
-Plug 'nvim-lua/popup.nvim'
-Plug 'ThePrimeagen/harpoon'
+" other estetics enchancments
+Plug 'mkitt/tabline.vim'
+Plug 'ryanoasis/vim-devicons'
+
+"other 
+Plug 'gioele/vim-autoswap' " deal with anoying swap files
+Plug 'airblade/vim-rooter' " automaticly change direcory to current file directory
+Plug 'xolox/vim-misc' " usefull vim scripts for other plugins
+Plug 'jiangmiao/auto-pairs'
+Plug 'othree/xml.vim' " xml helper
+Plug  'glepnir/dashboard-nvim' " welcome page
+
 call plug#end()
 
 let mapleader =" "
@@ -70,7 +85,6 @@ set nohlsearch
 set smarttab
 set smartindent
 set cursorline
-" set cursorcolumn
 set autoindent
 set autoread
 let g:coc_disable_startup_warning = 1
@@ -258,8 +272,6 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 
 
 " source plugin configurations
- source ~/.config/nvim/plugins-config/harpoon.vim
- source ~/.config/nvim/plugins-config/easymotion.vim
  source ~/.config/nvim/plugins-config/airline.vim
  source ~/.config/nvim/plugins-config/lightline.vim
  source ~/.config/nvim/plugins-config/coc.vim
