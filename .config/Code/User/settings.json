@@ -3,6 +3,9 @@
     "editor.lineNumbers": "relative",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.minimap.enabled": false,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.value": 1,
     "vim.leader": " ",
     "vim.handleKeys": {
        "<C-b>": false,
@@ -23,6 +26,10 @@
         {
         "before": ["<C-j>"],
         "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["g","r"],
+            "commands": ["references-view.findReferences"]
         },
         {
             "before": [
@@ -89,16 +96,12 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "glassit-linux.opacity": 90,
-    "stories.username": "Leia Organa_turkey",
     "vim.vimrc.path": "/home/frezer02/.config/Code/User/.vimrc",
     "vim.vimrc.enable": true,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.startupEditor": "welcomePage",
-    // "terminal.integrated.inheritEnv": false,
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "files.exclude": {
         "**/.classpath": true,
@@ -112,6 +115,11 @@
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
+    },
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "GitHub Dark",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
 
 }
