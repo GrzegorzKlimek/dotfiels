@@ -145,3 +145,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 neofetch
+alias df-git='/usr/bin/git --git-dir=/home/frezer02/.cfg/ --work-tree=/home/frezer02'
+alias df-git='/usr/bin/git --git-dir=/home/frezer02/.cfg/ --work-tree=/home/frezer02'
+alias df-git='/usr/bin/git --git-dir=/home/frezer02/.cfg/ --work-tree=/home/frezer02'

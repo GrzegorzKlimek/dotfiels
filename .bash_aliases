@@ -136,6 +136,7 @@ alias glog="git lg -15"
 alias gdiff="git diff HEAD"
 
 alias vim-be-good="docker run -it --rm brandoncc/vim-be-good:stable"
+alias vim="nvim"
 
 alias sync-redditScrapper="rsync -rav src/ readow:/opt/java/redditScrapper/src"
 

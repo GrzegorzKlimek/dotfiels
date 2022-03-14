@@ -19,3 +19,19 @@ fastKeys() {
   xset r rate 300 50
 }
 
+vj() {
+  cat $1 | python -m json.tool | nvim -R -c "set syntax=json" -
+}
+
+rmFiles() {
+  find $1 -type f | xargs rm
+}
+
+Files() {
+  find $1 -type f
+}
+
+countFiles() {
+  find $1 -type f | wc -l
+}
+
