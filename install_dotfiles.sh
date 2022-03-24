@@ -1,7 +1,18 @@
 #!/bin/bash
 
-#install neede packages
-sudo apt install -y git fzf autojump
+OS=$(cat /etc/os-release | head -n 1 | awk -F "=" '{print $2}' | tr -d '"' | tr '[:upper:]' '[:lower:]')
+
+# install neede packages
+if [ "$OS" = "ubuntu" ]; then
+    echo "os is ubuntu"
+    sudo apt install -y git fzf autojump nvim vim ncdu htop
+fi
+
+if [ "$OS" = "freebsd" ]; then
+    pkg install -y git fzf autojump nvim vim ncdu htop
+    echo "os is freebsd"
+fi
+
 
 #insatll nvm nodejs, npm and formatters for vim
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
