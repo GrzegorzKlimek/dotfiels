@@ -28,14 +28,14 @@ echo ".cfg" >> .gitignore
 git clone --bare git@github.com:GrzegorzKlimek/dotfiles.git $HOME/.cfg
 #backup old files
 mkdir -p .config-backup && \
-/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." |  \
+git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout 2>&1 | egrep "\s+\." |  \
 while read file; do
     mkdir --parents .config-backup/$file
     mv $file .config-backup/$file
 done
 
 #restore config
-/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
+git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
 
 #install zsh plugins
 export ZSH_PLUGINS_HOME="$HOME/.local/share/zsh/plugins" 
