@@ -9,7 +9,7 @@ if [ "$OS" = "ubuntu" ]; then
 fi
 
 if [ "$OS" = "freebsd" ]; then
-    pkg install -y git fzf autojump nvim vim ncdu htop
+    sudo pkg install -y git fzf autojump nvim vim ncdu htop
     echo "os is freebsd"
 fi
 
