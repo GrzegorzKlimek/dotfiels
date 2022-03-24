@@ -157,3 +157,4 @@ alias nano-to-vim="paste-from-clipboard | sed 's/nano/vim/' | tr -d "\n" | copy-
 alias get-myvpm-address="ifconfig | grep -A 1 'tun0:' | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+.[0-9]\+' | head -n 1 | tr -d \"\n\" | copy-to-clipboard"
 
 alias freg="-regextype sed -regex"
+alias lowercase="tr '[:upper:]' '[:lower:]'"

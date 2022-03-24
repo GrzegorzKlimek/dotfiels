@@ -179,7 +179,7 @@ nnoremap <C-n> :NERDTreeMirror<CR>
 nnoremap <C-c> :NERDTreeFocus<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>f :Files<CR>
+nnoremap <BS>f :Files<CR>
 " nnoremap <leader>bl :BLines<CR>
 nnoremap <leader><leader>b :Buffers<CR>
 nnoremap <leader>l :Lines<CR>
@@ -190,7 +190,8 @@ nnoremap <leader>i :echo @% <CR>
 nnoremap <leader>r :e! <CR>
 nnoremap <leader>z :MaximizerToggle<Esc>
 nnoremap <leader>t :tabnew<Esc>
-nnoremap <leader>q :q<Esc>
+nnoremap <BS>q :q<CR>
+nnoremap <BS>w :w<CR>
 nnoremap <leader>s :SessionLoad<Esc>
 nnoremap <leader>cd :CocDiagnostics<Esc>
 nnoremap <leader>ca :CocAction<Esc>
@@ -200,9 +201,9 @@ nnoremap <leader><space> a<space><Esc>h
 " nnoremap <F5> :e!<CR>
 nnoremap vv mm vip= `m
 nnoremap <C-f> mm gg=G `m
-autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/tsfmt --stdin <CR> `m
-autocmd FileType html nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type html <CR> `m
-autocmd FileType json nnoremap <buffer> <C-f> mm :%!/home/frezer02/.nvm/versions/node/v13.11.0/bin/js-beautify --type js <CR> `m
+autocmd FileType typescript nnoremap <buffer> <C-f> mm :%!$NVM_BIN/tsfmt --stdin <CR> `m
+autocmd FileType html nnoremap <buffer> <C-f> mm :%!$NVM_BIN/js-beautify --type html <CR> `m
+autocmd FileType json nnoremap <buffer> <C-f> mm :%!$NVM_BIN/js-beautify --type js <CR> `m
 
 " split navigation
 nnoremap <C-J> <C-W><C-J>
