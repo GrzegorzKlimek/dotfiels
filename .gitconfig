@@ -2,7 +2,7 @@
 	email = grzegorzklimek77@gmail.com
 	name = grzegorz
 [core]
-	autocrlf = input
+	autocrlf = false
 	editor = vim
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all --abbrev-commit
